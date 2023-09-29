@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap');
+
+@import "~bootstrap/scss/bootstrap";
+
+*,
+*:before,
+*:after {
+    box-sizing: inherit;
+}
+
+// #005651;
+
+html {
+    min-width: 100%;
+    font-size: 14px;
+    box-sizing: border-box;
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: lora, arial;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background: #9eb89a;
+    font-size: 16px;
+    height: 100%;
+    margin: 0;
+}
+
+main {
+    min-height: 90vh
+}
