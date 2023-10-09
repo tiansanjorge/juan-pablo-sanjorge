@@ -36,81 +36,136 @@ main {
 // Colores:
 // Verde oscuro: #005651
 // Verde claro: #9eb89a
-// Azul oscuro: #2d3047
+// Azul: #2d3047
 // Celeste: #c4fbff
-// Amarillo: #ffce48
+// Amarillo: #ffdf89
 
-.blanco{
-  color: #ffffff;
+.blanco {
+  color: #ececec;
 }
 
-.fondoVerdeO{
+.negro {
+  color: #2e2e2e;
+}
+
+.celeste {
+  color: #c4fbff;
+}
+
+.azul {
+  color: #2d3047;
+}
+
+.amarillo{
+  color: #ffdf89
+}
+
+.hoverVerdeC {
+  &:hover {
+    color: #9eb89a;
+  }
+}
+
+.hoverAzul {
+  &:hover {
+    color: #2d3047;
+  }
+}
+
+.hoverAmarillo {
+  &:hover {
+    color: #ffdf89;
+  }
+}
+
+.fondoVerdeO {
   background: #005651;
+}
+
+.fondoAmarillo {
+  background: #ffdf89;
+}
+
+.fondoAzul {
+  background: #2d3047;
+}
+
+.fondoCeleste {
+  background: #c4fbff;
 }
 
 .hoverFondoVerdeO {
   &:hover {
     background: #005651;
-    color: #ffffff;
   }
 }
 
-.hoverFondoAmarillo{
+.hoverFondoAmarillo {
   &:hover {
-    background: #ffce48;
-    color: #000000;
+    background: #ffdf89;
   }
 }
 
-.hoverFondoCeleste{
+.hoverFondoCeleste {
   &:hover {
     background: #c4fbff;
-    color: #000000;
-  }
-}
-
-.hoverCeleste {
-  color: #ffffff;
-  &:hover {
-    color: #c4fbff;
-  }
-}
-
-.hoverCeleste2 {
-  :hover {
-    color: #c4fbff;
   }
 }
 
 // Tipografía
 
-.size14{
-  font-size: 14px;
-}
-.size18{
-  font-size: 18px;
-}
-.size20{
-  font-size: 20px;
-}
-.size25{
+.titulo {
   font-size: 25px;
 }
-.size30{
+
+.subtitulo {
+  font-size: 18px;
+}
+
+.subtitulo2 {
+  font-size: 16px;
+}
+
+.size14 {
+  font-size: 14px;
+}
+.size18 {
+  font-size: 18px;
+}
+.size20 {
+  font-size: 20px;
+}
+.size25 {
+  font-size: 25px;
+}
+.size30 {
   font-size: 30px;
 }
-.size40{
+.size40 {
   font-size: 40px;
 }
 
-.weight600{
+.weight400 {
+  font-weight: 400;
+}
+.weight500 {
+  font-weight: 500;
+}
+.weight600 {
   font-weight: 600;
+}
+.weight700 {
+  font-weight: 700;
 }
 
 // Otras clases genéricas
 
-.bordeCuadrado{
+.bordeCuadrado {
   border-radius: 0;
+}
+
+.pointer {
+  cursor: pointer;
 }
 
 // Header
@@ -119,17 +174,91 @@ main {
   background-color: transparent;
   border: none;
   color: inherit;
-}
-
-.btn-secondary.dropdown:hover {
-  background-color: transparent;
-  border: none;
-  color: inherit;
+  &:hover {
+    background-color: transparent;
+    border: none;
+    color: #ffdf89
+  }
 }
 
 // Footer
 
-.divisor{
+.divisor {
   border-top: 3px solid #c4fbff;
 }
 
+// HOME PAGE
+
+.home {
+  margin-top: 70px;
+}
+
+.whatsapp {
+  font-family: Helvetica;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 999;
+  padding: 10px;
+  color: #ececec;
+  background: #128c7e;
+  &:hover {
+    background: #2d3047;
+  }
+}
+
+// ImageSlider
+
+.slider {
+  height: 550px;
+}
+
+.sliderRightArrow {
+  right: 10px;
+  z-index: 1;
+}
+
+.sliderLeftArrow {
+  left: 10px;
+  z-index: 1;
+}
+
+// Cambios de pantalla
+
+@media screen and (min-width: 576px) {
+  .titulo {
+    font-size: 27px;
+  }
+
+  .subtitulo {
+    font-size: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .titulo {
+    font-size: 30px;
+  }
+
+  .subtitulo {
+    font-size: 22px;
+  }
+
+  .subtitulo2 {
+    font-size: 18px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titulo {
+    font-size: 35px;
+  }
+
+  .subtitulo {
+    font-size: 26px;
+  }
+
+  .subtitulo2 {
+    font-size: 20px;
+  }
+}
