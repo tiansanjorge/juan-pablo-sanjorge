@@ -5,15 +5,22 @@ import { BsWhatsapp } from "react-icons/bs";
 export const Home = () => {
   const slides = [
     {
-      url: "/img/celuH1.jpg",
-      smUrl: "/img/celuH1_sm.jpg",
-      title: "Artech • Tecnología al Alcance",
+      url: "/img/portadaDistancia.jpg",
+      xlurl: "/img/portadaDistancia2.jpg",
+      lgurl: "/img/portadaDistancia3.jpg",
+      mdurl: "/img/portadaDistancia4.jpg",
+      smurl: "/img/portadaDistancia5.jpg",
+      xsurl: "/img/portadaDistancia6.jpg",
+      title: "Terapia a Distancia",
     },
     {
-      url: "/img/celuH2.jpg",
-      smUrl: "/img/celuH2_sm.jpg",
-      title: "Celulares en Artech",
-      href: "#",
+      url: "/img/portadaJP.jpg",
+      xlurl: "/img/portadaJP2.jpg",
+      lgurl: "/img/portadaJP3.jpg",
+      mdurl: "/img/portadaJP4.jpg",
+      smurl: "/img/portadaJP5.jpg",
+      xsurl: "/img/portadaJP6.jpg",
+      title: "Psicologo Juan Pablo Sanjorge",
     },
   ];
 

@@ -16,10 +16,22 @@ const ImageSlider = ({ slides }) => {
   }, []);
 
   const getImageUrlBySize = (slide) => {
-    if (windowSize >= 768) {
+    if (windowSize >= 1400) {
       return slide.url;
-    } else {
-      return slide.smUrl;
+    } 
+    if (windowSize >= 1200) {
+      return slide.xlurl;
+    } 
+    if (windowSize >= 992) {
+      return slide.lgurl;
+    } 
+    if (windowSize >= 768) {
+      return slide.mdurl;
+    }
+    if (windowSize >= 576) {
+      return slide.smurl;
+    }else {
+      return slide.xsurl;
     }
   };
 
