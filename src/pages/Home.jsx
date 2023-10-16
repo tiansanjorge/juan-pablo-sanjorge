@@ -40,10 +40,13 @@ export const Home = () => {
               <h1 className="titulo azul">
                 <b>Lic. Juan Pablo Sanjorge</b>
               </h1>
-              <h2 className="blanco mb-0 subtitulo">
-                <i>Psicoanalista</i>
+              <h2 className="blanco mb-3 subtitulo">
+                <i>Psicólogo</i>
               </h2>
-              <p className="azul pt-3 m-0 subtitulo2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate porro recusandae corporis dolores, dignissimos veritatis? Provident praesentium soluta repellat. </p>
+              <p className="azul pt-3 m-0 subtitulo2">
+                Universidad de Buenos Aires - M. 66123 <br />
+                Especializado en clínica de adolescentes y adultos.
+              </p>
             </div>
           </div>
         </div>
@@ -77,11 +80,18 @@ export const Home = () => {
           <h3 className="subtitulo azul py-3">
             {Articles[0].titulo.toUpperCase()}
           </h3>
-          <p className="size18">
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit.
-            Repellendus molestiae at, soluta delectus odit molestias. Error
-            laborum, voluptates odio dolorum reiciendis eius reprehenderit
-            voluptas ducimus repellendus optio quaerat iste earum. Lorem ipsum dolor sit amet consectetur adipisicing elit. At neque officiis, vitae, eum tempore beatae ullam sunt architecto saepe quos obcaecati sed, magni accusantium maxime quo sapiente esse sint commodi.
+          <p className="size18 azul">
+            ¿Para qué analizar la psiquis? Una primera respuesta es arrojada por
+            el modo mismo en que el psicoanálisis nace en la sociedad: a raíz de
+            que el malestar de ciertos pacientes que consultaban a sus médicos
+            no podía ser explicado a través de sus conocimientos anatómicos,
+            biológicos o neurológicos. Es importante tener en cuenta esto ya que
+            nos permite ubicar que de lo que se trata es de una ausencia de
+            saber o conocimiento: “¿por qué me pasa esto?”, “¿por qué no puedo
+            evitar comportarme así?”, “¿cómo hago para lograr esto?”, “¿qué es
+            lo que tengo que hacer?”. Son preguntas que quizás, aquel que se
+            encuentre evaluando la posibilidad de buscar ayuda psicoterapéutica,
+            pueda identificar con facilidad en sus propios razonamientos
           </p>
           <div className="col-12 d-flex py-3">
             <a
@@ -103,7 +113,9 @@ export const Home = () => {
         className="whatsapp text-decoration-none rounded subtitulo2"
         href="https://wa.link/7staf4"
         target="_blank"
-      >Enviar WhatsApp <BsWhatsapp className="h3"/> </a>
+      >
+        Enviar WhatsApp <BsWhatsapp className="h3" />{" "}
+      </a>
     </main>
   );
 };

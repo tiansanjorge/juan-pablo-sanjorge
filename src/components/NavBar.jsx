@@ -33,10 +33,10 @@ export const NavBar = () => {
                   <DropdownItem className="hoverFondoCeleste text-decoration-none p-0">
                     <NavLink
                       style={({ isActive }) => ({
-                        color: isActive ? "#1684a3" : "#000",
+                        color: isActive ? "#005651" : "#2d3047",
                         textDecoration: "none",
-                        fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 22 : 18,
+                        fontWeight: isActive ? "600" : "500",
+                        fontSize: isActive ? 20 : 18,
                       })}
                       to="/info"
                     >
@@ -48,10 +48,10 @@ export const NavBar = () => {
                   <DropdownItem className="hoverFondoCeleste text-decoration-none p-0">
                     <NavLink
                       style={({ isActive }) => ({
-                        color: isActive ? "#1684a3" : "#000",
+                        color: isActive ? "#005651" : "#2d3047",
                         textDecoration: "none",
-                        fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 22 : 18,
+                        fontWeight: isActive ? "600" : "500",
+                        fontSize: isActive ? 20 : 18,
                       })}
                       to="/articulos"
                     >
@@ -61,10 +61,10 @@ export const NavBar = () => {
                   <DropdownItem className="hoverFondoCeleste text-decoration-none p-0">
                     <NavLink
                       style={({ isActive }) => ({
-                        color: isActive ? "#1684a3" : "#000",
+                        color: isActive ? "#005651" : "#2d3047",
                         textDecoration: "none",
-                        fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 22 : 18,
+                        fontWeight: isActive ? "600" : "500",
+                        fontSize: isActive ? 20 : 18,
                       })}
                       to="/contacto"
                     >
