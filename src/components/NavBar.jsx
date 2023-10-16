@@ -17,16 +17,16 @@ export const NavBar = () => {
   };
 
   return (
-    <header className="fondoVerdeO text-white py-3">
+    <header className="fondoVerdeO blanco py-3 fixed-top">
       <div className="container">
         <div className="row ">
           <div className="col-12 d-flex flex-row justify-content-between align-items-center">
-            <Link className="text-decoration-none text-white" to="/">
+            <Link className="text-decoration-none blanco" to="/">
               <h1 className="size30">Juan Pablo Sanjorge</h1>
             </Link>
             <div className="d-md-none">
               <Dropdown isOpen={menuOpen} toggle={toggleMenu}>
-                <DropdownToggle className="border-0 dropdown hoverCeleste2">
+                <DropdownToggle className="border-0 dropdown">
                   <FontAwesomeIcon icon={faBars} size="lg" />
                 </DropdownToggle>
                 <DropdownMenu className="p-0 bordeCuadrado mt-2">
@@ -36,7 +36,7 @@ export const NavBar = () => {
                         color: isActive ? "#1684a3" : "#000",
                         textDecoration: "none",
                         fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 18 : 15,
+                        fontSize: isActive ? 22 : 18,
                       })}
                       to="/info"
                     >
@@ -51,7 +51,7 @@ export const NavBar = () => {
                         color: isActive ? "#1684a3" : "#000",
                         textDecoration: "none",
                         fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 18 : 15,
+                        fontSize: isActive ? 22 : 18,
                       })}
                       to="/articulos"
                     >
@@ -64,7 +64,7 @@ export const NavBar = () => {
                         color: isActive ? "#1684a3" : "#000",
                         textDecoration: "none",
                         fontWeight: isActive ? "700" : "500",
-                        fontSize: isActive ? 18 : 15,
+                        fontSize: isActive ? 22 : 18,
                       })}
                       to="/contacto"
                     >
@@ -76,15 +76,15 @@ export const NavBar = () => {
             </div>
             <div className="d-none d-md-flex col-5 justify-content-between align-items-center text-decoration-none">
               <NavLink className="text-decoration-none" to="/info">
-                <div className="d-flex d-lg-block flex-column blanco hoverCeleste">
+                <div className="d-flex d-lg-block flex-column blanco hoverAmarillo">
                   Información <span>Profesional</span> 
                 </div>
               </NavLink>
               <NavLink className="text-decoration-none">
-                <div className="blanco hoverCeleste">Artículos</div>
+                <div className="blanco hoverAmarillo">Artículos</div>
               </NavLink>
               <NavLink className="text-decoration-none">
-                <div className="blanco hoverCeleste">Contacto</div>
+                <div className="blanco hoverAmarillo">Contacto</div>
               </NavLink>
             </div>
           </div>
