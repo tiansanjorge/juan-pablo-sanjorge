@@ -1,5 +1,5 @@
 import ImageSlider from "../components/ImageSlider";
-import Articles from "../components/Article";
+import ArticlesArray from "../components/Article";
 import { BsWhatsapp } from "react-icons/bs";
 
 export const Home = () => {
@@ -63,7 +63,7 @@ export const Home = () => {
           <div className="divisor col-2 col-md-1 py-2 mx-auto"></div>
         </div>
         <div className="Col-10 d-flex flex-column d-lg-none justify-content-evenly pt-3 pb-4">
-          {Articles.map((articulo, index) => (
+          {ArticlesArray.map((articulo, index) => (
             <a
               className="col-10 col-md-7 d-flex flex-column justify-content-between fondoAzul blanco hoverFondoVerdeO p-4 text-decoration-none pointer mx-auto my-3"
               href="#"
@@ -78,7 +78,7 @@ export const Home = () => {
         </div>
         <div className="col-10 d-none d-lg-flex flex-column justify-content-between mx-auto pb-4">
           <h3 className="subtitulo azul py-3">
-            {Articles[0].titulo.toUpperCase()}
+            {ArticlesArray[0].titulo.toUpperCase()}
           </h3>
           <p className="size18 azul">
             ¿Para qué analizar la psiquis? Una primera respuesta es arrojada por

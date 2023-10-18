@@ -4,6 +4,7 @@ import { UserLayout } from "./components/UserLayout";
 
 import { Home } from "./pages/Home";
 import { Info } from "./pages/Info";
+import { Articles } from "./pages/Articles";
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
           <Route path={"/"} element={<UserLayout />}>
             <Route index element={<Home />} />
             <Route path="/info" element={<Info />} />
+            <Route path="/articles" element={<Articles />} />
           </Route>
         </Routes>
       </BrowserRouter>
