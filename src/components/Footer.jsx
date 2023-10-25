@@ -2,7 +2,7 @@ import { BsWhatsapp, BsFillEnvelopeFill, BsArrowUpShort } from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="fondoVerdeO blanco pt-5 pb-3">
+    <footer className="fondoVerdeO blanco pt-4 pb-3">
       <div className="container">
         <div className="row">
           <div className="col-10 d-flex flex-column justify-content-evenly align-items-center text-center mx-auto">
@@ -38,7 +38,7 @@ const Footer = () => {
               </a>
             </div>
             <div className="size14">
-              2023 Juan Pablo Sanjorge - Psicoanalista, Buenos Aires, Argentina.
+              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina.
               - Web Design:{" "}
               <span>
                 <a

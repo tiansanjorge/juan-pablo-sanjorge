@@ -29,14 +29,14 @@ export const Home = () => {
       <ImageSlider slides={slides}></ImageSlider>
       <div className="container ">
         <div className="row">
-          <div className="col-12 d-flex flex-column flex-lg-row justify-content-evenly py-lg-3">
+          <div className="col-12 d-flex flex-column flex-lg-row justify-content-evenly">
             <div className="col-12 col-lg-7 d-flex justify-content-center pt-5 pb-3 pb-lg-5">
-              <video className="img-fluid" controls>
+              <video className="img-fluid shadow" controls>
                 <source src="/img/video.mp4" type="video/mp4" />
                 Tu navegador no admite la reproducción de videos.
               </video>
             </div>
-            <div className="col-12 col-lg-4 pb-5 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 negro">
+            <div className="col-12 col-lg-4 pb-3 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 negro">
               <h1 className="titulo azul">
                 <b>Lic. Juan Pablo Sanjorge</b>
               </h1>
@@ -51,18 +51,11 @@ export const Home = () => {
           </div>
         </div>
       </div>
-      <div className="col-12 fondoVerdeO blanco text-center py-4">
-        <h3 className="my-0 mx-3 subtitulo weight400">
-          <i>“Cada hombre es lo que hace con lo que hicieron de él”</i> - J.P.
-          Sartre
-        </h3>
-      </div>
-      <div className="col-12 fondoVerdeC py-3 py-lg-5 d-flex flex-column justify-content-evenly">
-        <div className="col-10 mx-auto azul">
+      
+      <div className="col-12 fondoVerdeC py-4 pb-lg-5 d-flex flex-column justify-content-evenly">
+        <div className="Col-10 d-flex flex-column d-lg-none justify-content-evenly pb-4">
           <h2 className="titulo text-center pt-4">Artículos</h2>
           <div className="divisor col-2 col-md-1 py-2 mx-auto"></div>
-        </div>
-        <div className="Col-10 d-flex flex-column d-lg-none justify-content-evenly pt-3 pb-4">
           {ArticlesArray.map((articulo, index) => (
             <a
               className="col-10 col-md-7 d-flex flex-column justify-content-between fondoAzul blanco hoverFondoVerdeO p-4 text-decoration-none pointer mx-auto my-3"
@@ -77,9 +70,10 @@ export const Home = () => {
           ))}
         </div>
         <div className="col-10 d-none d-lg-flex flex-column justify-content-between mx-auto pb-4">
-          <h3 className="subtitulo azul py-3">
+          <h3 className="subtitulo verdeO pb-3 m-0">
             {ArticlesArray[0].titulo.toUpperCase()}
           </h3>
+          <div className="divisor col-2 mb-4"></div>
           <p className="size18 azul pb-2">
             [...] ¿Para qué analizar la psiquis? Una primera respuesta es
             arrojada por el modo mismo en que el psicoanálisis nace en la
@@ -96,13 +90,13 @@ export const Home = () => {
           </p>
           <div className="col-12 d-flex py-3">
             <a
-              className="col-3 text-decoration-none fondoAzul hoverFondoAmarillo blanco hoverAzul text-center me-4 py-1"
+              className="col-3 text-decoration-none fondoVerdeO hoverFondoAzul blanco text-center me-4 py-1"
               href="/articles/para-qu-un-psicoanlisis"
             >
               ARTICULO COMPLETO
             </a>
             <a
-              className="col-3 text-decoration-none fondoAzul hoverFondoAmarillo blanco hoverAzul text-center py-1"
+              className="col-3 text-decoration-none fondoVerdeO hoverFondoAzul blanco text-center py-1"
               href="/articles"
             >
               MÁS ARTICULOS
@@ -110,12 +104,21 @@ export const Home = () => {
           </div>
         </div>
       </div>
+
+      <div className="col-12 d-flex justify-content-center fondoAzul blanco text-center py-4">
+        <img className="imgByN col-2 col-md-1 rounded-circle img-fluid" src="img/sartre.jpg" alt="J.P. Sartre"/>
+        <h3 className="col-9 col-md-7 my-auto ms-2 ms-md-4 subtitulo weight400">
+          <i className="" >“Cada quien es lo que hace con lo que hicieron de él”</i> - J.P.
+          Sartre
+        </h3>
+      </div>
+
       <a
         className="whatsapp text-decoration-none rounded subtitulo2"
         href="https://wa.link/7staf4"
         target="_blank"
       >
-        <BsWhatsapp className="h3" /> Enviar WhatsApp 
+        <BsWhatsapp className="h3" /> Enviar WhatsApp
       </a>
     </main>
   );

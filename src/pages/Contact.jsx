@@ -1,18 +1,17 @@
 import { BsWhatsapp, BsFillEnvelopeFill } from "react-icons/bs";
+import { useState } from "react";
 
 export const Contact = () => {
-  function enviarMensaje() {
-    let mensaje = document.getElementById("mensaje").value
-      ? document.getElementById("mensaje").value
-      : document.getElementById("mensaje2").value;
-    mensaje = encodeURIComponent(mensaje);
-    let numeroTelefono = "5491122653526";
+  const [mensaje, setMensaje] = useState("Saludos, quisiera coordinar una entrevista.");
 
+  function enviarMensaje() {
+    let mensajeEncoded = encodeURIComponent(mensaje);
+    let numeroTelefono = "5491122653526";
     let enlaceWhatsApp =
       "https://api.whatsapp.com/send?phone=" +
       numeroTelefono +
       "&text=" +
-      mensaje;
+      mensajeEncoded;
     window.open(enlaceWhatsApp, "_blank");
   }
 
@@ -33,16 +32,17 @@ export const Contact = () => {
                   <form>
                     <div className="mx-4 py-3">
                       <textarea
-                        className="form-control py-2 mb-4 size18 azul"
+                        className="form-control textareaFijo py-2 mb-4 size18 azul"
                         id="mensaje2"
                         rows="5"
-                        value="Hola Juan Pablo, me gustaria comenzar a atenderme. Quisiera coordinar una entrevista."
+                        value={mensaje}
+                        onChange={(e) => setMensaje(e.target.value)}
                       ></textarea>
                       <button
                         className="whatsapp2 text-decoration-none rounded subtitulo2 border-0 mb-1"
                         type="button"
                         id="enviar"
-                        // onclick={enviarMensaje()}
+                        onClick={enviarMensaje}
                       >
                         <BsWhatsapp /> Enviar Whatsapp
                       </button>
@@ -58,7 +58,7 @@ export const Contact = () => {
 
                     <p className="size19">
                       <b>
-                        • Sesiones a distancia <br />• Sesiones presenciales{" "}
+                        • Sesiones a distancia <br />• Sesiones presenciales
                         <br />
                       </b>
                     </p>
@@ -82,8 +82,7 @@ export const Contact = () => {
                       href="mailto:jpsanjorge@gmail.com"
                       target="_blank"
                     >
-                      <BsFillEnvelopeFill className="me-2" />{" "}
-                      jpsanjorge@gmail.com
+                      <BsFillEnvelopeFill className="me-2" /> jpsanjorge@gmail.com
                     </a>
                 </div>
               </div>
@@ -104,16 +103,17 @@ export const Contact = () => {
                   <form>
                     <div className="mx-4 py-3 px-3">
                       <textarea
-                        className="form-control py-2 mb-4 size18 azul"
+                        className="form-control textareaFijo py-2 mb-4 size18 azul"
                         id="mensaje2"
                         rows="5"
-                        value="Hola Juan Pablo, me gustaria comenzar a atenderme. Quisiera coordinar una entrevista."
+                        value={mensaje}
+                        onChange={(e) => setMensaje(e.target.value)}
                       ></textarea>
                       <button
                         className="whatsapp2 text-decoration-none rounded subtitulo2 border-0 mb-1"
                         type="button"
                         id="enviar"
-                        // onclick={enviarMensaje()}
+                        onClick={enviarMensaje}
                       >
                         <BsWhatsapp /> Enviar Whatsapp
                       </button>

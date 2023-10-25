@@ -56,12 +56,16 @@ main {
   color: #2d3047;
 }
 
-.amarillo{
-  color: #ffdf89
+.amarillo {
+  color: #ffdf89;
 }
 
-.verdeO{
-  color: #005651
+.verdeO {
+  color: #005651;
+}
+
+.verdeC {
+  color: #9eb89a;
 }
 
 .hoverVerdeC {
@@ -119,6 +123,11 @@ main {
     background: #c4fbff;
   }
 }
+.hoverFondoAzul {
+  &:hover {
+    background: #2d3047;
+  }
+}
 
 // Tipografía
 
@@ -171,7 +180,7 @@ main {
 
 // Otras clases genéricas
 
-.topFiller{
+.topFiller {
   padding-top: 70px;
 }
 
@@ -183,8 +192,16 @@ main {
   cursor: pointer;
 }
 
-p{
+p {
   margin: 0;
+}
+
+.imgByN {
+  filter: grayscale(100%);
+}
+
+.textareaFijo {
+  resize: none;
 }
 
 // Header
@@ -196,7 +213,7 @@ p{
   &:hover {
     background-color: transparent;
     border: none;
-    color: #ffdf89
+    color: #ffdf89;
   }
 }
 
@@ -250,12 +267,13 @@ p{
 
 // CONTACTO
 
-.contacto{
+.contacto {
   background: url(../../public/img/contactoXs.jpg);
   background-size: cover;
   background-position: center;
   height: 650px;
 }
+
 
 // Cambios de pantalla
 
@@ -268,7 +286,7 @@ p{
     font-size: 20px;
   }
 
-  .contacto{
+  .contacto {
     background: url(../../public/img/contactoSm.jpg);
     background-size: cover;
     background-position: center;
@@ -289,7 +307,7 @@ p{
     font-size: 18px;
   }
 
-  .contacto{
+  .contacto {
     background: url(../../public/img/contactoMd.jpg);
     background-size: cover;
     background-position: center;
@@ -309,7 +327,7 @@ p{
     font-size: 20px;
   }
 
-  .contacto{
+  .contacto {
     background: url(../../public/img/contactoLg.jpg);
     background-size: cover;
     background-position: center;
@@ -318,7 +336,7 @@ p{
 }
 
 @media screen and (min-width: 1200px) {
-  .contacto{
+  .contacto {
     background-position: left;
   }
 }
