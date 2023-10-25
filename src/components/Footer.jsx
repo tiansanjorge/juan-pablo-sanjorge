@@ -9,7 +9,7 @@ const Footer = () => {
             <h2 className="blanco pt-2 titulo">Consultorio</h2>
             <div className="divisor col-3 col-md-2 col-xl-1 py-2"></div>
             <div className="py-2 subtitulo2">
-              F. Felix de Amador 1805 Dpto. 6, Tel: 11 2265-3526 <br />
+              F. Félix de Amador 1805 Dpto. 6, Tel: 11 2265-3526 <br />
               Olivos, Buenos Aires, Argentina
             </div>
             <div className="col-3 d-flex justify-content-evenly blanco py-3 size20 ">

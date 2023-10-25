@@ -25,7 +25,7 @@ export const Home = () => {
   ];
 
   return (
-    <main className="home">
+    <main className="topFiller">
       <ImageSlider slides={slides}></ImageSlider>
       <div className="container ">
         <div className="row">
@@ -80,29 +80,30 @@ export const Home = () => {
           <h3 className="subtitulo azul py-3">
             {ArticlesArray[0].titulo.toUpperCase()}
           </h3>
-          <p className="size18 azul">
-            ¿Para qué analizar la psiquis? Una primera respuesta es arrojada por
-            el modo mismo en que el psicoanálisis nace en la sociedad: a raíz de
-            que el malestar de ciertos pacientes que consultaban a sus médicos
-            no podía ser explicado a través de sus conocimientos anatómicos,
-            biológicos o neurológicos. Es importante tener en cuenta esto ya que
-            nos permite ubicar que de lo que se trata es de una ausencia de
-            saber o conocimiento: “¿por qué me pasa esto?”, “¿por qué no puedo
-            evitar comportarme así?”, “¿cómo hago para lograr esto?”, “¿qué es
-            lo que tengo que hacer?”. Son preguntas que quizás, aquel que se
-            encuentre evaluando la posibilidad de buscar ayuda psicoterapéutica,
-            pueda identificar con facilidad en sus propios razonamientos
+          <p className="size18 azul pb-2">
+            [...] ¿Para qué analizar la psiquis? Una primera respuesta es
+            arrojada por el modo mismo en que el psicoanálisis nace en la
+            sociedad: a raíz de que el malestar de ciertos pacientes que
+            consultaban a sus médicos no podía ser explicado a través de sus
+            conocimientos anatómicos, biológicos o neurológicos. Es importante
+            tener en cuenta esto ya que nos permite ubicar que de lo que se
+            trata es de una ausencia de saber o conocimiento: “¿por qué me pasa
+            esto?”, “¿por qué no puedo evitar comportarme así?”, “¿cómo hago
+            para lograr esto?”, “¿qué es lo que tengo que hacer?”. Son preguntas
+            que quizás, aquel que se encuentre evaluando la posibilidad de
+            buscar ayuda psicoterapéutica, pueda identificar con facilidad en
+            sus propios razonamientos [...]
           </p>
           <div className="col-12 d-flex py-3">
             <a
               className="col-3 text-decoration-none fondoAzul hoverFondoAmarillo blanco hoverAzul text-center me-4 py-1"
-              href="#"
+              href="/articles/para-qu-un-psicoanlisis"
             >
               ARTICULO COMPLETO
             </a>
             <a
               className="col-3 text-decoration-none fondoAzul hoverFondoAmarillo blanco hoverAzul text-center py-1"
-              href="#"
+              href="/articles"
             >
               MÁS ARTICULOS
             </a>
@@ -114,7 +115,7 @@ export const Home = () => {
         href="https://wa.link/7staf4"
         target="_blank"
       >
-        Enviar WhatsApp <BsWhatsapp className="h3" />{" "}
+        <BsWhatsapp className="h3" /> Enviar WhatsApp 
       </a>
     </main>
   );

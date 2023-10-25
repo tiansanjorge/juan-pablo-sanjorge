@@ -2,7 +2,7 @@ import { BsWhatsapp } from "react-icons/bs";
 
 export const Info = () => {
   return (
-    <main className="info">
+    <main className="topFiller">
       <section className="container-fluid">
         <div className="row">
           <div className="col-12 d-flex flex-column flex-md-row justify-content-center my-5">
@@ -14,7 +14,7 @@ export const Info = () => {
               />
             </div>
             <div class="col-10 col-sm-9 col-md-6 col-lg-5 col-xxl-4 d-flex flex-column justify-content-evenly azul px-0 mx-auto mx-md-0">
-              <h1 class="titulo p-0 m-0">Información Profesional</h1>
+              <h1 class="titulo p-0 m-0 verdeO">Información Profesional</h1>
               <div className="divisor col-3 mt-2 mt-xl-0 pb-3"></div>
               <p className="subtitulo2">• Licenciado en Psicología</p>
               <p className="subtitulo2">• Universidad de Buenos Aires - M. 66123</p>
@@ -43,7 +43,7 @@ export const Info = () => {
         href="https://wa.link/7staf4"
         target="_blank"
       >
-        Enviar WhatsApp <BsWhatsapp className="h3" />{" "}
+        <BsWhatsapp className="h3" /> Enviar WhatsApp 
       </a>
     </main>
   );
