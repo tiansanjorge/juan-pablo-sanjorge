@@ -53,7 +53,7 @@ export const NavBar = () => {
                         fontWeight: isActive ? "600" : "500",
                         fontSize: isActive ? 20 : 18,
                       })}
-                      to="/articulos"
+                      to="/articles"
                     >
                       <div className="text-center">Artículos</div>
                     </NavLink>
@@ -66,7 +66,7 @@ export const NavBar = () => {
                         fontWeight: isActive ? "600" : "500",
                         fontSize: isActive ? 20 : 18,
                       })}
-                      to="/contacto"
+                      to="/contact"
                     >
                       <div className="text-center ">Contacto</div>
                     </NavLink>
@@ -80,10 +80,10 @@ export const NavBar = () => {
                   Información <span>Profesional</span> 
                 </div>
               </NavLink>
-              <NavLink className="text-decoration-none">
-                <div className="blanco hoverAmarillo">Artículos</div>
+              <NavLink className="text-decoration-none" to="/articles">
+                <div className="blanco hoverAmarillo" >Artículos</div>
               </NavLink>
-              <NavLink className="text-decoration-none">
+              <NavLink className="text-decoration-none" to="/contact">
                 <div className="blanco hoverAmarillo">Contacto</div>
               </NavLink>
             </div>

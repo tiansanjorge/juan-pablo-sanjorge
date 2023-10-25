@@ -56,8 +56,16 @@ main {
   color: #2d3047;
 }
 
-.amarillo{
-  color: #ffdf89
+.amarillo {
+  color: #ffdf89;
+}
+
+.verdeO {
+  color: #005651;
+}
+
+.verdeC {
+  color: #9eb89a;
 }
 
 .hoverVerdeC {
@@ -80,6 +88,10 @@ main {
 
 .fondoVerdeO {
   background: #005651;
+}
+
+.fondoVerdeC {
+  background: #9eb89a;
 }
 
 .fondoAmarillo {
@@ -111,6 +123,11 @@ main {
     background: #c4fbff;
   }
 }
+.hoverFondoAzul {
+  &:hover {
+    background: #2d3047;
+  }
+}
 
 // Tipografía
 
@@ -131,6 +148,9 @@ main {
 }
 .size18 {
   font-size: 18px;
+}
+.size19 {
+  font-size: 19px;
 }
 .size20 {
   font-size: 20px;
@@ -160,12 +180,28 @@ main {
 
 // Otras clases genéricas
 
+.topFiller {
+  padding-top: 70px;
+}
+
 .bordeCuadrado {
   border-radius: 0;
 }
 
 .pointer {
   cursor: pointer;
+}
+
+p {
+  margin: 0;
+}
+
+.imgByN {
+  filter: grayscale(100%);
+}
+
+.textareaFijo {
+  resize: none;
 }
 
 // Header
@@ -177,7 +213,7 @@ main {
   &:hover {
     background-color: transparent;
     border: none;
-    color: #ffdf89
+    color: #ffdf89;
   }
 }
 
@@ -189,16 +225,22 @@ main {
 
 // HOME PAGE
 
-.home {
-  margin-top: 70px;
-}
-
 .whatsapp {
   font-family: Helvetica;
   position: fixed;
   bottom: 20px;
   right: 20px;
   z-index: 999;
+  padding: 10px;
+  color: #ececec;
+  background: #128c7e;
+  &:hover {
+    background: #2d3047;
+  }
+}
+
+.whatsapp2 {
+  font-family: Helvetica;
   padding: 10px;
   color: #ececec;
   background: #128c7e;
@@ -223,11 +265,15 @@ main {
   z-index: 1;
 }
 
-// INFORMACIÓN PROFESIONAL
+// CONTACTO
 
-.info {
-  margin-top: 70px;
+.contacto {
+  background: url(../../public/img/contactoXs.jpg);
+  background-size: cover;
+  background-position: center;
+  height: 650px;
 }
+
 
 // Cambios de pantalla
 
@@ -238,6 +284,13 @@ main {
 
   .subtitulo {
     font-size: 20px;
+  }
+
+  .contacto {
+    background: url(../../public/img/contactoSm.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 600px;
   }
 }
 
@@ -253,6 +306,12 @@ main {
   .subtitulo2 {
     font-size: 18px;
   }
+
+  .contacto {
+    background: url(../../public/img/contactoMd.jpg);
+    background-size: cover;
+    background-position: center;
+  }
 }
 
 @media screen and (min-width: 992px) {
@@ -266,5 +325,18 @@ main {
 
   .subtitulo2 {
     font-size: 20px;
+  }
+
+  .contacto {
+    background: url(../../public/img/contactoLg.jpg);
+    background-size: cover;
+    background-position: center;
+    height: 650px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .contacto {
+    background-position: left;
   }
 }
