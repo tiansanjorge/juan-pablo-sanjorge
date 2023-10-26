@@ -27,23 +27,23 @@ export const Home = () => {
   return (
     <main className="topFiller">
       <ImageSlider slides={slides}></ImageSlider>
-      <div className="container ">
+      <div className="container-fluid">
         <div className="row">
-          <div className="col-12 d-flex flex-column flex-lg-row justify-content-evenly">
-            <div className="col-12 col-lg-7 d-flex justify-content-center pt-5 pb-3 pb-lg-5">
+          <div className="col-12 d-flex flex-column flex-lg-row justify-content-evenly justify-content-xxl-center">
+            <div className="col-11 col-md-10 col-lg-7 col-xl-6 col-xxl-5 d-flex justify-content-center pt-5 pb-4 pb-lg-5 mx-auto mx-lg-0 me-xxl-5">
               <video className="img-fluid shadow" controls>
                 <source src="/img/video.mp4" type="video/mp4" />
                 Tu navegador no admite la reproducción de videos.
               </video>
             </div>
-            <div className="col-12 col-lg-4 pb-3 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 negro">
+            <div className="col-11 col-md-10 col-lg-4 pb-3 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 mx-auto mx-lg-0 negro">
               <h1 className="titulo azul">
                 <b>Lic. Juan Pablo Sanjorge</b>
               </h1>
               <h2 className="blanco mb-3 subtitulo">
                 <i>Psicólogo</i>
               </h2>
-              <p className="azul pt-3 m-0 subtitulo2">
+              <p className="azul pt-lg-3 m-0 subtitulo2">
                 Universidad de Buenos Aires - M. 66123 <br />
                 Especializado en clínica de adolescentes y adultos.
               </p>
@@ -52,13 +52,13 @@ export const Home = () => {
         </div>
       </div>
       
-      <div className="col-12 fondoVerdeC py-4 pb-lg-5 d-flex flex-column justify-content-evenly">
-        <div className="Col-10 d-flex flex-column d-lg-none justify-content-evenly pb-4">
+      <div className="col-12 fondoVerdeC py-4 pb-lg-5">
+        <div className="col-10 col-md-9 d-flex flex-column d-lg-none pb-4 mx-auto">
           <h2 className="titulo text-center pt-4">Artículos</h2>
-          <div className="divisor col-2 col-md-1 py-2 mx-auto"></div>
+          <div className="divisorAmarillo col-2 col-md-1 py-2 mx-auto"></div>
           {ArticlesArray.map((articulo, index) => (
             <a
-              className="col-10 col-md-7 d-flex flex-column justify-content-between fondoAzul blanco hoverFondoVerdeO p-4 text-decoration-none pointer mx-auto my-3"
+              className="col-12 d-flex flex-column justify-content-between fondoAzul blanco hoverFondoVerdeO p-4 text-decoration-none pointer mx-auto my-3"
               href="#"
               key={index}
             >
@@ -69,11 +69,11 @@ export const Home = () => {
             </a>
           ))}
         </div>
-        <div className="col-10 d-none d-lg-flex flex-column justify-content-between mx-auto pb-4">
+        <div className="col-10 col-xl-9 d-none d-lg-flex flex-column justify-content-between mx-auto pb-4">
           <h3 className="subtitulo verdeO pb-3 m-0">
             {ArticlesArray[0].titulo.toUpperCase()}
           </h3>
-          <div className="divisor col-2 mb-4"></div>
+          <div className="divisorAmarillo col-2 mb-4"></div>
           <p className="size18 azul pb-2">
             [...] ¿Para qué analizar la psiquis? Una primera respuesta es
             arrojada por el modo mismo en que el psicoanálisis nace en la
@@ -114,7 +114,7 @@ export const Home = () => {
       </div>
 
       <a
-        className="whatsapp text-decoration-none rounded subtitulo2"
+        className="whatsapp text-decoration-none rounded subtitulo2 shadow"
         href="https://wa.link/7staf4"
         target="_blank"
       >

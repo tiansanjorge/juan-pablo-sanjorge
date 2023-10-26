@@ -135,7 +135,7 @@ export const Contact = () => {
                     </p>
                     <a
                       className="size18 text-decoration-none azul hoverVerdeC ms-3"
-                      href="#"
+                      href="#footer"
                     >
                       Consultorio en Olivos (Bs. As.)
                     </a>

@@ -20,11 +20,11 @@ export const Detail = () => {
   return (
     <div className="topFiller">
       <div className="container-fluid">
-        <div className="row fondoVerdeO">
+        <div className="row fondoAzul">
           <div className="col-12 pt-5 pb-4">
             <div className="col-10 col-md-8 mx-auto">
               <h2 className="titulo blanco mb-3">{article.titulo.toUpperCase()}</h2>
-              <div className="divisor col-4 col-md-3 ms-3"></div>
+              <div className="divisorAmarillo col-4 col-md-3 ms-3"></div>
               <p className="subtitulo2 celeste text-end mt-5">{article.fecha}</p>
             </div>
           </div>

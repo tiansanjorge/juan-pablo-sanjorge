@@ -61,13 +61,13 @@ const ImageSlider = ({ slides }) => {
       <div className="slider w-100 position-relative">
         <div>
           <div
-            className="sliderLeftArrow position-absolute top-50 ms-3 size40 pointer negro"
+            className="sliderLeftArrow position-absolute top-50 ms-3 size40 pointer verdeO hoverAmarillo"
             onClick={goToPrevious}
           >
             ❰
           </div>
           <div
-            className="sliderRightArrow position-absolute top-50 me-3 size40 pointer negro"
+            className="sliderRightArrow position-absolute top-50 me-3 size40 pointer verdeO hoverAmarillo"
             onClick={goToNext}
           >
             ❱
@@ -76,14 +76,14 @@ const ImageSlider = ({ slides }) => {
 
         <Link
           to={slides[currentIndex].href}
-          className="text-decoration-none negro"
+          className="text-decoration-none verdeO"
         >
           <div className="w-100 h-100 d-flex flex-column justify-content-end" style={slideBackgroundStyle}>
             <div className="d-flex justify-content-center">
               {slides.map((slide, slideIndex) => (
                 <div
                   className={`mx-2 size20 pointer ${
-                    slideIndex === currentIndex ? "blanco" : ""
+                    slideIndex === currentIndex ? "amarillo" : ""
                   }`}
                   key={slideIndex}
                   onClick={() => goToSlide(slideIndex)}
