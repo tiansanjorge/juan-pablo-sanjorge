@@ -83,7 +83,7 @@ const ImageSlider = ({ slides }) => {
               {slides.map((slide, slideIndex) => (
                 <div
                   className={`mx-2 size20 pointer ${
-                    slideIndex === currentIndex ? "amarillo" : ""
+                    slideIndex === currentIndex ? "amarillo" : "hoverAmarillo"
                   }`}
                   key={slideIndex}
                   onClick={() => goToSlide(slideIndex)}

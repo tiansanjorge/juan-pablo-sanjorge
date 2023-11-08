@@ -1,5 +1,7 @@
 import { useParams } from "react-router-dom";
 import ArticlesArray from "../components/Article";
+import { Helmet } from "react-helmet-async";
+
 
 export const Detail = () => {
   const { articleId } = useParams();
@@ -14,11 +16,20 @@ export const Detail = () => {
   console.log(article);
 
   if (!article) {
-    return <div>Artículo no encontrado</div>;
+    return <div>
+      <Helmet>
+        <meta name="title" content="Articulos de Juan Pablo Sanjorge"/>
+        <meta name="description" content="Juan Pablo Sanjorge, licenciado en psicologia (UBA). Articulos: ¿Para qué un psicoanálisis?; La terapia a distancia; El diagnóstico en psicología" />
+      </Helmet>
+      Artículo no encontrado</div>;
   }
 
   return (
     <div className="topFiller">
+      <Helmet>
+        <meta name="title" content="Articulos de Juan Pablo Sanjorge"/>
+        <meta name="description" content={`Juan Pablo Sanjorge, licenciado en psicologia (UBA). Articulo: ${article.titulo}`} />
+      </Helmet>
       <div className="container-fluid">
         <div className="row fondoAzul">
           <div className="col-12 pt-5 pb-4">

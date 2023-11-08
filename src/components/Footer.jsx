@@ -7,7 +7,7 @@ const Footer = () => {
         <div className="row">
           <div className="col-10 d-flex flex-column justify-content-evenly align-items-center text-center mx-auto">
             <h2 className="blanco pt-2 titulo">Consultorio</h2>
-            <div className="divisorAmarillo col-3 col-md-2 col-xl-1 py-2"></div>
+            <div className="divisorAmarillo col-3 col-md-2 col-xl-1 mb-3"></div>
             <div className="py-2 subtitulo2">
               F. Félix de Amador 1805 Dpto. 6, Tel: 11 2265-3526 <br />
               Olivos, Buenos Aires, Argentina

@@ -1,5 +1,6 @@
 import { BsWhatsapp, BsFillEnvelopeFill } from "react-icons/bs";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 
 export const Contact = () => {
   const [mensaje, setMensaje] = useState("Saludos, quisiera coordinar una entrevista.");
@@ -17,6 +18,10 @@ export const Contact = () => {
 
   return (
     <div className="topFiller">
+      <Helmet>
+        <meta name="title" content="Contactar a Juan Pablo Sanjorge"/>
+        <meta name="description" content="Juan Pablo Sanjorge, licenciado en psicologia (UBA). Telefono: +54 9 11 2265-3526 mail: jpsanjorge@gmail.com" />
+      </Helmet>
       <div className="container-fluid">
         <div className="row fondoVerdeC">
           {/* Formato XS a SM (360 a 768px) */}
@@ -24,8 +29,8 @@ export const Contact = () => {
             <div className="col-11 mx-auto d-flex flex-column azul shadow mt-3">
               <div className="">
                 <div className="d-flex justify-content-between text-start">
-                  <div className="col-12 subtitulo fondoVerdeC pt-3 pb-1 text-center">
-                    <b className="verdeO">PRIMERA ENTREVISTA SIN CARGO</b>
+                  <div className="col-12 fondoVerdeC pt-3 pb-1 text-center">
+                    <h1 className="verdeO titulo weight600 mb-0 mx-2">PRIMERA ENTREVISTA SIN CARGO</h1>
                   </div>
                 </div>
                 <div className="fondoVerdeC">
@@ -64,7 +69,7 @@ export const Contact = () => {
                     </p>
                     <a
                       className="size14 text-decoration-none azul hoverVerdeC ms-3"
-                      href="#"
+                      href="#footer"
                     >
                       Consultorio en Olivos (Bs. As.)
                     </a>
@@ -95,8 +100,8 @@ export const Contact = () => {
             <div className="col-7 col-lg-7 col-xl-6 col-xxl-5 offset-xl-1 d-flex flex-column azul">
               <div className="ms-md-4 ms-lg-5 ms-xl-0 shadow">
                 <div className="d-flex justify-content-between text-start">
-                  <div className="col-12 subtitulo fondoVerdeC pt-3 pb-1 text-center">
-                    <b className="verdeO">PRIMERA ENTREVISTA SIN CARGO</b>
+                  <div className="col-12 fondoVerdeC pt-3 pb-1 text-center">
+                    <h1 className="subtitulo verdeO weight600">PRIMERA ENTREVISTA SIN CARGO</h1>
                   </div>
                 </div>
                 <div className="fondoVerdeC">
@@ -127,12 +132,12 @@ export const Contact = () => {
               <div className="ms-5 ms-xl-0">
                 <div className="col-10 col-lg-9 col-xl-7 col-xxl-6 offset-xl-1  d-flex justify-content-between justify-content-lg-around justify-content-xl-between azul">
                   <div className="d-flex flex-column justify-content-evenly align-self-start ps-3">
-                    <p className="subtitulo">
+                    <h2 className="subtitulo lh-base">
                       <b>
                         • Sesiones a distancia <br />• Sesiones presenciales
                       </b>
                       <br />
-                    </p>
+                    </h2>
                     <a
                       className="size18 text-decoration-none azul hoverVerdeC ms-3"
                       href="#footer"

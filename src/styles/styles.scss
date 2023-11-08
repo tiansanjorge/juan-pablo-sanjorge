@@ -71,18 +71,21 @@ main {
 .hoverVerdeC {
   &:hover {
     color: #9eb89a;
+    transition: 0.15s ease-in;
   }
 }
 
 .hoverAzul {
   &:hover {
     color: #2d3047;
+    transition: 0.15s ease-in;
   }
 }
 
 .hoverAmarillo {
   &:hover {
     color: #ffdf89;
+    transition: 0.15s ease-in;
   }
 }
 
@@ -113,23 +116,27 @@ main {
 .hoverFondoVerdeO {
   &:hover {
     background: #005651;
+    transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoAmarillo {
   &:hover {
     background: #ffdf89;
+    transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoCeleste {
   &:hover {
     background: #c4fbff;
+    transition: 0.25s ease-in;
   }
 }
 .hoverFondoAzul {
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 
@@ -169,6 +176,9 @@ main {
   font-size: 40px;
 }
 
+.weight400 {
+  font-weight: 400;
+}
 .weight500 {
   font-weight: 500;
 }
@@ -206,7 +216,11 @@ p {
 }
 
 .divisorAmarillo {
-  border-top: 3px solid #dbc376;
+  border-top: 3px solid #ffdf89;
+}
+
+.divisorVerdeO {
+  border-bottom: 3px solid #005651;
 }
 
 .divisorCeleste {
@@ -224,6 +238,55 @@ p {
 // HEADER
 
 
+.fadeInRight {
+  &:hover {
+    animation: fadeInRight;
+    animation-duration: 1.5s;
+  }
+}
+
+.subrayado {
+  position: relative;
+}
+
+.subrayado::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  z-index:-1;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInRight 0.1s;
+}
+
+.subrayado2 {
+  position: relative;
+}
+
+.subrayado2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom:0;
+  left: 0;
+  z-index:2;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado2:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInLeft 0.1s;
+}
+
+
 // HOME PAGE
 
 .whatsapp {
@@ -237,6 +300,7 @@ p {
   background: #128c7e;
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 
@@ -247,6 +311,7 @@ p {
   background: #128c7e;
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 

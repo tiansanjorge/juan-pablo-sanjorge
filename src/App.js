@@ -1,5 +1,7 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
+import { HelmetProvider } from "react-helmet-async";
+
 import { UserLayout } from "./components/UserLayout";
 
 import { Home } from "./pages/Home";
@@ -10,6 +12,7 @@ import { Contact } from "./pages/Contact";
 
 function App() {
   return (
+    <HelmetProvider>
     <div className="App">
       <BrowserRouter>
         <Routes>
@@ -23,6 +26,7 @@ function App() {
         </Routes>
       </BrowserRouter>
     </div>
+    </HelmetProvider>
   );
 }
 
