@@ -37,10 +37,11 @@ export const Info = () => {
             </div>
           </div>
           <div className="col-11 col-md-10 col-lg-7 d-flex justify-content-center mx-auto py-5">
-            <video className="img-fluid shadow" controls>
+            {/* <video className="img-fluid shadow" controls>
               <source src="/img/video.mp4" type="video/mp4" />
               Tu navegador no admite la reproducción de videos.
-            </video>
+            </video> */}
+            <img className="img-fluid shadow" src="/img/video.jpg" alt="video presentacion proximamente" />
           </div>
         </div>
       </section>
