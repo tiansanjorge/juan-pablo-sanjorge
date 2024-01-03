@@ -37,7 +37,7 @@ export const NavBar = () => {
                       <NavLink
                         className={({ isActive }) =>
                           isActive
-                            ? "d-inline-block verdeC weight600 text-decoration-none"
+                            ? "d-inline-block amarillo text-decoration-none"
                             : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
                         }
                         to="/info"
@@ -50,7 +50,7 @@ export const NavBar = () => {
                       <NavLink
                         className={({ isActive }) =>
                           isActive
-                            ? "d-inline-block verdeC weight600 text-decoration-none"
+                            ? "d-inline-block amarillo text-decoration-none"
                             : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
                         }
                         to="/articles"
@@ -63,7 +63,7 @@ export const NavBar = () => {
                       <NavLink
                         className={({ isActive }) =>
                           isActive
-                            ? "d-inline-block verdeC weight600 text-decoration-none"
+                            ? "d-inline-block amarillo text-decoration-none"
                             : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
                         }
                         to="/contact"
@@ -77,16 +77,28 @@ export const NavBar = () => {
               )}
             </div>
             <div className="d-none d-md-flex col-5 justify-content-between align-items-center text-decoration-none">
-              <NavLink className="text-decoration-none subrayado" to="/info">
-                <div className="d-flex d-lg-block flex-column blanco hoverAmarillo ">
+              <NavLink className={({ isActive }) =>
+                          isActive
+                            ? "d-inline-block amarillo text-decoration-none"
+                            : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
+                        } to="/info">
+                <div className="d-flex d-lg-block flex-column">
                   Información <span>Profesional</span>
                 </div>
               </NavLink>
-              <NavLink className="text-decoration-none subrayado" to="/articles">
-                <div className="blanco hoverAmarillo ">Artículos</div>
+              <NavLink className={({ isActive }) =>
+                          isActive
+                            ? "d-inline-block amarillo text-decoration-none"
+                            : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
+                        } to="/articles">
+                <div >Artículos</div>
               </NavLink>
-              <NavLink className="text-decoration-none subrayado" to="/contact">
-                <div className="blanco hoverAmarillo">Contacto</div>
+              <NavLink className={({ isActive }) =>
+                          isActive
+                            ? "d-inline-block amarillo text-decoration-none"
+                            : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
+                        } to="/contact">
+                <div>Contacto</div>
               </NavLink>
             </div>
           </div>

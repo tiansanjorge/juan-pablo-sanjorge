@@ -3,7 +3,7 @@ import { Helmet } from "react-helmet-async";
 
 export const Info = () => {
   return (
-    <main className="topFiller">
+    <main className="topFiller d-flex flex-column justify-content-between">
       <Helmet>
         <meta name="title" content="Informacion Profesional" />
         <meta
@@ -13,7 +13,7 @@ export const Info = () => {
       </Helmet>
       <section className="container-fluid">
         <div className="row">
-          <div className="col-12 d-flex flex-column flex-md-row justify-content-center fondoVerdeO py-5">
+          <div className="col-12 d-flex flex-column flex-md-row justify-content-center fondoVerdeC py-5">
             <div className="col-6 col-md-4 col-lg-3 mb-4 mb-md-0 me-0 me-md-5  align-self-center ">
               <img
                 className="img-fluid rounded-circle shadow"
@@ -21,27 +21,22 @@ export const Info = () => {
                 alt="Juan Pablo Sanjorge"
               />
             </div>
-            <div className="col-10 col-sm-9 col-md-6 col-lg-5 col-xxl-4 d-flex flex-column justify-content-evenly blanco px-0 mx-auto mx-md-0 ms-md-4">
-              <h1 className="titulo p-0 m-0 blanco">Información Profesional</h1>
+            <div className="col-10 col-sm-9 col-md-6 col-lg-5 col-xxl-4 d-flex flex-column justify-content-evenly azul px-0 mx-auto mx-md-0 ms-md-4">
+              <h1 className="titulo p-0 m-0">Información Profesional</h1>
               <div className="divisorAmarillo col-3 mt-2 mt-xl-0 pb-3"></div>
-              <h4 className="subtitulo2 m-0 weight400">
+              <h4 className="subtitulo2 m-md-0 weight400">
                 • Licenciado en Psicología
               </h4>
-              <h4 className="subtitulo2 m-0 weight400">
+              <h4 className="subtitulo2 m-md-0 weight400">
                 • Universidad de Buenos Aires - M. 66123
               </h4>
-              <h4 className="subtitulo2 m-0 weight400">
+              <h4 className="subtitulo2 m-md-0 weight400">
                 • Experiencia en clínica de adolescentes y adultos.
               </h4>
-              <h4 className="subtitulo2 m-0 weight400">• Socio adherente de APOLa.</h4>
+              <h4 className="subtitulo2 m-md-0 weight400">
+                • Socio adherente de APOLa.
+              </h4>
             </div>
-          </div>
-          <div className="col-11 col-md-10 col-lg-7 d-flex justify-content-center mx-auto py-5">
-            {/* <video className="img-fluid shadow" controls>
-              <source src="/img/video.mp4" type="video/mp4" />
-              Tu navegador no admite la reproducción de videos.
-            </video> */}
-            <img className="img-fluid shadow" src="/img/video.jpg" alt="video presentacion proximamente" />
           </div>
         </div>
       </section>

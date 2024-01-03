@@ -132,7 +132,7 @@ export const Contact = () => {
               <div className="ms-5 ms-xl-0">
                 <div className="col-10 col-lg-9 col-xl-7 col-xxl-6 offset-xl-1  d-flex justify-content-between justify-content-lg-around justify-content-xl-between azul">
                   <div className="d-flex flex-column justify-content-evenly align-self-start ps-3">
-                    <h2 className="subtitulo lh-base">
+                    <h2 className="subtitulo lh-base m-0">
                       <b>
                         • Sesiones a distancia <br />• Sesiones presenciales
                       </b>

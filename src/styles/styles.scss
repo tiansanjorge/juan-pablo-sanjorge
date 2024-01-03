@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
-@import "~bootstrap/scss/bootstrap";
-
 *,
 *:before,
 *:after {
@@ -265,6 +263,27 @@ p {
   animation: fadeInRight 0.1s;
 }
 
+.subrayado {
+  position: relative;
+}
+
+.subrayado::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom:0;
+  left: 0;
+  z-index:2;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInLeft 0.1s;
+}
+
 .subrayado2 {
   position: relative;
 }
@@ -403,5 +422,11 @@ p {
 @media screen and (min-width: 1200px) {
   .contacto {
     background-position: left;
+  }
+}
+
+@media screen and (min-width: 1650px) {
+  .slider {
+    height:600px
   }
 }

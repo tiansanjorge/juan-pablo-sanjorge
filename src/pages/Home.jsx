@@ -25,7 +25,6 @@ export const Home = () => {
     },
   ];
 
-  // <link rel="canonical" href="https://www.tusitio.com/tu-pagina-canonica" />
 
   return (
     <main className="topFiller">
@@ -42,11 +41,10 @@ export const Home = () => {
         <div className="row">
           <div className="col-12 d-flex flex-column flex-lg-row justify-content-evenly justify-content-xxl-center">
             <div className="col-11 col-md-10 col-lg-7 col-xl-6 col-xxl-5 d-flex justify-content-center pt-5 pb-4 pb-lg-5 mx-auto mx-lg-0 me-xxl-5">
-              {/* <video className="img-fluid shadow" controls>
+              <video className="img-fluid shadow pointer" controls>
                 <source src="/img/video.mp4" type="video/mp4" />
                 Tu navegador no admite la reproducción de videos.
-              </video> */}
-              <img className="img-fluid shadow" src="/img/video.jpg" alt="video presentacion proximamente" />
+              </video> 
             </div>
             <div className="col-11 col-md-10 col-lg-4 pb-3 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 mx-auto mx-lg-0 negro">
               <h1 className="titulo azul">
