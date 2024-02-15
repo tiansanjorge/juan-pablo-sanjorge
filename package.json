@@ -22,6 +22,7 @@
     "sass": "^1.68.0",
     "web-vitals": "^2.1.4"
   },
+  "homepage":"http://c2051951.ferozo.com/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
