@@ -173,6 +173,9 @@ main {
 .size40 {
   font-size: 40px;
 }
+.size60{
+  font-size: 60px;
+}
 
 .weight400 {
   font-weight: 400;
@@ -341,11 +344,13 @@ p {
 }
 
 .sliderRightArrow {
+  top:45%;
   right: 10px;
   z-index: 1;
 }
 
 .sliderLeftArrow {
+  top:45%;
   left: 10px;
   z-index: 1;
 }

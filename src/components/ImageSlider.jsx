@@ -61,13 +61,13 @@ const ImageSlider = ({ slides }) => {
       <div className="slider w-100 position-relative">
         <div>
           <div
-            className="sliderLeftArrow position-absolute top-50 ms-3 size40 pointer verdeO hoverAmarillo"
+            className="sliderLeftArrow position-absolute ms-3 size60 pointer verdeO hoverAmarillo"
             onClick={goToPrevious}
           >
             ❰
           </div>
           <div
-            className="sliderRightArrow position-absolute top-50 me-3 size40 pointer verdeO hoverAmarillo"
+            className="sliderRightArrow position-absolute me-3 size60 pointer verdeO hoverAmarillo"
             onClick={goToNext}
           >
             ❱
