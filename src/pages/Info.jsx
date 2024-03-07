@@ -41,6 +41,20 @@ export const Info = () => {
         </div>
       </section>
 
+      <section className="container-fluid">
+        <div className="row">
+          <div className="col-12 d-flex justify-content-center fondoVerdeC py-5">
+            <div className="col-11 col-sm-10 col-md-9 col-xl-7 mb-5 me-0 d-flex justify-content-center">
+              <img
+                className="img-fluid shadow"
+                src="img/titulo.jpg"
+                alt="titulo Juan Pablo Sanjorge"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
       <div className="col-12 d-flex justify-content-center fondoAzul blanco text-center py-4">
         <img
           className="col-2 col-md-1 rounded-circle img-fluid"
