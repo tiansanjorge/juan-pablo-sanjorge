@@ -56,6 +56,10 @@ main {
   color: #9eb89a;
 }
 
+.rojo {
+  color: #CC2031;
+}
+
 .hoverVerdeC:hover {
   color: #9eb89a;
   transition: 0.15s ease-in;
@@ -219,6 +223,10 @@ p {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
+.no-resize {
+  resize: none;
+}
+
 .fadeInRight:hover {
   animation: fadeInRight;
   animation-duration: 1.5s;
@@ -332,21 +340,38 @@ p {
   background: url(../../public/img/contactoXs.jpg);
   background-size: cover;
   background-position: center;
-  height: 650px;
+  min-height: 1000px;
+}
+
+.textareaForm {
+  height: 110px !important;
+  overflow-y: auto;
+}
+
+.botonForm {
+  background: #005651;
+  color: #ececec;
+}
+.botonForm:hover {
+  background: #ffdf89;
+  color: #2d3047;
+  transition: 0.3s ease;
+  cursor: pointer;
+}
+.botonForm:disabled {
+  background: gray;
+  color: #ececec;
+  cursor: not-allowed;
 }
 
 @media screen and (min-width: 576px) {
   .titulo {
     font-size: 27px;
   }
-  .subtitulo {
-    font-size: 20px;
-  }
   .contacto {
     background: url(../../public/img/contactoSm.jpg);
     background-size: cover;
     background-position: center;
-    height: 600px;
   }
 }
 @media screen and (min-width: 768px) {
@@ -363,28 +388,23 @@ p {
     background: url(../../public/img/contactoMd.jpg);
     background-size: cover;
     background-position: center;
+    min-height: 1100px;
   }
 }
 @media screen and (min-width: 992px) {
   .titulo {
-    font-size: 35px;
+    font-size: 32px;
   }
   .subtitulo {
-    font-size: 26px;
+    font-size: 24px;
   }
   .subtitulo2 {
-    font-size: 20px;
+    font-size: 19px;
   }
   .contacto {
     background: url(../../public/img/contactoLg.jpg);
     background-size: cover;
     background-position: center;
-    height: 650px;
-  }
-}
-@media screen and (min-width: 1200px) {
-  .contacto {
-    background-position: left;
   }
 }
 @media screen and (min-width: 1650px) {

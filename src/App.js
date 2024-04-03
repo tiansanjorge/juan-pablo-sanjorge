@@ -9,6 +9,8 @@ import { Info } from "./pages/Info";
 import { Articles } from "./pages/Articles";
 import { Detail } from "./pages/Detail";
 import { Contact } from "./pages/Contact";
+import { ToastContainer, Slide } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
@@ -25,8 +27,10 @@ function App() {
           </Route>
         </Routes>
       </BrowserRouter>
+      <ToastContainer transition={Slide} />
     </div>
     </HelmetProvider>
+    
   );
 }
 
