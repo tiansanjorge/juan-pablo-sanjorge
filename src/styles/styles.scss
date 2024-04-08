@@ -145,15 +145,15 @@ main {
 // Tipografía
 
 .titulo {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .subtitulo {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .subtitulo2 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .size14 {
@@ -397,7 +397,7 @@ p {
 
 @media screen and (min-width: 576px) {
   .titulo {
-    font-size: 27px;
+    font-size: 22px;
   }
 
   .contacto {
@@ -409,11 +409,32 @@ p {
 
 @media screen and (min-width: 768px) {
   .titulo {
+    font-size: 24px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .subtitulo2 {
+    font-size: 16px;
+  }
+
+  .contacto {
+    background: url(../../public/img/contactoMd.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titulo {
     font-size: 30px;
   }
 
   .subtitulo {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .subtitulo2 {
@@ -421,37 +442,10 @@ p {
   }
 
   .contacto {
-    background: url(../../public/img/contactoMd.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 1100px;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .titulo {
-    font-size: 32px;
-  }
-
-  .subtitulo {
-    font-size: 24px;
-  }
-
-  .subtitulo2 {
-    font-size: 19px;
-  }
-
-  .contacto {
     background: url(../../public/img/contactoLg.jpg);
     background-size: cover;
     background-position: center;
   }
-}
-
-@media screen and (min-width: 1200px) {
-  // .contacto {
-  //   background-position: left;
-  // }
 }
 
 @media screen and (min-width: 1650px) {
