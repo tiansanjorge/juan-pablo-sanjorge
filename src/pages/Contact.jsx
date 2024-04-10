@@ -184,6 +184,16 @@ export const Contact = () => {
     localStorage.removeItem("email");
     localStorage.removeItem("inquiry");
     localStorage.removeItem("message");
+    document.getElementById("name").value = "";
+    document.getElementById("email").value = "";
+    document.getElementById("phone").value = "";
+    document.getElementById("inquiry").value = "";
+    document.getElementById("message").value = "";
+    document.getElementById("name2").value = "";
+    document.getElementById("email2").value = "";
+    document.getElementById("phone2").value = "";
+    document.getElementById("inquiry2").value = "";
+    document.getElementById("message2").value = "";
   };
 
   return (
@@ -217,6 +227,7 @@ export const Contact = () => {
                     Nombre <span className="verdeO align-top mt-0">•</span>
                   </label>
                   <input
+                    id="name"
                     className="subtitulo2 azul px-2 form-control"
                     name="user_name"
                     onChange={(e) => {
@@ -234,6 +245,7 @@ export const Contact = () => {
                     Correo electrónico <span className="verdeO">•</span>
                   </label>
                   <input
+                    id="email"
                     className="subtitulo2 azul px-2 form-control"
                     name="user_email"
                     onChange={(e) => {
@@ -251,6 +263,7 @@ export const Contact = () => {
                     Teléfono <span className="verdeO">•</span>
                   </label>
                   <input
+                    id="phone"
                     className="subtitulo2 azul px-2 form-control"
                     name="user_phone"
                     onChange={(e) => {
@@ -268,6 +281,7 @@ export const Contact = () => {
                     Motivo de Consulta
                   </label>
                   <textarea
+                    id="inquiry"
                     className="subtitulo2 azul px-2 form-control no-resize"
                     name="user_inquiry"
                     onChange={(e) => {
@@ -280,6 +294,7 @@ export const Contact = () => {
                   />
                   <label className="subtitulo azul mt-2 mb-1">Mensaje</label>
                   <textarea
+                    id="message"
                     className="textareaForm no-resize subtitulo2 azul px-2 form-control"
                     name="message"
                     onChange={(e) => {
@@ -359,6 +374,7 @@ export const Contact = () => {
                       Nombre <span className="verdeO align-top mt-0">•</span>
                     </label>
                     <input
+                      id="name2"
                       className="subtitulo2 azul px-2 form-control"
                       name="user_name"
                       onChange={(e) => {
@@ -376,6 +392,7 @@ export const Contact = () => {
                       Correo electrónico <span className="verdeO">•</span>
                     </label>
                     <input
+                      id="email2"
                       className="subtitulo2 azul px-2 form-control"
                       name="user_email"
                       onChange={(e) => {
@@ -393,6 +410,7 @@ export const Contact = () => {
                       Teléfono <span className="verdeO">•</span>
                     </label>
                     <input
+                      id="phone2"
                       className="subtitulo2 azul px-2 form-control"
                       name="user_phone"
                       onChange={(e) => {
@@ -410,6 +428,7 @@ export const Contact = () => {
                       Motivo de Consulta
                     </label>
                     <textarea
+                      id="inquiry2"
                       className="subtitulo2 azul px-2 form-control no-resize"
                       name="user_inquiry"
                       onChange={(e) => {
@@ -422,6 +441,7 @@ export const Contact = () => {
                     />
                     <label className="subtitulo azul mt-2 mb-1">Mensaje</label>
                     <textarea
+                      id="message2"
                       className="textareaForm no-resize subtitulo2 azul px-2 form-control"
                       name="message"
                       onChange={(e) => {
