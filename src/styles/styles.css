@@ -32,6 +32,10 @@ main {
   color: #ececec;
 }
 
+.gris {
+  color: #d1d1d1;
+}
+
 .negro {
   color: #2e2e2e;
 }
@@ -57,7 +61,7 @@ main {
 }
 
 .rojo {
-  color: #CC2031;
+  color: #cc2031;
 }
 
 .hoverVerdeC:hover {
@@ -72,6 +76,11 @@ main {
 
 .hoverAmarillo:hover {
   color: #ffdf89;
+  transition: 0.15s ease-in;
+}
+
+.hoverCeleste:hover {
+  color: #c4fbff;
   transition: 0.15s ease-in;
 }
 

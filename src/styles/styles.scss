@@ -41,6 +41,9 @@ main {
 .blanco {
   color: #ececec;
 }
+.gris {
+  color: #d1d1d1;
+}
 
 .negro {
   color: #2e2e2e;
@@ -66,8 +69,8 @@ main {
   color: #9eb89a;
 }
 
-.rojo{
-  color: #CC2031;
+.rojo {
+  color: #cc2031;
 }
 
 .hoverVerdeC {
@@ -89,6 +92,11 @@ main {
     color: #ffdf89;
     transition: 0.15s ease-in;
   }
+}
+
+.hoverCeleste:hover {
+  color: #c4fbff;
+  transition: 0.15s ease-in;
 }
 
 .fondoBlanco {
@@ -177,7 +185,7 @@ main {
 .size40 {
   font-size: 40px;
 }
-.size60{
+.size60 {
   font-size: 60px;
 }
 
@@ -240,12 +248,11 @@ p {
   text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
 }
 
-.no-resize{
-  resize:none
+.no-resize {
+  resize: none;
 }
 
 // HEADER
-
 
 .fadeInRight {
   &:hover {
@@ -263,7 +270,7 @@ p {
   position: absolute;
   width: 0;
   right: 0;
-  z-index:-1;
+  z-index: -1;
   border-bottom: 2px solid transparent;
   transition: width 0.3s ease-in-out;
 }
@@ -282,9 +289,9 @@ p {
   content: "";
   position: absolute;
   width: 0;
-  bottom:0;
+  bottom: 0;
   left: 0;
-  z-index:2;
+  z-index: 2;
   border-bottom: 2px solid transparent;
   transition: width 0.3s ease-in-out;
 }
@@ -303,9 +310,9 @@ p {
   content: "";
   position: absolute;
   width: 0;
-  bottom:0;
+  bottom: 0;
   left: 0;
-  z-index:2;
+  z-index: 2;
   border-bottom: 2px solid transparent;
   transition: width 0.3s ease-in-out;
 }
@@ -315,7 +322,6 @@ p {
   border-bottom: 1px solid #ffdf89;
   animation: fadeInLeft 0.1s;
 }
-
 
 // HOME PAGE
 
@@ -352,13 +358,13 @@ p {
 }
 
 .sliderRightArrow {
-  top:45%;
+  top: 45%;
   right: 10px;
   z-index: 1;
 }
 
 .sliderLeftArrow {
-  top:45%;
+  top: 45%;
   left: 10px;
   z-index: 1;
 }
@@ -372,7 +378,7 @@ p {
   min-height: 1000px;
 }
 
-.textareaForm{
+.textareaForm {
   height: 110px !important;
   overflow-y: auto;
 }
@@ -380,13 +386,13 @@ p {
 .botonForm {
   background: #005651;
   color: #ececec;
-   &:hover{
+  &:hover {
     background: #ffdf89;
-    color:#2d3047;
+    color: #2d3047;
     transition: 0.3s ease;
-    cursor:pointer
-   }
-   &:disabled {
+    cursor: pointer;
+  }
+  &:disabled {
     background: gray;
     color: #ececec;
     cursor: not-allowed;
@@ -450,6 +456,6 @@ p {
 
 @media screen and (min-width: 1650px) {
   .slider {
-    height:600px
+    height: 600px;
   }
 }

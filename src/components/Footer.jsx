@@ -1,4 +1,9 @@
-import { BsWhatsapp, BsFillEnvelopeFill, BsArrowUpShort } from "react-icons/bs";
+import {
+  BsWhatsapp,
+  BsFillEnvelopeFill,
+  BsArrowUpShort,
+  BsInstagram,
+} from "react-icons/bs";
 
 const Footer = () => {
   return (
@@ -22,6 +27,13 @@ const Footer = () => {
               </a>
               <a
                 className="text-decoration-none blanco hoverAmarillo"
+                href="https://www.instagram.com/juanpablosanjorge"
+                target="_blank"
+              >
+                <BsInstagram />
+              </a>
+              <a
+                className="text-decoration-none blanco hoverAmarillo"
                 href="mailto:jpsanjorge@gmail.com"
                 target="_blank"
               >
@@ -30,7 +42,6 @@ const Footer = () => {
             </div>
             <div className="">
               <a
-              
                 className="text-decoration-none size40 weight600 blanco hoverAmarillo"
                 href="#"
               >
@@ -38,12 +49,12 @@ const Footer = () => {
               </a>
             </div>
             <div className="size14">
-              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina.
-              - Web Design:{" "}
+              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina. -
+              Web Design:{" "}
               <span>
                 <a
                   className="blanco hoverAmarillo"
-                  href="https://ssanjorge.netlify.com"
+                  href="https://ssanjorge.netlify.app"
                   target="_blank"
                 >
                   Sebastián Sanjorge

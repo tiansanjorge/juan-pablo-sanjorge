@@ -43,13 +43,31 @@ export const Info = () => {
 
       <section className="container-fluid">
         <div className="row">
-          <div className="col-12 d-flex justify-content-center fondoVerdeC py-5">
-            <div className="col-11 col-sm-10 col-md-9 col-xl-7 mb-5 me-0 d-flex justify-content-center">
-              <img
-                className="img-fluid shadow"
-                src="img/titulo.jpg"
-                alt="titulo Juan Pablo Sanjorge"
-              />
+          <div className="col-12 d-flex justify-content-center">
+            <div className="col-11 col-sm-10 col-md-9 col-xl-8 mb-5 me-0 pb-5 pt-4 px-5 gris fondoAzul">
+              <p className=" titulo weight400 mb-4 mt-2">
+                Tu tranquilidad es mi prioridad.
+              </p>
+              <p className="subtitulo2 weight400 mb-4">
+                Por eso, quiero que tengas la seguridad de que estás en manos de
+                un profesional habilitado para acompañarte.
+              </p>
+              <p className="subtitulo2 weight400 mb-4">
+                Podés confirmar mi matrícula activa en el
+                <a
+                  className="verdeC hoverCeleste ms-1"
+                  href="https://sisa.msal.gov.ar/sisa"
+                  target="_blank"
+                >
+                  Buscador Nacional de Profesionales de la Salud del Ministerio
+                  de Salud de la Nación.
+                </a>
+              </p>
+              <p className=" subtitulo2 weight400">
+                Además, si lo preferís, puedo enviarte mi Matrícula Digital
+                oficial a través de la app Mi Argentina, que incluye un código
+                QR para validar mi habilitación en tiempo real.
+              </p>
             </div>
           </div>
         </div>

@@ -3,6 +3,7 @@ import {
   BsFillEnvelopeFill,
   BsCheckSquareFill,
   BsAsterisk,
+  BsInstagram,
 } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import React, { useRef, useState, useEffect } from "react";
@@ -341,6 +342,13 @@ export const Contact = () => {
                     <BsWhatsapp className="me-2" /> +54 9 11 2265-3526
                   </a>
                   <a
+                    className="text-decoration-none verdeO hoverVerdeC mt-2 "
+                    href="https://www.instagram.com/juanpablosanjorge"
+                    target="_blank"
+                  >
+                    <BsInstagram className="me-2" /> juanpablosanjorge
+                  </a>
+                  <a
                     className="text-decoration-none verdeO hoverVerdeC mt-2"
                     href="mailto:jpsanjorge@gmail.com"
                     target="_blank"
@@ -488,6 +496,13 @@ export const Contact = () => {
                       target="_blank"
                     >
                       <BsWhatsapp className="me-2" /> +54 9 11 2265-3526
+                    </a>
+                    <a
+                      className="subtitulo text-decoration-none verdeO hoverVerdeC mt-2"
+                      href="https://www.instagram.com/juanpablosanjorge"
+                      target="_blank"
+                    >
+                      <BsInstagram className="me-2" /> juanpablosanjorge
                     </a>
                     <a
                       className="subtitulo text-decoration-none verdeO hoverVerdeC mt-2"
