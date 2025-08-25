@@ -112,16 +112,11 @@ export const Home = () => {
             >
               ARTICULO COMPLETO
             </a>
-            <a
-              className="col-3 text-decoration-none fondoVerdeO hoverFondoAzul blanco text-center py-1"
-              href="/articles"
+            <Link
+              className="text-decoration-none blanco col-3 fondoVerdeO hoverFondoAzul text-center py-1"
+              to="/articles"
             >
               MÁS ARTICULOS
-            </a>
-            <Link className="text-decoration-none blanco" to="/articles">
-              <p className="col-3 fondoVerdeO hoverFondoAzul text-center py-1">
-                Juan Pablo Sanjorge
-              </p>
             </Link>
           </div>
         </div>
