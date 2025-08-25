@@ -2,6 +2,7 @@ import ImageSlider from "../components/ImageSlider";
 import ArticlesArray from "../components/Article";
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
+import { Link } from "react-router-dom";
 
 export const Home = () => {
   const slides = [
@@ -25,7 +26,6 @@ export const Home = () => {
     },
   ];
 
-
   return (
     <main className="topFiller">
       <Helmet>
@@ -44,7 +44,7 @@ export const Home = () => {
               <video className="img-fluid shadow pointer" controls>
                 <source src="/img/video.mp4" type="video/mp4" />
                 Tu navegador no admite la reproducción de videos.
-              </video> 
+              </video>
             </div>
             <div className="col-11 col-md-10 col-lg-4 pb-3 pb-lg-0 pt-lg-5 ps-2 mt-lg-4 mx-auto mx-lg-0 negro">
               <h1 className="titulo azul">
@@ -118,6 +118,11 @@ export const Home = () => {
             >
               MÁS ARTICULOS
             </a>
+            <Link className="text-decoration-none blanco" to="/articles">
+              <p className="col-3 fondoVerdeO hoverFondoAzul text-center py-1">
+                Juan Pablo Sanjorge
+              </p>
+            </Link>
           </div>
         </div>
       </div>
