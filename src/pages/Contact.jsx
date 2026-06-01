@@ -151,8 +151,9 @@ export const Contact = () => {
           toastInquiry();
         },
         (error) => {
-          console.log("FAILED...", error.text);
-        }
+          console.error("FAILED...", error);
+          toastInquiryError();
+        },
       );
   };
 
@@ -168,6 +169,20 @@ export const Contact = () => {
       theme: "light",
       icon: <BsCheckSquareFill className="text-success" />,
     });
+
+  const toastInquiryError = () =>
+    toast.error(
+      "No se pudo enviar la consulta. Por favor comuníquese por WhatsApp al +54 9 11 2265-3526.",
+      {
+        position: "top-right",
+        autoClose: 5000,
+        hideProgressBar: true,
+        closeOnClick: true,
+        pauseOnHover: true,
+        draggable: true,
+        theme: "light",
+      },
+    );
 
   const resetFormValues = () => {
     setName("");
