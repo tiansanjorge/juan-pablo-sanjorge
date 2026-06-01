@@ -1,7 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Lora:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&display=swap");
 
-@import "~bootstrap/scss/bootstrap";
-
 *,
 *:before,
 *:after {
@@ -43,6 +41,9 @@ main {
 .blanco {
   color: #ececec;
 }
+.gris {
+  color: #d1d1d1;
+}
 
 .negro {
   color: #2e2e2e;
@@ -68,22 +69,38 @@ main {
   color: #9eb89a;
 }
 
+.rojo {
+  color: #cc2031;
+}
+
 .hoverVerdeC {
   &:hover {
     color: #9eb89a;
+    transition: 0.15s ease-in;
   }
 }
 
 .hoverAzul {
   &:hover {
     color: #2d3047;
+    transition: 0.15s ease-in;
   }
 }
 
 .hoverAmarillo {
   &:hover {
     color: #ffdf89;
+    transition: 0.15s ease-in;
   }
+}
+
+.hoverCeleste:hover {
+  color: #c4fbff;
+  transition: 0.15s ease-in;
+}
+
+.fondoBlanco {
+  background: #ececec;
 }
 
 .fondoVerdeO {
@@ -109,38 +126,42 @@ main {
 .hoverFondoVerdeO {
   &:hover {
     background: #005651;
+    transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoAmarillo {
   &:hover {
     background: #ffdf89;
+    transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoCeleste {
   &:hover {
     background: #c4fbff;
+    transition: 0.25s ease-in;
   }
 }
 .hoverFondoAzul {
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 
 // Tipografía
 
 .titulo {
-  font-size: 25px;
+  font-size: 20px;
 }
 
 .subtitulo {
-  font-size: 18px;
+  font-size: 16px;
 }
 
 .subtitulo2 {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .size14 {
@@ -164,6 +185,9 @@ main {
 .size40 {
   font-size: 40px;
 }
+.size60 {
+  font-size: 60px;
+}
 
 .weight400 {
   font-weight: 400;
@@ -181,7 +205,7 @@ main {
 // Otras clases genéricas
 
 .topFiller {
-  padding-top: 70px;
+  padding-top: 100px;
 }
 
 .bordeCuadrado {
@@ -204,23 +228,99 @@ p {
   resize: none;
 }
 
-// Header
+.divisorAmarillo {
+  border-top: 3px solid #ffdf89;
+}
 
-.btn-secondary.dropdown {
-  background-color: transparent;
-  border: none;
-  color: inherit;
+.divisorVerdeO {
+  border-bottom: 3px solid #005651;
+}
+
+.divisorCeleste {
+  border-top: 3px solid #c4fbff;
+}
+
+.sombra {
+  box-shadow: 0px 6px 7px rgba(0, 0, 0, 0.15);
+}
+
+.text-shadow {
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.no-resize {
+  resize: none;
+}
+
+// HEADER
+
+.fadeInRight {
   &:hover {
-    background-color: transparent;
-    border: none;
-    color: #ffdf89;
+    animation: fadeInRight;
+    animation-duration: 1.5s;
   }
 }
 
-// Footer
+.subrayado {
+  position: relative;
+}
 
-.divisor {
-  border-top: 3px solid #c4fbff;
+.subrayado::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  right: 0;
+  z-index: -1;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInRight 0.1s;
+}
+
+.subrayado {
+  position: relative;
+}
+
+.subrayado::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInLeft 0.1s;
+}
+
+.subrayado2 {
+  position: relative;
+}
+
+.subrayado2::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  bottom: 0;
+  left: 0;
+  z-index: 2;
+  border-bottom: 2px solid transparent;
+  transition: width 0.3s ease-in-out;
+}
+
+.subrayado2:hover::after {
+  width: 100%;
+  border-bottom: 1px solid #ffdf89;
+  animation: fadeInLeft 0.1s;
 }
 
 // HOME PAGE
@@ -236,6 +336,7 @@ p {
   background: #128c7e;
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 
@@ -246,6 +347,7 @@ p {
   background: #128c7e;
   &:hover {
     background: #2d3047;
+    transition: 0.25s ease-in;
   }
 }
 
@@ -256,11 +358,13 @@ p {
 }
 
 .sliderRightArrow {
+  top: 45%;
   right: 10px;
   z-index: 1;
 }
 
 .sliderLeftArrow {
+  top: 45%;
   left: 10px;
   z-index: 1;
 }
@@ -271,36 +375,78 @@ p {
   background: url(../../public/img/contactoXs.jpg);
   background-size: cover;
   background-position: center;
-  height: 650px;
+  min-height: 1000px;
 }
 
+.textareaForm {
+  height: 110px !important;
+  overflow-y: auto;
+}
+
+.botonForm {
+  background: #005651;
+  color: #ececec;
+  &:hover {
+    background: #ffdf89;
+    color: #2d3047;
+    transition: 0.3s ease;
+    cursor: pointer;
+  }
+  &:disabled {
+    background: gray;
+    color: #ececec;
+    cursor: not-allowed;
+  }
+}
 
 // Cambios de pantalla
 
+@media screen and (min-width: 408px) {
+  .topFiller {
+    padding-top: 70px;
+  }
+}
+
 @media screen and (min-width: 576px) {
   .titulo {
-    font-size: 27px;
-  }
-
-  .subtitulo {
-    font-size: 20px;
+    font-size: 22px;
   }
 
   .contacto {
     background: url(../../public/img/contactoSm.jpg);
     background-size: cover;
     background-position: center;
-    height: 600px;
   }
 }
 
 @media screen and (min-width: 768px) {
   .titulo {
+    font-size: 24px;
+  }
+
+  .subtitulo {
+    font-size: 18px;
+  }
+
+  .subtitulo2 {
+    font-size: 16px;
+  }
+
+  .contacto {
+    background: url(../../public/img/contactoMd.jpg);
+    background-size: cover;
+    background-position: center;
+    min-height: 1000px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .titulo {
     font-size: 30px;
   }
 
   .subtitulo {
-    font-size: 22px;
+    font-size: 20px;
   }
 
   .subtitulo2 {
@@ -308,35 +454,14 @@ p {
   }
 
   .contacto {
-    background: url(../../public/img/contactoMd.jpg);
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@media screen and (min-width: 992px) {
-  .titulo {
-    font-size: 35px;
-  }
-
-  .subtitulo {
-    font-size: 26px;
-  }
-
-  .subtitulo2 {
-    font-size: 20px;
-  }
-
-  .contacto {
     background: url(../../public/img/contactoLg.jpg);
     background-size: cover;
     background-position: center;
-    height: 650px;
   }
 }
 
-@media screen and (min-width: 1200px) {
-  .contacto {
-    background-position: left;
+@media screen and (min-width: 1650px) {
+  .slider {
+    height: 600px;
   }
 }

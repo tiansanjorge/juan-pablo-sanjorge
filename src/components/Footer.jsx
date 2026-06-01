@@ -1,13 +1,18 @@
-import { BsWhatsapp, BsFillEnvelopeFill, BsArrowUpShort } from "react-icons/bs";
+import {
+  BsWhatsapp,
+  BsFillEnvelopeFill,
+  BsArrowUpShort,
+  BsInstagram,
+} from "react-icons/bs";
 
 const Footer = () => {
   return (
-    <footer className="fondoVerdeO blanco pt-4 pb-3">
+    <footer id="footer" className="fondoVerdeO blanco pt-4 pb-3">
       <div className="container">
         <div className="row">
           <div className="col-10 d-flex flex-column justify-content-evenly align-items-center text-center mx-auto">
             <h2 className="blanco pt-2 titulo">Consultorio</h2>
-            <div className="divisor col-3 col-md-2 col-xl-1 py-2"></div>
+            <div className="divisorAmarillo col-3 col-md-2 col-xl-1 mb-3"></div>
             <div className="py-2 subtitulo2">
               F. Félix de Amador 1805 Dpto. 6, Tel: 11 2265-3526 <br />
               Olivos, Buenos Aires, Argentina
@@ -22,6 +27,13 @@ const Footer = () => {
               </a>
               <a
                 className="text-decoration-none blanco hoverAmarillo"
+                href="https://www.instagram.com/juanpablosanjorge"
+                target="_blank"
+              >
+                <BsInstagram />
+              </a>
+              <a
+                className="text-decoration-none blanco hoverAmarillo"
                 href="mailto:jpsanjorge@gmail.com"
                 target="_blank"
               >
@@ -30,7 +42,6 @@ const Footer = () => {
             </div>
             <div className="">
               <a
-              
                 className="text-decoration-none size40 weight600 blanco hoverAmarillo"
                 href="#"
               >
@@ -38,12 +49,12 @@ const Footer = () => {
               </a>
             </div>
             <div className="size14">
-              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina.
-              - Web Design:{" "}
+              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina. -
+              Web Design:{" "}
               <span>
                 <a
                   className="blanco hoverAmarillo"
-                  href="https://ssanjorge.netlify.com"
+                  href="https://ssanjorge.netlify.app"
                   target="_blank"
                 >
                   Sebastián Sanjorge
