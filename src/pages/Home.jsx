@@ -3,6 +3,7 @@ import { ArticleCard } from "../components/ArticleCard";
 import { Reveal } from "../components/Reveal";
 import { Marquee } from "../components/Marquee";
 import { Accordion } from "../components/Accordion";
+import { EnfoqueContent } from "../components/EnfoqueContent";
 import FaqArray from "../components/Faq";
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
@@ -53,7 +54,7 @@ export const Home = () => {
       <section className="hero-banner hero-top-offset">
         <div className="container-fluid">
           <div className="hero-banner-content row">
-            <div className="col-12 col-lg-6">
+            <div className="col-12 col-lg-6 offset-lg-1">
               <Reveal className="hero-banner-copy">
                 <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
                 <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
@@ -93,7 +94,7 @@ export const Home = () => {
       <Marquee items={malestares} />
 
       <section className="py-5">
-        <div className="container-fluid">
+        <div className="content-width">
           <div className="row align-items-center g-5">
             <div className="col-12 col-lg-5">
               <Reveal className="d-flex justify-content-center justify-content-lg-start">
@@ -108,15 +109,20 @@ export const Home = () => {
 
             <div className="col-12 col-lg-7">
               <Reveal delay={0.15}>
-                <p className="bio-statement mb-4">
-                  Escuchar es solo el comienzo.{" "}
-                  <mark>Deconstruir lo que parece dado</mark> y construir
-                  nuevas formas de interpretar lo que nos sucede es el
-                  horizonte.
-                </p>
-                <Link to="/info#enfoque" className="link-primary">
-                  Conocé más sobre mi enfoque →
-                </Link>
+                <div className="d-lg-none">
+                  <p className="bio-statement mb-4">
+                    Escuchar es solo el comienzo.{" "}
+                    <mark>Deconstruir lo que parece dado</mark> y construir
+                    nuevas formas de interpretar lo que nos sucede es el
+                    horizonte.
+                  </p>
+                  <Link to="/info#enfoque" className="link-primary">
+                    Conocé más sobre mi enfoque →
+                  </Link>
+                </div>
+                <div className="d-none d-lg-block">
+                  <EnfoqueContent />
+                </div>
               </Reveal>
             </div>
           </div>

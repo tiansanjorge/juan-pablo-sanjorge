@@ -51,10 +51,10 @@
   position: relative;
   display: flex;
   align-items: center;
-  min-height: 75vh;
+  min-height: 92vh;
   background-image: url("/img/portada.jpg");
   background-size: cover;
-  background-position: center right;
+  background-position: center center;
   overflow: hidden;
 }
 
@@ -76,16 +76,44 @@
   z-index: 1;
 }
 
+@media (min-width: 992px) {
+  .hero-banner-content {
+    margin-top: -10vh;
+  }
+}
+
 .hero-banner-copy {
-  max-width: 460px;
+  max-width: 580px;
   margin: 0 auto;
   padding: 2.5rem 0;
+
+  .hero-title {
+    font-size: var(--text-4xl);
+  }
+
+  .hero-subtitle {
+    font-size: var(--text-2xl);
+  }
+
+  .hero-lead {
+    font-size: var(--text-xl);
+  }
+
+  .badge-pill {
+    font-size: var(--text-sm);
+    padding: 0.5rem 1.15rem;
+  }
+
+  .btn-pill {
+    font-size: var(--text-lg);
+    padding: 1rem 2.15rem;
+  }
 }
 
 @media (max-width: 991.98px) {
   .hero-banner {
-    min-height: 85vh;
-    background-position: top center;
+    min-height: 90vh;
+    background-position: center center;
     align-items: flex-start;
   }
 
