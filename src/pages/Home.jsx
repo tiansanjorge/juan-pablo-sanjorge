@@ -52,36 +52,40 @@ export const Home = () => {
 
       <section className="hero-banner hero-top-offset">
         <div className="container-fluid">
-          <div className="hero-banner-content">
-            <Reveal className="hero-banner-copy">
-              <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
-              <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
+          <div className="hero-banner-content row">
+            <div className="col-12 col-lg-6">
+              <Reveal className="hero-banner-copy">
+                <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
+                <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
 
-              <div className="d-flex flex-wrap gap-2 mb-4">
-                <span className="badge-pill">Universidad de Buenos Aires</span>
-                <span className="badge-pill">M. 66123</span>
-                <span className="badge-pill">+10 años de experiencia</span>
-                <span className="badge-pill">Adultos y Tercera Edad</span>
-              </div>
+                <div className="d-flex flex-wrap gap-2 mb-4">
+                  <span className="badge-pill">
+                    Universidad de Buenos Aires
+                  </span>
+                  <span className="badge-pill">M. 66123</span>
+                  <span className="badge-pill">+10 años de experiencia</span>
+                  <span className="badge-pill">Adultos y Tercera Edad</span>
+                </div>
 
-              <p className="hero-lead mb-4">
-                Sesiones a distancia · Primera entrevista sin cargo
-              </p>
+                <p className="hero-lead mb-4">
+                  Sesiones a distancia · Primera entrevista sin cargo
+                </p>
 
-              <div className="d-flex flex-wrap gap-3">
-                <Link to="/contact" className="btn-pill btn-pill-primary">
-                  Reservar primera consulta
-                </Link>
-                <a
-                  className="btn-pill btn-pill-outline"
-                  href="https://wa.link/7staf4"
-                  target="_blank"
-                  rel="noreferrer"
-                >
-                  <BsWhatsapp /> WhatsApp
-                </a>
-              </div>
-            </Reveal>
+                <div className="d-flex flex-wrap gap-3">
+                  <Link to="/contact" className="btn-pill btn-pill-primary">
+                    Reservar primera consulta
+                  </Link>
+                  <a
+                    className="btn-pill btn-pill-outline"
+                    href="https://wa.link/7staf4"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsWhatsapp /> WhatsApp
+                  </a>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
@@ -179,12 +183,13 @@ export const Home = () => {
       </section>
 
       <a
-        className="whatsapp text-decoration-none rounded subtitulo2 shadow"
+        className="whatsapp-fab"
         href="https://wa.link/7staf4"
         target="_blank"
         rel="noreferrer"
+        aria-label="Enviar WhatsApp"
       >
-        <BsWhatsapp className="h3" /> Enviar WhatsApp
+        <BsWhatsapp />
       </a>
     </main>
   );

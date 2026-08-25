@@ -141,12 +141,13 @@ export const Info = () => {
       </section>
 
       <a
-        className="whatsapp text-decoration-none rounded subtitulo2 shadow"
+        className="whatsapp-fab"
         href="https://wa.link/7staf4"
         target="_blank"
         rel="noreferrer"
+        aria-label="Enviar WhatsApp"
       >
-        <BsWhatsapp className="h3" /> Enviar WhatsApp
+        <BsWhatsapp />
       </a>
     </main>
   );

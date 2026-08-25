@@ -258,34 +258,6 @@ p {
   resize: none;
 }
 
-// HOME PAGE
-
-.whatsapp {
-  font-family: Helvetica;
-  position: fixed;
-  bottom: 20px;
-  right: 20px;
-  z-index: 999;
-  padding: 10px;
-  color: var(--color-white);
-  background: #128c7e;
-  &:hover {
-    background: var(--color-navy);
-    transition: 0.25s ease-in;
-  }
-}
-
-.whatsapp2 {
-  font-family: Helvetica;
-  padding: 10px;
-  color: var(--color-white);
-  background: #128c7e;
-  &:hover {
-    background: var(--color-navy);
-    transition: 0.25s ease-in;
-  }
-}
-
 // Cambios de pantalla
 
 @media screen and (min-width: 408px) {
