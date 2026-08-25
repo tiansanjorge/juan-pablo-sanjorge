@@ -106,7 +106,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="py-5">
+      <section className="section-subtle py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img
