@@ -11,8 +11,9 @@
 # production
 /dist
 
-# design reference material (not part of the site)
+# design/content reference material (not part of the site)
 /diseño
+/material de texto cliente.txt
 
 # misc
 .DS_Store
