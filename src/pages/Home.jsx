@@ -1,4 +1,5 @@
 import ArticlesArray from "../components/Article";
+import { ArticleCard } from "../components/ArticleCard";
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -78,27 +79,11 @@ export const Home = () => {
             <h2 className="section-title mb-4">Reflexiones y escritos</h2>
 
             <div className="row g-4">
-              {ArticlesArray.map((articulo, index) => {
-                const articleId = articulo.titulo
-                  .toLowerCase()
-                  .replace(/\s+/g, "-")
-                  .replace(/[^a-zA-Z0-9-]/g, "");
-                return (
-                  <div className="col-12 col-md-6 col-lg-3" key={index}>
-                    <Link
-                      to={`/${articleId}`}
-                      className="article-card card-surface h-100 text-decoration-none"
-                    >
-                      <h3 className="article-card-title">
-                        {articulo.titulo}
-                      </h3>
-                      <span className="badge-pill mt-3">
-                        {articulo.fecha}
-                      </span>
-                    </Link>
-                  </div>
-                );
-              })}
+              {ArticlesArray.map((articulo, index) => (
+                <div className="col-12 col-md-6 col-lg-3" key={index}>
+                  <ArticleCard articulo={articulo} />
+                </div>
+              ))}
             </div>
 
             <div className="text-center mt-5">

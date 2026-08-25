@@ -2,6 +2,7 @@
 @import "tokens";
 @import "components";
 @import "home";
+@import "contact";
 
 *,
 *:before,
@@ -333,36 +334,6 @@ p {
   }
 }
 
-// CONTACTO
-
-.contacto {
-  background: url(../../public/img/contactoXs.jpg);
-  background-size: cover;
-  background-position: center;
-  min-height: 1000px;
-}
-
-.textareaForm {
-  height: 110px !important;
-  overflow-y: auto;
-}
-
-.botonForm {
-  background: var(--color-navy);
-  color: var(--color-white);
-  &:hover {
-    background: var(--color-primary);
-    color: var(--color-navy);
-    transition: 0.3s ease;
-    cursor: pointer;
-  }
-  &:disabled {
-    background: gray;
-    color: var(--color-white);
-    cursor: not-allowed;
-  }
-}
-
 // Cambios de pantalla
 
 @media screen and (min-width: 408px) {
@@ -374,12 +345,6 @@ p {
 @media screen and (min-width: 576px) {
   .titulo {
     font-size: 22px;
-  }
-
-  .contacto {
-    background: url(../../public/img/contactoSm.jpg);
-    background-size: cover;
-    background-position: center;
   }
 }
 
@@ -395,13 +360,6 @@ p {
   .subtitulo2 {
     font-size: 16px;
   }
-
-  .contacto {
-    background: url(../../public/img/contactoMd.jpg);
-    background-size: cover;
-    background-position: center;
-    min-height: 1000px;
-  }
 }
 
 @media screen and (min-width: 992px) {
@@ -415,11 +373,5 @@ p {
 
   .subtitulo2 {
     font-size: 18px;
-  }
-
-  .contacto {
-    background: url(../../public/img/contactoLg.jpg);
-    background-size: cover;
-    background-position: center;
   }
 }

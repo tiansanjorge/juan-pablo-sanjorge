@@ -2,11 +2,10 @@ import {
   BsWhatsapp,
   BsFillEnvelopeFill,
   BsCheckSquareFill,
-  BsAsterisk,
   BsInstagram,
 } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
-import React, { useRef, useState, useEffect } from "react";
+import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
 
@@ -62,6 +61,7 @@ export const Contact = () => {
     if (storedMessage) {
       setInputMessage(JSON.parse(storedMessage));
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // funcion para guardar el valor de los input en localStorage
@@ -95,7 +95,7 @@ export const Contact = () => {
       phoneError !== "" ||
       emailError !== ""
     ) {
-      setSubmitError("Completa los campos obligatorios •");
+      setSubmitError("Completá los campos obligatorios •");
     } else {
       setSubmitError("");
     }
@@ -123,7 +123,6 @@ export const Contact = () => {
   };
 
   // Funcion para validar el valor email con el RegEx de email declarado previamente ("EmailRegEx")
-
   const validateEmail = (value) => {
     if (value === "") {
       setEmail(value);
@@ -146,14 +145,13 @@ export const Contact = () => {
       })
       .then(
         () => {
-          console.log("SUCCESS!");
           resetFormValues();
           toastInquiry();
         },
         (error) => {
           console.error("FAILED...", error);
           toastInquiryError();
-        },
+        }
       );
   };
 
@@ -181,7 +179,7 @@ export const Contact = () => {
         pauseOnHover: true,
         draggable: true,
         theme: "light",
-      },
+      }
     );
 
   const resetFormValues = () => {
@@ -200,51 +198,40 @@ export const Contact = () => {
     localStorage.removeItem("email");
     localStorage.removeItem("inquiry");
     localStorage.removeItem("message");
-    document.getElementById("name").value = "";
-    document.getElementById("email").value = "";
-    document.getElementById("phone").value = "";
-    document.getElementById("inquiry").value = "";
-    document.getElementById("message").value = "";
-    document.getElementById("name2").value = "";
-    document.getElementById("email2").value = "";
-    document.getElementById("phone2").value = "";
-    document.getElementById("inquiry2").value = "";
-    document.getElementById("message2").value = "";
+    form.current.reset();
   };
 
   return (
-    <div className="topFiller">
+    <main className="topFiller">
       <Helmet>
         <meta name="title" content="Contactar a Juan Pablo Sanjorge" />
         <meta
           name="description"
-          content="Juan Pablo Sanjorge, licenciado en psicologia (UBA). Telefono: +54 9 11 2265-3526 mail: jpsanjorge@gmail.com"
+          content="Juan Pablo Sanjorge, licenciado en psicología (UBA). Teléfono: +54 9 11 2265-3526 mail: jpsanjorge@gmail.com"
         />
       </Helmet>
-      <div className="container-fluid">
-        <div className="row fondoVerdeC">
-          {/* Formato XS a SM (360 a 768px) */}
-          <div className="col-12 p-0 contacto d-flex d-md-none flex-column">
-            <div className="col-11 mx-auto d-flex flex-column azul shadow fondoVerdeC py-3 mt-4">
-              <div className="d-flex justify-content-between text-start">
-                <div className="col-12 pt-3 pb-1 text-center">
-                  <h1 className="verdeO titulo weight600 mb-0 mx-4">
-                    PRIMERA ENTREVISTA SIN CARGO
-                  </h1>
-                </div>
-              </div>
-              <div>
+
+      <section className="contact-hero py-5">
+        <div className="container-fluid">
+          <div className="row g-4 g-lg-5 justify-content-center">
+            <div className="col-12 col-lg-6 col-xl-5">
+              <div className="card-surface">
+                <span className="badge-pill mb-3 d-inline-block">
+                  Primera entrevista sin cargo
+                </span>
+                <h1 className="section-title mb-4">Contacto</h1>
+
                 <form
-                  className="d-flex flex-column justify-content-evenly mx-4 py-3 px-3"
+                  className="contact-form"
                   ref={form}
                   onSubmit={sendEmail}
                 >
-                  <label className="subtitulo azul mb-1">
-                    Nombre <span className="verdeO align-top mt-0">•</span>
+                  <label className="form-label" htmlFor="name">
+                    Nombre <span className="required-dot">•</span>
                   </label>
                   <input
                     id="name"
-                    className="subtitulo2 azul px-2 form-control"
+                    className="form-control-pill mb-3"
                     name="user_name"
                     onChange={(e) => {
                       setName(e.target.value);
@@ -256,13 +243,13 @@ export const Contact = () => {
                     }}
                     defaultValue={inputName}
                   />
-                  <div className="mt-1"></div>
-                  <label className="subtitulo azul mt-2 mb-1">
-                    Correo electrónico <span className="verdeO">•</span>
+
+                  <label className="form-label" htmlFor="email">
+                    Correo electrónico <span className="required-dot">•</span>
                   </label>
                   <input
                     id="email"
-                    className="subtitulo2 azul px-2 form-control"
+                    className="form-control-pill"
                     name="user_email"
                     onChange={(e) => {
                       validateEmail(e.target.value);
@@ -274,13 +261,14 @@ export const Contact = () => {
                     }}
                     defaultValue={inputEmail}
                   />
-                  <div className="rojo subtitulo2 mt-1">{emailError}</div>
-                  <label className="subtitulo azul mt-2 mb-1">
-                    Teléfono <span className="verdeO">•</span>
+                  <div className="form-error">{emailError}</div>
+
+                  <label className="form-label mt-2" htmlFor="phone">
+                    Teléfono <span className="required-dot">•</span>
                   </label>
                   <input
                     id="phone"
-                    className="subtitulo2 azul px-2 form-control"
+                    className="form-control-pill"
                     name="user_phone"
                     onChange={(e) => {
                       validatePhone(e.target.value);
@@ -292,249 +280,89 @@ export const Contact = () => {
                     }}
                     defaultValue={inputPhone}
                   />
-                  <div className="rojo subtitulo2 mt-1">{phoneError}</div>
-                  <label className="subtitulo azul mt-2 mb-1">
-                    Motivo de Consulta
+                  <div className="form-error">{phoneError}</div>
+
+                  <label className="form-label mt-2" htmlFor="inquiry">
+                    Motivo de consulta
                   </label>
                   <textarea
                     id="inquiry"
-                    className="subtitulo2 azul px-2 form-control no-resize"
+                    className="form-control-pill no-resize mb-3"
                     name="user_inquiry"
-                    onChange={(e) => {
-                      storeInputInquiry(e.target.value);
-                    }}
-                    onBlur={(e) => {
-                      storeInputInquiry(e.target.value);
-                    }}
+                    onChange={(e) => storeInputInquiry(e.target.value)}
+                    onBlur={(e) => storeInputInquiry(e.target.value)}
                     defaultValue={inputInquiry}
                   />
-                  <label className="subtitulo azul mt-2 mb-1">Mensaje</label>
+
+                  <label className="form-label" htmlFor="message">
+                    Mensaje
+                  </label>
                   <textarea
                     id="message"
-                    className="textareaForm no-resize subtitulo2 azul px-2 form-control"
+                    className="form-control-pill no-resize contact-textarea"
                     name="message"
-                    onChange={(e) => {
-                      storeInputMessage(e.target.value);
-                    }}
-                    onBlur={(e) => {
-                      storeInputMessage(e.target.value);
-                    }}
+                    onChange={(e) => storeInputMessage(e.target.value)}
+                    onBlur={(e) => storeInputMessage(e.target.value)}
                     defaultValue={inputMessage}
                   />
-                  <div className="verdeO subtitulo2 mt-3 ">{submitError}</div>
-                  <input
-                    className="subtitulo botonForm border-0 rounded-3 mt-4 py-1 w-50 mx-auto"
+
+                  <div className="form-hint mt-3">{submitError}</div>
+
+                  <button
+                    className="btn-pill btn-pill-primary mt-4"
                     type="submit"
-                    value="Enviar consulta"
                     disabled={submitDisabled}
-                  />
+                  >
+                    Enviar consulta
+                  </button>
                 </form>
               </div>
             </div>
 
-            <div className="col-12">
-              <div className="col-11 d-flex flex-column justify-content-between azul mx-auto">
-                <div className="col-sm-5 d-flex flex-column justify-content-evenly align-self-end mt-4 mt-sm-5 me-1">
-                  <p className="size19">
-                    <b>
-                      • Sesiones a distancia <br />• Sesiones presenciales
-                      <br />
-                    </b>
-                  </p>
+            <div className="col-12 col-lg-5">
+              <div className="card-surface h-100">
+                <h2 className="section-title mb-4">Modalidad</h2>
+                <ul className="info-list mb-4">
+                  <li>Sesiones a distancia</li>
+                  <li>Sesiones presenciales</li>
+                </ul>
+                <a className="link-primary d-inline-block mb-4" href="#footer">
+                  Consultorio en Olivos (Bs. As.)
+                </a>
+
+                <div className="d-flex flex-column gap-3">
                   <a
-                    className="size14 text-decoration-none azul hoverVerdeC ms-3"
-                    href="#footer"
-                  >
-                    Consultorio en Olivos (Bs. As.)
-                  </a>
-                </div>
-                <div className="col-sm-5 d-flex flex-column justify-content-evenly align-self-end mt-4 mt-sm-5 me-1">
-                  <a
-                    className="text-decoration-none verdeO hoverVerdeC"
+                    className="link-primary"
                     href="https://wa.link/7staf4"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <BsWhatsapp className="me-2" /> +54 9 11 2265-3526
                   </a>
                   <a
-                    className="text-decoration-none verdeO hoverVerdeC mt-2 "
+                    className="link-primary"
                     href="https://www.instagram.com/juanpablosanjorge"
                     target="_blank"
+                    rel="noreferrer"
                   >
                     <BsInstagram className="me-2" /> juanpablosanjorge
                   </a>
                   <a
-                    className="text-decoration-none verdeO hoverVerdeC mt-2"
+                    className="link-primary"
                     href="mailto:jpsanjorge@gmail.com"
                     target="_blank"
+                    rel="noreferrer"
                   >
-                    <BsFillEnvelopeFill className="me-2" /> jpsanjorge@gmail.com
+                    <BsFillEnvelopeFill className="me-2" />{" "}
+                    jpsanjorge@gmail.com
                   </a>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Formato MD o superior (768px en adelante) */}
-
-          <div className="col-12 p-0 contacto d-none d-md-flex flex-column justify-content-evenly">
-            <div className="col-7 col-lg-7 col-xl-6 col-xxl-5 offset-xl-1 d-flex flex-column azul">
-              <div className="ms-md-4 ms-lg-5 ms-xl-0 fondoVerdeC shadow py-3 mt-4">
-                <div className="d-flex justify-content-between text-start">
-                  <div className="col-12 fondoVerdeC pt-3 pb-1 text-center">
-                    <h1 className="titulo verdeO weight600 mb-0 mx-4">
-                      PRIMERA ENTREVISTA SIN CARGO
-                    </h1>
-                  </div>
-                </div>
-                <div>
-                  <form
-                    className="d-flex flex-column justify-content-evenly mx-4 py-3 px-3"
-                    ref={form}
-                    onSubmit={sendEmail}
-                  >
-                    <label className="subtitulo azul mb-1">
-                      Nombre <span className="verdeO align-top mt-0">•</span>
-                    </label>
-                    <input
-                      id="name2"
-                      className="subtitulo2 azul px-2 form-control"
-                      name="user_name"
-                      onChange={(e) => {
-                        setName(e.target.value);
-                        storeInputName(e.target.value);
-                      }}
-                      onBlur={(e) => {
-                        setName(e.target.value);
-                        storeInputName(e.target.value);
-                      }}
-                      defaultValue={inputName}
-                    />
-                    <div className="mt-1"></div>
-                    <label className="subtitulo azul mt-2 mb-1">
-                      Correo electrónico <span className="verdeO">•</span>
-                    </label>
-                    <input
-                      id="email2"
-                      className="subtitulo2 azul px-2 form-control"
-                      name="user_email"
-                      onChange={(e) => {
-                        validateEmail(e.target.value);
-                        storeInputEmail(e.target.value);
-                      }}
-                      onBlur={(e) => {
-                        validateEmail(e.target.value);
-                        storeInputEmail(e.target.value);
-                      }}
-                      defaultValue={inputEmail}
-                    />
-                    <div className="rojo subtitulo2 mt-1">{emailError}</div>
-                    <label className="subtitulo azul mt-2 mb-1">
-                      Teléfono <span className="verdeO">•</span>
-                    </label>
-                    <input
-                      id="phone2"
-                      className="subtitulo2 azul px-2 form-control"
-                      name="user_phone"
-                      onChange={(e) => {
-                        validatePhone(e.target.value);
-                        storeInputPhone(e.target.value);
-                      }}
-                      onBlur={(e) => {
-                        validatePhone(e.target.value);
-                        storeInputPhone(e.target.value);
-                      }}
-                      defaultValue={inputPhone}
-                    />
-                    <div className="rojo subtitulo2 mt-1">{phoneError}</div>
-                    <label className="subtitulo azul mt-2 mb-1">
-                      Motivo de Consulta
-                    </label>
-                    <textarea
-                      id="inquiry2"
-                      className="subtitulo2 azul px-2 form-control no-resize"
-                      name="user_inquiry"
-                      onChange={(e) => {
-                        storeInputInquiry(e.target.value);
-                      }}
-                      onBlur={(e) => {
-                        storeInputInquiry(e.target.value);
-                      }}
-                      defaultValue={inputInquiry}
-                    />
-                    <label className="subtitulo azul mt-2 mb-1">Mensaje</label>
-                    <textarea
-                      id="message2"
-                      className="textareaForm no-resize subtitulo2 azul px-2 form-control"
-                      name="message"
-                      onChange={(e) => {
-                        storeInputMessage(e.target.value);
-                      }}
-                      onBlur={(e) => {
-                        storeInputMessage(e.target.value);
-                      }}
-                      defaultValue={inputMessage}
-                    />
-                    <div className="verdeO subtitulo2 mt-3 ">{submitError}</div>
-                    <input
-                      className="subtitulo botonForm border-0 rounded-3 mt-4 py-1 w-50 mx-auto"
-                      type="submit"
-                      value="Enviar consulta"
-                      disabled={submitDisabled}
-                    />
-                  </form>
-                </div>
-              </div>
-            </div>
-
-            <div className="col-12">
-              <div className="ms-5 ms-xl-0">
-                <div className="col-10 col-lg-9 col-xl-7 col-xxl-6 offset-xl-1  d-flex justify-content-between justify-content-lg-around justify-content-xl-between azul">
-                  <div className="d-flex flex-column justify-content-evenly align-self-start ps-3">
-                    <h2 className="subtitulo lh-base m-0">
-                      <b>
-                        • Sesiones a distancia <br />• Sesiones presenciales
-                      </b>
-                      <br />
-                    </h2>
-                    <a
-                      className="size18 text-decoration-none azul hoverVerdeC ms-3"
-                      href="#footer"
-                    >
-                      Consultorio en Olivos (Bs. As.)
-                    </a>
-                  </div>
-                  <div className="d-flex flex-column justify-content-evenly align-self-start">
-                    <a
-                      className="subtitulo text-decoration-none verdeO hoverVerdeC"
-                      href="https://wa.link/7staf4"
-                      target="_blank"
-                    >
-                      <BsWhatsapp className="me-2" /> +54 9 11 2265-3526
-                    </a>
-                    <a
-                      className="subtitulo text-decoration-none verdeO hoverVerdeC mt-2"
-                      href="https://www.instagram.com/juanpablosanjorge"
-                      target="_blank"
-                    >
-                      <BsInstagram className="me-2" /> juanpablosanjorge
-                    </a>
-                    <a
-                      className="subtitulo text-decoration-none verdeO hoverVerdeC mt-2"
-                      href="mailto:jpsanjorge@gmail.com"
-                      target="_blank"
-                    >
-                      <BsFillEnvelopeFill className="me-3" />
-                      jpsanjorge@gmail.com
-                    </a>
-                  </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

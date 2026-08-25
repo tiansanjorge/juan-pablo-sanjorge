@@ -1,0 +1,43 @@
+// Estilos específicos de la página Contact
+
+.contact-hero {
+  background: linear-gradient(
+    180deg,
+    var(--color-bg-subtle) 0%,
+    var(--color-white) 55%
+  );
+  min-height: 80vh;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-label {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-sm);
+  color: var(--color-primary-dark);
+  margin-bottom: 0.4rem;
+}
+
+.required-dot {
+  color: var(--color-primary);
+}
+
+.form-error {
+  color: #cc2031;
+  font-size: var(--text-xs);
+  margin-top: 0.35rem;
+  min-height: 1.1em;
+}
+
+.form-hint {
+  color: var(--color-text-muted);
+  font-size: var(--text-sm);
+}
+
+.contact-textarea {
+  min-height: 110px;
+}

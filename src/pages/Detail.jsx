@@ -1,7 +1,6 @@
-import { useParams } from "react-router-dom";
+import { useParams, Link } from "react-router-dom";
 import ArticlesArray from "../components/Article";
 import { Helmet } from "react-helmet-async";
-
 
 export const Detail = () => {
   const { articleId } = useParams();
@@ -13,42 +12,60 @@ export const Detail = () => {
         .replace(/\s+/g, "-")
         .replace(/[^a-zA-Z0-9-]/g, "") === articleId
   );
-  console.log(article);
 
   if (!article) {
-    return <div>
-      <Helmet>
-        <meta name="title" content="Articulos de Juan Pablo Sanjorge"/>
-        <meta name="description" content="Juan Pablo Sanjorge, licenciado en psicologia (UBA). Articulos: ¿Para qué un psicoanálisis?; La terapia a distancia; El diagnóstico en psicología" />
-      </Helmet>
-      Artículo no encontrado</div>;
+    return (
+      <main className="topFiller">
+        <Helmet>
+          <meta name="title" content="Artículos de Juan Pablo Sanjorge" />
+          <meta
+            name="description"
+            content="Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículos: ¿Para qué un psicoanálisis?; La terapia a distancia; El diagnóstico en psicología"
+          />
+        </Helmet>
+        <section className="container-fluid py-5 text-center">
+          <p className="section-title mb-4">Artículo no encontrado</p>
+          <Link to="/articles" className="btn-pill btn-pill-outline">
+            Volver a artículos
+          </Link>
+        </section>
+      </main>
+    );
   }
 
   return (
-    <div className="topFiller">
+    <main className="topFiller">
       <Helmet>
-        <meta name="title" content="Articulos de Juan Pablo Sanjorge"/>
-        <meta name="description" content={`Juan Pablo Sanjorge, licenciado en psicologia (UBA). Articulo: ${article.titulo}`} />
+        <meta name="title" content="Artículos de Juan Pablo Sanjorge" />
+        <meta
+          name="description"
+          content={`Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículo: ${article.titulo}`}
+        />
       </Helmet>
-      <div className="container-fluid">
-        <div className="row fondoAzul">
-          <div className="col-12 pt-5 pb-4">
-            <div className="col-10 col-md-8 mx-auto">
-              <h2 className="titulo blanco mb-3">{article.titulo.toUpperCase()}</h2>
-              <div className="divisorAmarillo col-4 col-md-3 ms-3"></div>
-              <p className="subtitulo2 celeste text-end mt-5">{article.fecha}</p>
-            </div>
-          </div>
-          <div className="col-12 fondoVerdeC py-5">
-            <div
-              className="col-10 col-md-8 mx-auto azul subtitulo2"
-              dangerouslySetInnerHTML={{ __html: article.contenido }}
-            />
-            <p className="col-10 col-md-8 mx-auto mt-3 azul subtitulo2 text-end"><b><i>{article.firma}</i></b></p>
+
+      <section className="container-fluid py-5">
+        <div className="col-11 col-md-8 mx-auto">
+          <span className="badge-pill mb-3 d-inline-block">
+            {article.fecha}
+          </span>
+          <h1 className="section-title mb-4">{article.titulo}</h1>
+
+          <div
+            className="card-surface article-body"
+            dangerouslySetInnerHTML={{ __html: article.contenido }}
+          />
+          <p className="article-signature mt-4">
+            <b>{article.firma}</b>
+          </p>
+
+          <div className="mt-5">
+            <Link to="/articles" className="btn-pill btn-pill-outline">
+              ← Volver a artículos
+            </Link>
           </div>
         </div>
-      </div>
-    </div>
+      </section>
+    </main>
   );
 };
 

@@ -69,6 +69,61 @@
   background: var(--color-bg-subtle);
 }
 
+.link-primary {
+  color: var(--color-primary);
+  font-weight: 500;
+  text-decoration: none;
+
+  &:hover {
+    color: var(--color-primary-dark);
+  }
+}
+
+.info-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+}
+
+.info-list li {
+  position: relative;
+  padding-left: 1.4rem;
+  color: var(--color-text);
+  font-size: var(--text-base);
+}
+
+.info-list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.5em;
+  width: 7px;
+  height: 7px;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+}
+
+.article-body {
+  font-size: var(--text-base);
+  line-height: 1.8;
+  color: var(--color-text);
+}
+
+.article-signature {
+  text-align: right;
+  font-style: italic;
+  color: var(--color-text-muted);
+}
+
+.uba-seal {
+  width: 88px;
+  height: auto;
+  margin-top: 0.5rem;
+}
+
 .form-control-pill {
   display: block;
   width: 100%;

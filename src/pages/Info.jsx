@@ -3,94 +3,104 @@ import { Helmet } from "react-helmet-async";
 
 export const Info = () => {
   return (
-    <main className="topFiller d-flex flex-column justify-content-between">
+    <main className="topFiller">
       <Helmet>
-        <meta name="title" content="Informacion Profesional" />
+        <meta name="title" content="Información Profesional" />
         <meta
           name="description"
-          content="Juan Pablo Sanjorge, licenciado en Psicologia egresado Universidad de Buenos aires (M. 66123). Experiencia en clinica de adultos y adolescentes."
+          content="Juan Pablo Sanjorge, licenciado en Psicología egresado Universidad de Buenos Aires (M. 66123). Más de 10 años de experiencia en atención clínica, especializado en Adultos y Tercera Edad."
         />
       </Helmet>
-      <section className="container-fluid">
-        <div className="row">
-          <div className="col-12 d-flex flex-column flex-md-row justify-content-center fondoVerdeC py-5">
-            <div className="col-6 col-md-4 col-lg-3 mb-4 mb-md-0 me-0 me-md-5  align-self-center ">
-              <img
-                className="img-fluid rounded-circle shadow"
-                src="img/perfil.jpg"
-                alt="Juan Pablo Sanjorge"
-              />
-            </div>
-            <div className="col-10 col-sm-9 col-md-6 col-lg-5 col-xxl-4 d-flex flex-column justify-content-evenly azul px-0 mx-auto mx-md-0 ms-md-4">
-              <h1 className="titulo p-0 m-0">Información Profesional</h1>
-              <div className="divisorAmarillo col-3 mt-2 mt-xl-0 pb-3"></div>
-              <h4 className="subtitulo2 m-md-0 weight400">
-                • Licenciado en Psicología
-              </h4>
-              <h4 className="subtitulo2 m-md-0 weight400">
-                • Universidad de Buenos Aires - M. 66123
-              </h4>
-              <h4 className="subtitulo2 m-md-0 weight400">
-                • Experiencia en clínica de adolescentes y adultos.
-              </h4>
-              <h4 className="subtitulo2 m-md-0 weight400">
-                • Socio adherente de APOLa.
-              </h4>
-            </div>
+
+      <section className="container-fluid py-5">
+        <div className="row align-items-center g-5">
+          <div className="col-12 col-lg-5 order-2 order-lg-1">
+            <span className="badge-pill mb-3 d-inline-block">
+              Información Profesional
+            </span>
+            <h1 className="section-title mb-4">Formación y trayectoria</h1>
+
+            <ul className="info-list mb-4">
+              <li>Licenciado en Psicología</li>
+              <li>Universidad de Buenos Aires — M. 66123</li>
+              <li>Más de 10 años de experiencia en atención clínica</li>
+              <li>Especializado en Adultos y Tercera Edad</li>
+              <li>Socio adherente de APOLa</li>
+            </ul>
+
+            <img
+              className="uba-seal"
+              src="/img/logo-uba.png"
+              alt="Universidad de Buenos Aires"
+            />
+          </div>
+
+          <div className="col-12 col-lg-7 order-1 order-lg-2">
+            <img
+              className="hero-portrait"
+              src="/img/perfil.jpg"
+              alt="Juan Pablo Sanjorge"
+            />
           </div>
         </div>
       </section>
 
-      <section className="container-fluid">
-        <div className="row">
-          <div className="col-12 d-flex justify-content-center">
-            <div className="col-11 col-sm-10 col-md-9 col-xl-8 mb-5 me-0 pb-5 pt-4 px-5 gris fondoAzul">
-              <p className=" titulo weight400 mb-4 mt-2">
-                Tu tranquilidad es mi prioridad.
-              </p>
-              <p className="subtitulo2 weight400 mb-4">
-                Por eso, quiero que tengas la seguridad de que estás en manos de
-                un profesional habilitado para acompañarte.
-              </p>
-              <p className="subtitulo2 weight400 mb-4">
-                Podés confirmar mi matrícula activa en el
-                <a
-                  className="verdeC hoverCeleste ms-1"
-                  href="https://sisa.msal.gov.ar/sisa"
-                  target="_blank"
-                >
-                  Buscador Nacional de Profesionales de la Salud del Ministerio
-                  de Salud de la Nación.
-                </a>
-              </p>
-              <p className=" subtitulo2 weight400">
-                Además, si lo preferís, puedo enviarte mi Matrícula Digital
-                oficial a través de la app Mi Argentina, que incluye un código
-                QR para validar mi habilitación en tiempo real.
-              </p>
-            </div>
+      <section className="section-subtle py-5">
+        <div className="container-fluid">
+          <div className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
+            <h2 className="section-title mb-3">
+              Tu tranquilidad es mi prioridad
+            </h2>
+            <p className="hero-lead mb-3">
+              Por eso, quiero que tengas la seguridad de que estás en manos de
+              un profesional habilitado para acompañarte.
+            </p>
+            <p className="hero-lead mb-3">
+              Podés confirmar mi matrícula activa en el{" "}
+              <a
+                className="link-primary"
+                href="https://sisa.msal.gov.ar/sisa"
+                target="_blank"
+                rel="noreferrer"
+              >
+                Buscador Nacional de Profesionales de la Salud del Ministerio
+                de Salud de la Nación
+              </a>
+              .
+            </p>
+            <p className="hero-lead m-0">
+              Además, si lo preferís, puedo enviarte mi Matrícula Digital
+              oficial a través de la app Mi Argentina, que incluye un código
+              QR para validar mi habilitación en tiempo real.
+            </p>
           </div>
         </div>
       </section>
 
-      <div className="col-12 d-flex justify-content-center fondoAzul blanco text-center py-4">
-        <img
-          className="col-2 col-md-1 rounded-circle img-fluid"
-          src="img/freud.jpg"
-          alt="S. Freud"
-        />
-        <p className="col-9 col-md-7 col-xl-6 my-auto ms-2 ms-md-4 subtitulo weight400">
-          <i>“El yo no es dueño en su propia casa”.</i> - S. Freud
-        </p>
-      </div>
+      <section className="py-5">
+        <div className="container-fluid">
+          <div className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
+            <img
+              className="quote-author-photo"
+              src="/img/freud.jpg"
+              alt="S. Freud"
+            />
+            <p className="quote-text">“El yo no es dueño en su propia casa”</p>
+            <p className="quote-author">— Sigmund Freud</p>
+          </div>
+        </div>
+      </section>
 
       <a
         className="whatsapp text-decoration-none rounded subtitulo2 shadow"
         href="https://wa.link/7staf4"
         target="_blank"
+        rel="noreferrer"
       >
         <BsWhatsapp className="h3" /> Enviar WhatsApp
       </a>
     </main>
   );
 };
+
+export default Info;
