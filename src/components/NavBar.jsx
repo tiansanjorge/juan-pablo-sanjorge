@@ -13,20 +13,25 @@ export const NavBar = () => {
     setIsBarsIcon(!isBarsIcon);
   };
 
+  const linkClass = ({ isActive }) =>
+    isActive
+      ? "d-inline-block navbar-link navbar-link-active"
+      : "d-inline-block navbar-link";
+
   return (
-    <header className="fondoVerdeO blanco py-3 fixed-top shadow">
+    <header className="navbar py-3 fixed-top">
       <div className="container-fluid">
         <div className="row ">
           <div className="col-11 col-sm-10 col-md-11 col-xl-10 d-flex flex-row justify-content-between align-items-center mx-auto p-0">
-            <Link className="text-decoration-none blanco" to="/">
-              <p className="size30 ps-2 weight500 lh-sm mb-2">
+            <Link className="text-decoration-none navbar-brand" to="/">
+              <p className="size25 ps-2 weight600 lh-sm mb-2">
                 Lic. Juan Pablo Sanjorge
               </p>
             </Link>
             <div className="d-md-none">
               <button
                 type="button"
-                className="border-0 blanco fondoVerdeO hoverAmarillo"
+                className="navbar-toggle"
                 onClick={toggleMenu}
                 aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
                 aria-expanded={menuOpen}
@@ -41,90 +46,45 @@ export const NavBar = () => {
                 {menuOpen && (
                   <motion.div
                     id="mobile-menu"
-                    className="col-12 fondoVerdeO sombra pt-2 pb-3 position-absolute top-100 end-0"
+                    className="col-12 navbar-mobile-menu pt-2 pb-3 position-absolute top-100 end-0"
                     initial={{ opacity: 0, y: -8 }}
                     animate={{ opacity: 1, y: 0 }}
                     exit={{ opacity: 0, y: -8 }}
                     transition={{ duration: 0.2, ease: "easeOut" }}
                   >
-                    <div className="col-11 col-sm-10 d-flex flex-column mx-auto">
-                      <div className="text-decoration-none p-0">
-                        <NavLink
-                          className={({ isActive }) =>
-                            isActive
-                              ? "d-inline-block amarillo text-decoration-none"
-                              : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
-                          }
-                          to="/info"
-                          onClick={toggleMenu}
-                        >
-                          <div className="">Información Profesional</div>
-                        </NavLink>
-                      </div>
-                      <div className="text-decoration-none p-0">
-                        <NavLink
-                          className={({ isActive }) =>
-                            isActive
-                              ? "d-inline-block amarillo text-decoration-none"
-                              : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
-                          }
-                          to="/articles"
-                          onClick={toggleMenu}
-                        >
-                          <div className="mt-1">Artículos</div>
-                        </NavLink>
-                      </div>
-                      <div className="text-decoration-none p-0">
-                        <NavLink
-                          className={({ isActive }) =>
-                            isActive
-                              ? "d-inline-block amarillo text-decoration-none"
-                              : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado2"
-                          }
-                          to="/contact"
-                          onClick={toggleMenu}
-                        >
-                          <div className="mt-1">Contacto</div>
-                        </NavLink>
-                      </div>
+                    <div className="col-11 col-sm-10 d-flex flex-column gap-3 mx-auto">
+                      <NavLink className={linkClass} to="/info" onClick={toggleMenu}>
+                        Información Profesional
+                      </NavLink>
+                      <NavLink
+                        className={linkClass}
+                        to="/articles"
+                        onClick={toggleMenu}
+                      >
+                        Artículos
+                      </NavLink>
+                      <Link
+                        className="btn-pill btn-pill-primary align-self-start"
+                        to="/contact"
+                        onClick={toggleMenu}
+                      >
+                        Reservar consulta
+                      </Link>
                     </div>
                   </motion.div>
                 )}
               </AnimatePresence>
             </div>
-            <div className="d-none d-md-flex col-5 justify-content-between align-items-center text-decoration-none">
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "d-inline-block amarillo text-decoration-none"
-                    : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
-                }
-                to="/info"
-              >
-                <div className="d-flex d-lg-block flex-column">
-                  Información <span>Profesional</span>
-                </div>
+            <div className="d-none d-md-flex align-items-center gap-4">
+              <NavLink className={linkClass} to="/info">
+                Información Profesional
               </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "d-inline-block amarillo text-decoration-none"
-                    : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
-                }
-                to="/articles"
-              >
-                <div>Artículos</div>
+              <NavLink className={linkClass} to="/articles">
+                Artículos
               </NavLink>
-              <NavLink
-                className={({ isActive }) =>
-                  isActive
-                    ? "d-inline-block amarillo text-decoration-none"
-                    : "d-inline-block text-decoration-none blanco hoverAmarillo subrayado"
-                }
-                to="/contact"
-              >
-                <div>Contacto</div>
-              </NavLink>
+              <Link className="btn-pill btn-pill-primary" to="/contact">
+                Reservar consulta
+              </Link>
             </div>
           </div>
         </div>

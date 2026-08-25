@@ -3,6 +3,7 @@
 @import "components";
 @import "home";
 @import "contact";
+@import "navbar";
 
 *,
 *:before,
@@ -253,48 +254,6 @@ p {
 
 .no-resize {
   resize: none;
-}
-
-// HEADER
-
-.subrayado {
-  position: relative;
-}
-
-.subrayado::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  border-bottom: 2px solid transparent;
-  transition: width 0.3s ease-in-out;
-}
-
-.subrayado:hover::after {
-  width: 100%;
-  border-bottom: 1px solid var(--color-primary);
-}
-
-.subrayado2 {
-  position: relative;
-}
-
-.subrayado2::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  bottom: 0;
-  left: 0;
-  z-index: 2;
-  border-bottom: 2px solid transparent;
-  transition: width 0.3s ease-in-out;
-}
-
-.subrayado2:hover::after {
-  width: 100%;
-  border-bottom: 1px solid var(--color-primary);
 }
 
 // HOME PAGE
