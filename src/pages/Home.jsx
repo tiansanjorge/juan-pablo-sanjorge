@@ -33,7 +33,7 @@ const malestares = [
 
 export const Home = () => {
   return (
-    <main className="topFiller">
+    <main>
       <Helmet>
         <title>Lic. Juan Pablo Sanjorge | Psicólogo</title>
         <meta name="title" content="Psicólogo Juan Pablo Sanjorge" />
@@ -50,7 +50,7 @@ export const Home = () => {
         <meta property="og:url" content="https://psicologosanjorge.com.ar/" />
       </Helmet>
 
-      <section className="container-fluid section-glow py-5">
+      <section className="container-fluid section-glow hero-top-offset pb-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-6 order-2 order-lg-1">
             <Reveal className="hero-copy">

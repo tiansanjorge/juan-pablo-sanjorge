@@ -4,7 +4,7 @@ import { Reveal } from "../components/Reveal";
 
 export const Info = () => {
   return (
-    <main className="topFiller">
+    <main>
       <Helmet>
         <title>Información Profesional | Lic. Juan Pablo Sanjorge</title>
         <meta name="title" content="Información Profesional" />
@@ -27,7 +27,7 @@ export const Info = () => {
         />
       </Helmet>
 
-      <section className="container-fluid section-glow py-5">
+      <section className="container-fluid section-glow hero-top-offset pb-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-5 order-2 order-lg-1">
             <Reveal>
