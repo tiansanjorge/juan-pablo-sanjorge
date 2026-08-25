@@ -31,7 +31,7 @@ export const Articles = () => {
         />
       </Helmet>
 
-      <section className="section-subtle py-5">
+      <section className="section-glow section-gradient-reverse py-5">
         <div className="container-fluid">
           <div className="col-11 col-md-10 col-xl-9 mx-auto">
             <Reveal>
@@ -54,7 +54,7 @@ export const Articles = () => {
         </div>
       </section>
 
-      <section className="section-subtle py-5">
+      <section className="section-gradient-subtle py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img

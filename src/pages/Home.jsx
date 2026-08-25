@@ -2,6 +2,8 @@ import ArticlesArray from "../components/Article";
 import { ArticleCard } from "../components/ArticleCard";
 import { Reveal } from "../components/Reveal";
 import { Marquee } from "../components/Marquee";
+import { Accordion } from "../components/Accordion";
+import FaqArray from "../components/Faq";
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
@@ -48,7 +50,7 @@ export const Home = () => {
         <meta property="og:url" content="https://psicologosanjorge.com.ar/" />
       </Helmet>
 
-      <section className="container-fluid py-5">
+      <section className="container-fluid section-glow py-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-6 order-2 order-lg-1">
             <Reveal>
@@ -130,7 +132,21 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-subtle py-5">
+      <section className="section-gradient py-5">
+        <div className="container-fluid">
+          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
+            <span className="badge-pill mb-3 d-inline-block">
+              Preguntas frecuentes
+            </span>
+            <h2 className="section-title mb-4">
+              Antes de tu primera consulta
+            </h2>
+            <Accordion items={FaqArray} />
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="section-gradient-reverse py-5">
         <div className="container-fluid">
           <div className="col-11 col-md-10 col-xl-9 mx-auto">
             <Reveal>
@@ -159,7 +175,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-subtle py-5">
+      <section className="section-gradient-subtle py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img

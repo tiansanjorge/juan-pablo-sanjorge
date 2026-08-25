@@ -1,8 +1,6 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Reveal } from "../components/Reveal";
-import { Accordion } from "../components/Accordion";
-import FaqArray from "../components/Faq";
 
 export const Info = () => {
   return (
@@ -29,7 +27,7 @@ export const Info = () => {
         />
       </Helmet>
 
-      <section className="container-fluid py-5">
+      <section className="container-fluid section-glow py-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-5 order-2 order-lg-1">
             <Reveal>
@@ -100,7 +98,7 @@ export const Info = () => {
         </div>
       </section>
 
-      <section className="section-subtle py-5">
+      <section className="section-gradient py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
             <h2 className="section-title mb-3">
@@ -132,21 +130,7 @@ export const Info = () => {
         </div>
       </section>
 
-      <section className="py-5">
-        <div className="container-fluid">
-          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
-            <span className="badge-pill mb-3 d-inline-block">
-              Preguntas frecuentes
-            </span>
-            <h2 className="section-title mb-4">
-              Antes de tu primera consulta
-            </h2>
-            <Accordion items={FaqArray} />
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="section-subtle py-5">
+      <section className="section-gradient-subtle py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img
