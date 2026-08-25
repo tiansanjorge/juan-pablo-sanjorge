@@ -1,0 +1,45 @@
+// Design tokens — paleta e identidad tomadas del case study de referencia (Theriva)
+// Los 5 colores base (navy, blue, gray, white, black) son valores extraídos directo
+// de la referencia. color-text-muted y bg-subtle son derivados míos, no están en la
+// referencia original: son tonos intermedios para texto secundario y fondos de sección.
+
+:root {
+  // Paleta base
+  --color-navy: #032c7a;
+  --color-blue: #2e6bd5;
+  --color-gray: #d6d6d6;
+  --color-white: #ffffff;
+  --color-black: #000000;
+
+  // Alias semánticos
+  --color-primary: var(--color-blue);
+  --color-primary-dark: var(--color-navy);
+  --color-text: var(--color-navy);
+  --color-text-muted: #5b6b8c;
+  --color-bg: var(--color-white);
+  --color-bg-subtle: #f3f5fa;
+  --color-border: var(--color-gray);
+
+  // Tipografía
+  --font-sans: "General Sans", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --text-xs: 0.8125rem;
+  --text-sm: 0.9375rem;
+  --text-base: 1rem;
+  --text-lg: 1.125rem;
+  --text-xl: 1.375rem;
+  --text-2xl: 1.75rem;
+  --text-3xl: 2.25rem;
+  --text-4xl: 3rem;
+
+  // Bordes y sombras
+  --radius-sm: 8px;
+  --radius-md: 16px;
+  --radius-lg: 24px;
+  --radius-pill: 999px;
+  --shadow-sm: 0 2px 8px rgba(3, 44, 122, 0.06);
+  --shadow-md: 0 8px 24px rgba(3, 44, 122, 0.1);
+
+  // Ritmo de secciones
+  --space-section: 96px;
+}
