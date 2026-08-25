@@ -44,7 +44,7 @@ export const Articles = () => {
             <div className="row g-4">
               {ArticlesArray.map((articulo, index) => (
                 <div className="col-12 col-md-6 col-lg-3" key={index}>
-                  <Reveal delay={index * 0.08}>
+                  <Reveal delay={index * 0.08} className="h-100">
                     <ArticleCard articulo={articulo} />
                   </Reveal>
                 </div>

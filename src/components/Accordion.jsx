@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { FiChevronDown } from "react-icons/fi";
 
 export const Accordion = ({ items }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -17,7 +18,10 @@ export const Accordion = ({ items }) => {
               aria-controls={`accordion-panel-${index}`}
             >
               <span>{item.pregunta}</span>
-              <span className="accordion-icon">{isOpen ? "−" : "+"}</span>
+              <FiChevronDown
+                strokeWidth={3}
+                className={`accordion-icon${isOpen ? " accordion-icon-open" : ""}`}
+              />
             </button>
             <div
               className="accordion-panel"

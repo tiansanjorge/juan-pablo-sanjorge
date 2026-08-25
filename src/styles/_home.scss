@@ -155,8 +155,8 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 72px;
-  height: 72px;
+  width: 78px;
+  height: 78px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -164,7 +164,11 @@
   border-radius: var(--radius-pill);
   background: var(--color-primary);
   color: var(--color-white);
-  font-size: 1.75rem;
+  font-size: 3.4rem;
+
+  svg {
+    margin-left: 0.12em;
+  }
   box-shadow: var(--shadow-md);
   cursor: pointer;
   z-index: 2;

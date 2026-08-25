@@ -152,7 +152,7 @@ export const Home = () => {
       <section className="section-gradient py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
-            <span className="badge-pill mb-3 d-inline-block">
+            <span className="badge-pill badge-pill-lg mb-3 d-inline-block">
               Preguntas frecuentes
             </span>
             <h2 className="section-title mb-4">
@@ -167,7 +167,7 @@ export const Home = () => {
         <div className="container-fluid">
           <div className="col-11 col-md-10 col-xl-9 mx-auto">
             <Reveal>
-              <span className="badge-pill mb-3 d-inline-block">
+              <span className="badge-pill badge-pill-lg badge-pill-bordered mb-3 d-inline-block">
                 Artículos
               </span>
               <h2 className="section-title mb-4">Reflexiones y escritos</h2>
@@ -176,7 +176,7 @@ export const Home = () => {
             <div className="row g-4">
               {ArticlesArray.map((articulo, index) => (
                 <div className="col-12 col-md-6 col-lg-3" key={index}>
-                  <Reveal delay={index * 0.08}>
+                  <Reveal delay={index * 0.08} className="h-100">
                     <ArticleCard articulo={articulo} />
                   </Reveal>
                 </div>
