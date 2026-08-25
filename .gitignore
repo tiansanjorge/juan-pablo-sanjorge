@@ -9,7 +9,10 @@
 /coverage
 
 # production
-/build
+/dist
+
+# design reference material (not part of the site)
+/diseño
 
 # misc
 .DS_Store
