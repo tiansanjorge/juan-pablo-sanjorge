@@ -1,19 +1,45 @@
-// Estilos del header
+// Header flotante
 
-.navbar {
+.navbar-float {
+  position: fixed;
+  top: 16px;
+  left: 0;
+  right: 0;
+  z-index: 1030;
+  display: flex;
+  justify-content: center;
+  padding: 0 16px;
+}
+
+.navbar-inner {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
   background: var(--color-white);
-  box-shadow: var(--shadow-sm);
+  border-radius: var(--radius-pill);
+  box-shadow: var(--shadow-md);
+  padding: 0.75rem 1rem 0.75rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2.5rem;
 }
 
 .navbar-brand {
   color: var(--color-primary-dark);
   font-weight: 600;
+  white-space: nowrap;
+}
+
+.navbar-links {
+  gap: 2rem;
 }
 
 .navbar-link {
   color: var(--color-primary-dark);
   font-weight: 500;
   text-decoration: none;
+  white-space: nowrap;
   transition: color 0.2s ease;
 
   &:hover {
@@ -37,5 +63,10 @@
 
 .navbar-mobile-menu {
   background: var(--color-white);
+  border-radius: var(--radius-lg);
   box-shadow: var(--shadow-md);
+  position: absolute;
+  top: calc(100% + 10px);
+  right: 0;
+  left: 0;
 }
