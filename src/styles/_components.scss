@@ -98,7 +98,7 @@
 }
 
 .content-width {
-  width: 75vw;
+  width: 70vw;
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -210,14 +210,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 56px;
-  height: 56px;
+  width: 62px;
+  height: 62px;
   border-radius: var(--radius-pill);
   background: var(--color-primary);
   color: var(--color-white);
   border: 1px solid var(--color-primary);
   box-shadow: var(--shadow-md);
-  font-size: 1.5rem;
+  font-size: 1.9rem;
   line-height: 1;
   transition:
     background-color 0.2s ease,

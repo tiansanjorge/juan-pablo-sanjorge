@@ -5,9 +5,10 @@ import { Marquee } from "../components/Marquee";
 import { Accordion } from "../components/Accordion";
 import { EnfoqueContent } from "../components/EnfoqueContent";
 import FaqArray from "../components/Faq";
-import { BsWhatsapp } from "react-icons/bs";
+import { BsWhatsapp, BsPlayFill } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+import { useRef, useState } from "react";
 
 const malestares = [
   "Problemas de autoestima o autoconfianza",
@@ -33,6 +34,9 @@ const malestares = [
 ];
 
 export const Home = () => {
+  const videoRef = useRef(null);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+
   return (
     <main>
       <Helmet>
@@ -95,14 +99,30 @@ export const Home = () => {
 
       <section className="py-5">
         <div className="content-width">
-          <div className="row align-items-center g-5">
+          <div className="row align-items-center g-0">
             <div className="col-12 col-lg-5">
               <Reveal className="d-flex justify-content-center justify-content-lg-start">
                 <div className="video-vertical-frame">
-                  <video controls preload="metadata">
+                  <video
+                    ref={videoRef}
+                    controls
+                    preload="metadata"
+                    onPlay={() => setIsVideoPlaying(true)}
+                    onPause={() => setIsVideoPlaying(false)}
+                  >
                     <source src="/img/video.mp4" type="video/mp4" />
                     Tu navegador no admite la reproducción de videos.
                   </video>
+                  {!isVideoPlaying && (
+                    <button
+                      type="button"
+                      className="video-play-button"
+                      onClick={() => videoRef.current?.play()}
+                      aria-label="Reproducir video"
+                    >
+                      <BsPlayFill />
+                    </button>
+                  )}
                 </div>
               </Reveal>
             </div>

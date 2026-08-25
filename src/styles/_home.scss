@@ -134,6 +134,7 @@
 }
 
 .video-vertical-frame {
+  position: relative;
   width: 100%;
   max-width: 320px;
   aspect-ratio: 9 / 16;
@@ -146,6 +147,34 @@
     width: 100%;
     height: 100%;
     object-fit: cover;
+  }
+}
+
+.video-play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 72px;
+  height: 72px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: var(--radius-pill);
+  background: var(--color-primary);
+  color: var(--color-white);
+  font-size: 1.75rem;
+  box-shadow: var(--shadow-md);
+  cursor: pointer;
+  z-index: 2;
+  transition:
+    background-color 0.2s ease,
+    transform 0.2s ease;
+
+  &:hover {
+    background: var(--color-primary-dark);
+    transform: translate(-50%, -50%) scale(1.06);
   }
 }
 
