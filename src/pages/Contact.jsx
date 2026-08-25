@@ -8,6 +8,7 @@ import { Helmet } from "react-helmet-async";
 import { useRef, useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 import { toast } from "react-toastify";
+import { Reveal } from "../components/Reveal";
 
 export const Contact = () => {
   const form = useRef();
@@ -215,7 +216,7 @@ export const Contact = () => {
         <div className="container-fluid">
           <div className="row g-4 g-lg-5 justify-content-center">
             <div className="col-12 col-lg-6 col-xl-5">
-              <div className="card-surface">
+              <Reveal className="card-surface">
                 <span className="badge-pill mb-3 d-inline-block">
                   Primera entrevista sin cargo
                 </span>
@@ -316,11 +317,11 @@ export const Contact = () => {
                     Enviar consulta
                   </button>
                 </form>
-              </div>
+              </Reveal>
             </div>
 
             <div className="col-12 col-lg-5">
-              <div className="card-surface h-100">
+              <Reveal delay={0.15} className="card-surface h-100">
                 <h2 className="section-title mb-4">Modalidad</h2>
                 <ul className="info-list mb-4">
                   <li>Sesiones a distancia</li>
@@ -357,7 +358,7 @@ export const Contact = () => {
                     jpsanjorge@gmail.com
                   </a>
                 </div>
-              </div>
+              </Reveal>
             </div>
           </div>
         </div>

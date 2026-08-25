@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import ArticlesArray from "../components/Article";
+import { Reveal } from "../components/Reveal";
 import { Helmet } from "react-helmet-async";
 
 export const Detail = () => {
@@ -45,24 +46,26 @@ export const Detail = () => {
 
       <section className="container-fluid py-5">
         <div className="col-11 col-md-8 mx-auto">
-          <span className="badge-pill mb-3 d-inline-block">
-            {article.fecha}
-          </span>
-          <h1 className="section-title mb-4">{article.titulo}</h1>
+          <Reveal>
+            <span className="badge-pill mb-3 d-inline-block">
+              {article.fecha}
+            </span>
+            <h1 className="section-title mb-4">{article.titulo}</h1>
 
-          <div
-            className="card-surface article-body"
-            dangerouslySetInnerHTML={{ __html: article.contenido }}
-          />
-          <p className="article-signature mt-4">
-            <b>{article.firma}</b>
-          </p>
+            <div
+              className="card-surface article-body"
+              dangerouslySetInnerHTML={{ __html: article.contenido }}
+            />
+            <p className="article-signature mt-4">
+              <b>{article.firma}</b>
+            </p>
 
-          <div className="mt-5">
-            <Link to="/articles" className="btn-pill btn-pill-outline">
-              ← Volver a artículos
-            </Link>
-          </div>
+            <div className="mt-5">
+              <Link to="/articles" className="btn-pill btn-pill-outline">
+                ← Volver a artículos
+              </Link>
+            </div>
+          </Reveal>
         </div>
       </section>
     </main>

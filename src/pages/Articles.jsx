@@ -1,5 +1,6 @@
 import ArticlesArray from "../components/Article";
 import { ArticleCard } from "../components/ArticleCard";
+import { Reveal } from "../components/Reveal";
 import { Helmet } from "react-helmet-async";
 
 export const Articles = () => {
@@ -16,13 +17,19 @@ export const Articles = () => {
       <section className="section-subtle py-5">
         <div className="container-fluid">
           <div className="col-11 col-md-10 col-xl-9 mx-auto">
-            <span className="badge-pill mb-3 d-inline-block">Artículos</span>
-            <h1 className="section-title mb-4">Todos los artículos</h1>
+            <Reveal>
+              <span className="badge-pill mb-3 d-inline-block">
+                Artículos
+              </span>
+              <h1 className="section-title mb-4">Todos los artículos</h1>
+            </Reveal>
 
             <div className="row g-4">
               {ArticlesArray.map((articulo, index) => (
                 <div className="col-12 col-md-6 col-lg-3" key={index}>
-                  <ArticleCard articulo={articulo} />
+                  <Reveal delay={index * 0.08}>
+                    <ArticleCard articulo={articulo} />
+                  </Reveal>
                 </div>
               ))}
             </div>
@@ -32,7 +39,7 @@ export const Articles = () => {
 
       <section className="py-5">
         <div className="container-fluid">
-          <div className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
+          <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img
               className="quote-author-photo"
               src="/img/lacan.jpg"
@@ -40,7 +47,7 @@ export const Articles = () => {
             />
             <p className="quote-text">“Amar es dar lo que no se tiene”</p>
             <p className="quote-author">— Jacques Lacan</p>
-          </div>
+          </Reveal>
         </div>
       </section>
     </main>

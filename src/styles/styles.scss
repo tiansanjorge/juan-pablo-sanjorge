@@ -257,13 +257,6 @@ p {
 
 // HEADER
 
-.fadeInRight {
-  &:hover {
-    animation: fadeInRight;
-    animation-duration: 1.5s;
-  }
-}
-
 .subrayado {
   position: relative;
 }
@@ -282,7 +275,6 @@ p {
 .subrayado:hover::after {
   width: 100%;
   border-bottom: 1px solid var(--color-primary);
-  animation: fadeInLeft 0.1s;
 }
 
 .subrayado2 {
@@ -303,7 +295,6 @@ p {
 .subrayado2:hover::after {
   width: 100%;
   border-bottom: 1px solid var(--color-primary);
-  animation: fadeInLeft 0.1s;
 }
 
 // HOME PAGE

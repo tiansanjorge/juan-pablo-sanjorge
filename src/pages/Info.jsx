@@ -1,5 +1,6 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
+import { Reveal } from "../components/Reveal";
 
 export const Info = () => {
   return (
@@ -15,39 +16,43 @@ export const Info = () => {
       <section className="container-fluid py-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-5 order-2 order-lg-1">
-            <span className="badge-pill mb-3 d-inline-block">
-              Información Profesional
-            </span>
-            <h1 className="section-title mb-4">Formación y trayectoria</h1>
+            <Reveal>
+              <span className="badge-pill mb-3 d-inline-block">
+                Información Profesional
+              </span>
+              <h1 className="section-title mb-4">Formación y trayectoria</h1>
 
-            <ul className="info-list mb-4">
-              <li>Licenciado en Psicología</li>
-              <li>Universidad de Buenos Aires — M. 66123</li>
-              <li>Más de 10 años de experiencia en atención clínica</li>
-              <li>Especializado en Adultos y Tercera Edad</li>
-              <li>Socio adherente de APOLa</li>
-            </ul>
+              <ul className="info-list mb-4">
+                <li>Licenciado en Psicología</li>
+                <li>Universidad de Buenos Aires — M. 66123</li>
+                <li>Más de 10 años de experiencia en atención clínica</li>
+                <li>Especializado en Adultos y Tercera Edad</li>
+                <li>Socio adherente de APOLa</li>
+              </ul>
 
-            <img
-              className="uba-seal"
-              src="/img/logo-uba.png"
-              alt="Universidad de Buenos Aires"
-            />
+              <img
+                className="uba-seal"
+                src="/img/logo-uba.png"
+                alt="Universidad de Buenos Aires"
+              />
+            </Reveal>
           </div>
 
           <div className="col-12 col-lg-7 order-1 order-lg-2">
-            <img
-              className="hero-portrait"
-              src="/img/perfil.jpg"
-              alt="Juan Pablo Sanjorge"
-            />
+            <Reveal delay={0.15}>
+              <img
+                className="hero-portrait"
+                src="/img/perfil.jpg"
+                alt="Juan Pablo Sanjorge"
+              />
+            </Reveal>
           </div>
         </div>
       </section>
 
       <section className="section-subtle py-5">
         <div className="container-fluid">
-          <div className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
+          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
             <h2 className="section-title mb-3">
               Tu tranquilidad es mi prioridad
             </h2>
@@ -73,13 +78,13 @@ export const Info = () => {
               oficial a través de la app Mi Argentina, que incluye un código
               QR para validar mi habilitación en tiempo real.
             </p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
       <section className="py-5">
         <div className="container-fluid">
-          <div className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
+          <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img
               className="quote-author-photo"
               src="/img/freud.jpg"
@@ -87,7 +92,7 @@ export const Info = () => {
             />
             <p className="quote-text">“El yo no es dueño en su propia casa”</p>
             <p className="quote-author">— Sigmund Freud</p>
-          </div>
+          </Reveal>
         </div>
       </section>
 
