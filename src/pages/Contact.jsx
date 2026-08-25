@@ -341,8 +341,7 @@ export const Contact = () => {
               <Reveal delay={0.15} className="card-surface h-100">
                 <h2 className="section-title mb-4">Modalidad</h2>
                 <ul className="info-list mb-4">
-                  <li>Sesiones a distancia</li>
-                  <li>Sesiones presenciales</li>
+                  <li>Sesiones a distancia (exclusivamente online)</li>
                 </ul>
                 <a className="link-primary d-inline-block mb-4" href="#footer">
                   Consultorio en Olivos (Bs. As.)
@@ -375,6 +374,31 @@ export const Contact = () => {
                     jpsanjorge@gmail.com
                   </a>
                 </div>
+
+                <hr className="contact-divider" />
+
+                <h3 className="contact-subtitle mb-3">Antes de tu consulta</h3>
+                <dl className="operational-info">
+                  <div>
+                    <dt>Pago</dt>
+                    <dd>Transferencia bancaria.</dd>
+                  </div>
+                  <div>
+                    <dt>Horarios</dt>
+                    <dd>
+                      Mañana y tarde, hasta las 20 h. Si no podés sostener un
+                      horario fijo todas las semanas, se puede coordinar una
+                      modalidad flexible.
+                    </dd>
+                  </div>
+                  <div>
+                    <dt>Cancelaciones</dt>
+                    <dd>
+                      Con un mínimo de 24 horas de anticipación. Pasado ese
+                      plazo, la sesión se abona igual.
+                    </dd>
+                  </div>
+                </dl>
               </Reveal>
             </div>
           </div>

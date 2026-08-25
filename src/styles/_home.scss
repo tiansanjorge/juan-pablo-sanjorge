@@ -45,6 +45,20 @@
   }
 }
 
+.bio-statement {
+  font-family: var(--font-sans);
+  font-weight: 500;
+  font-size: var(--text-2xl);
+  line-height: 1.4;
+  color: var(--color-text-muted);
+}
+
+.bio-statement mark {
+  background: none;
+  color: var(--color-primary-dark);
+  font-weight: 600;
+}
+
 .section-title {
   font-family: var(--font-sans);
   font-weight: 600;

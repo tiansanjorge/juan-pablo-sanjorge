@@ -1,9 +1,33 @@
 import ArticlesArray from "../components/Article";
 import { ArticleCard } from "../components/ArticleCard";
 import { Reveal } from "../components/Reveal";
+import { Marquee } from "../components/Marquee";
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Link } from "react-router-dom";
+
+const malestares = [
+  "Problemas de autoestima o autoconfianza",
+  "Inhibición social",
+  "Problemas vinculares",
+  "Desarrollo personal",
+  "Ataques de pánico",
+  "Ansiedad",
+  "Depresión",
+  "Autoconocimiento",
+  "Dificultades para dormir",
+  "Dificultades para poner límites",
+  "Inseguridad",
+  "Miedos y preocupaciones",
+  "Estrés",
+  "Angustia",
+  "Toma de decisiones",
+  "Crisis personales",
+  "Procrastinación",
+  "Problemas laborales",
+  "Dificultades para adaptarse a cambios",
+  "Malestar emocional",
+];
 
 export const Home = () => {
   return (
@@ -73,14 +97,36 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="py-4 py-lg-5">
-        <div className="container-fluid d-flex justify-content-center">
-          <Reveal className="video-vertical-frame">
-            <video controls preload="metadata">
-              <source src="/img/video.mp4" type="video/mp4" />
-              Tu navegador no admite la reproducción de videos.
-            </video>
-          </Reveal>
+      <Marquee items={malestares} />
+
+      <section className="py-5">
+        <div className="container-fluid">
+          <div className="row align-items-center g-5">
+            <div className="col-12 col-lg-5">
+              <Reveal className="d-flex justify-content-center justify-content-lg-start">
+                <div className="video-vertical-frame">
+                  <video controls preload="metadata">
+                    <source src="/img/video.mp4" type="video/mp4" />
+                    Tu navegador no admite la reproducción de videos.
+                  </video>
+                </div>
+              </Reveal>
+            </div>
+
+            <div className="col-12 col-lg-7">
+              <Reveal delay={0.15}>
+                <p className="bio-statement mb-4">
+                  Escuchar es solo el comienzo.{" "}
+                  <mark>Deconstruir lo que parece dado</mark> y construir
+                  nuevas formas de interpretar lo que nos sucede es el
+                  horizonte.
+                </p>
+                <Link to="/info#enfoque" className="link-primary">
+                  Conocé más sobre mi enfoque →
+                </Link>
+              </Reveal>
+            </div>
+          </div>
         </div>
       </section>
 

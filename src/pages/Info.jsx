@@ -1,6 +1,8 @@
 import { BsWhatsapp } from "react-icons/bs";
 import { Helmet } from "react-helmet-async";
 import { Reveal } from "../components/Reveal";
+import { Accordion } from "../components/Accordion";
+import FaqArray from "../components/Faq";
 
 export const Info = () => {
   return (
@@ -64,6 +66,40 @@ export const Info = () => {
         </div>
       </section>
 
+      <section id="enfoque" className="py-5">
+        <div className="container-fluid">
+          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
+            <span className="badge-pill mb-3 d-inline-block">
+              Mi enfoque
+            </span>
+            <p className="enfoque-statement mb-4">
+              Escuchar es solo el comienzo.{" "}
+              <mark>
+                Deconstruir lo que parece dado y construir nuevas formas de
+                interpretar lo que nos sucede
+              </mark>{" "}
+              es el horizonte.
+            </p>
+            <div className="enfoque-body">
+              <p className="mb-3">
+                Mi práctica clínica se sostiene en una formación permanente y
+                en un trabajo cuidadoso y particular sobre cada tratamiento.
+                Además de lo que sucede durante las sesiones, dedico tiempo a
+                revisar, estudiar y elaborar el material de cada caso,
+                buscando comprender qué está ocurriendo y qué orientación
+                puede resultar más adecuada para ese tratamiento.
+              </p>
+              <p className="m-0">
+                No trabajo con respuestas prefabricadas. Cada tratamiento
+                requiere una escucha atenta, una reflexión sostenida y una
+                forma de abordaje acorde con aquello que lleva a cada persona
+                a consultar.
+              </p>
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
       <section className="section-subtle py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
@@ -92,6 +128,20 @@ export const Info = () => {
               oficial a través de la app Mi Argentina, que incluye un código
               QR para validar mi habilitación en tiempo real.
             </p>
+          </Reveal>
+        </div>
+      </section>
+
+      <section className="py-5">
+        <div className="container-fluid">
+          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
+            <span className="badge-pill mb-3 d-inline-block">
+              Preguntas frecuentes
+            </span>
+            <h2 className="section-title mb-4">
+              Antes de tu primera consulta
+            </h2>
+            <Accordion items={FaqArray} />
           </Reveal>
         </div>
       </section>
