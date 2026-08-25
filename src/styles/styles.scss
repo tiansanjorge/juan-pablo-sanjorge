@@ -33,43 +33,41 @@ main {
 }
 
 // Colores y fondos
-
-// Colores:
-// Verde oscuro: #005651
-// Verde claro: #9eb89a
-// Azul: #2d3047
-// Celeste: #c4fbff
-// Amarillo: #ffdf89
+//
+// Clases de la identidad vieja (verdeO, verdeC, azul, celeste, amarillo),
+// remapeadas a los tokens nuevos como puente hasta migrar cada página
+// (bloques 3 y 4). Para código nuevo usar los tokens de _tokens.scss
+// directamente, no estas clases.
 
 .blanco {
-  color: #ececec;
+  color: var(--color-white);
 }
 .gris {
-  color: #d1d1d1;
+  color: var(--color-gray);
 }
 
 .negro {
-  color: #2e2e2e;
+  color: var(--color-text);
 }
 
 .celeste {
-  color: #c4fbff;
+  color: var(--color-gray);
 }
 
 .azul {
-  color: #2d3047;
+  color: var(--color-navy);
 }
 
 .amarillo {
-  color: #ffdf89;
+  color: var(--color-primary);
 }
 
 .verdeO {
-  color: #005651;
+  color: var(--color-navy);
 }
 
 .verdeC {
-  color: #9eb89a;
+  color: var(--color-bg-subtle);
 }
 
 .rojo {
@@ -78,77 +76,77 @@ main {
 
 .hoverVerdeC {
   &:hover {
-    color: #9eb89a;
+    color: var(--color-bg-subtle);
     transition: 0.15s ease-in;
   }
 }
 
 .hoverAzul {
   &:hover {
-    color: #2d3047;
+    color: var(--color-navy);
     transition: 0.15s ease-in;
   }
 }
 
 .hoverAmarillo {
   &:hover {
-    color: #ffdf89;
+    color: var(--color-primary);
     transition: 0.15s ease-in;
   }
 }
 
 .hoverCeleste:hover {
-  color: #c4fbff;
+  color: var(--color-gray);
   transition: 0.15s ease-in;
 }
 
 .fondoBlanco {
-  background: #ececec;
+  background: var(--color-white);
 }
 
 .fondoVerdeO {
-  background: #005651;
+  background: var(--color-navy);
 }
 
 .fondoVerdeC {
-  background: #9eb89a;
+  background: var(--color-bg-subtle);
 }
 
 .fondoAmarillo {
-  background: #ffdf89;
+  background: var(--color-primary);
 }
 
 .fondoAzul {
-  background: #2d3047;
+  background: var(--color-navy);
 }
 
 .fondoCeleste {
-  background: #c4fbff;
+  background: var(--color-gray);
 }
 
 .hoverFondoVerdeO {
   &:hover {
-    background: #005651;
+    background: var(--color-navy);
     transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoAmarillo {
   &:hover {
-    background: #ffdf89;
+    background: var(--color-primary);
     transition: 0.25s ease-in;
   }
 }
 
 .hoverFondoCeleste {
   &:hover {
-    background: #c4fbff;
+    background: var(--color-gray);
     transition: 0.25s ease-in;
   }
 }
 .hoverFondoAzul {
   &:hover {
-    background: #2d3047;
+    background: var(--color-navy);
     transition: 0.25s ease-in;
   }
 }
@@ -232,15 +230,15 @@ p {
 }
 
 .divisorAmarillo {
-  border-top: 3px solid #ffdf89;
+  border-top: 3px solid var(--color-primary);
 }
 
 .divisorVerdeO {
-  border-bottom: 3px solid #005651;
+  border-bottom: 3px solid var(--color-navy);
 }
 
 .divisorCeleste {
-  border-top: 3px solid #c4fbff;
+  border-top: 3px solid var(--color-gray);
 }
 
 .sombra {
@@ -272,26 +270,6 @@ p {
   content: "";
   position: absolute;
   width: 0;
-  right: 0;
-  z-index: -1;
-  border-bottom: 2px solid transparent;
-  transition: width 0.3s ease-in-out;
-}
-
-.subrayado:hover::after {
-  width: 100%;
-  border-bottom: 1px solid #ffdf89;
-  animation: fadeInRight 0.1s;
-}
-
-.subrayado {
-  position: relative;
-}
-
-.subrayado::after {
-  content: "";
-  position: absolute;
-  width: 0;
   bottom: 0;
   left: 0;
   z-index: 2;
@@ -301,7 +279,7 @@ p {
 
 .subrayado:hover::after {
   width: 100%;
-  border-bottom: 1px solid #ffdf89;
+  border-bottom: 1px solid var(--color-primary);
   animation: fadeInLeft 0.1s;
 }
 
@@ -322,7 +300,7 @@ p {
 
 .subrayado2:hover::after {
   width: 100%;
-  border-bottom: 1px solid #ffdf89;
+  border-bottom: 1px solid var(--color-primary);
   animation: fadeInLeft 0.1s;
 }
 
@@ -335,10 +313,10 @@ p {
   right: 20px;
   z-index: 999;
   padding: 10px;
-  color: #ececec;
+  color: var(--color-white);
   background: #128c7e;
   &:hover {
-    background: #2d3047;
+    background: var(--color-navy);
     transition: 0.25s ease-in;
   }
 }
@@ -346,10 +324,10 @@ p {
 .whatsapp2 {
   font-family: Helvetica;
   padding: 10px;
-  color: #ececec;
+  color: var(--color-white);
   background: #128c7e;
   &:hover {
-    background: #2d3047;
+    background: var(--color-navy);
     transition: 0.25s ease-in;
   }
 }
@@ -387,17 +365,17 @@ p {
 }
 
 .botonForm {
-  background: #005651;
-  color: #ececec;
+  background: var(--color-navy);
+  color: var(--color-white);
   &:hover {
-    background: #ffdf89;
-    color: #2d3047;
+    background: var(--color-primary);
+    color: var(--color-navy);
     transition: 0.3s ease;
     cursor: pointer;
   }
   &:disabled {
     background: gray;
-    color: #ececec;
+    color: var(--color-white);
     cursor: not-allowed;
   }
 }
