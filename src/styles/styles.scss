@@ -1,6 +1,7 @@
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap");
 @import "tokens";
 @import "components";
+@import "home";
 
 *,
 *:before,
@@ -332,24 +333,6 @@ p {
   }
 }
 
-// ImageSlider
-
-.slider {
-  height: 550px;
-}
-
-.sliderRightArrow {
-  top: 45%;
-  right: 10px;
-  z-index: 1;
-}
-
-.sliderLeftArrow {
-  top: 45%;
-  left: 10px;
-  z-index: 1;
-}
-
 // CONTACTO
 
 .contacto {
@@ -438,11 +421,5 @@ p {
     background: url(../../public/img/contactoLg.jpg);
     background-size: cover;
     background-position: center;
-  }
-}
-
-@media screen and (min-width: 1650px) {
-  .slider {
-    height: 600px;
   }
 }
