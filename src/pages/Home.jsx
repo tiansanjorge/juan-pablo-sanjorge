@@ -53,12 +53,9 @@ export const Home = () => {
       <section className="container-fluid section-glow py-5">
         <div className="row align-items-center g-5">
           <div className="col-12 col-lg-6 order-2 order-lg-1">
-            <Reveal>
-              <span className="badge-pill mb-3 d-inline-block">
-                Psicoanálisis · Orientación lacaniana
-              </span>
+            <Reveal className="hero-copy">
               <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
-              <p className="hero-subtitle mb-4">Psicólogo</p>
+              <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
 
               <div className="d-flex flex-wrap gap-2 mb-4">
                 <span className="badge-pill">Universidad de Buenos Aires</span>
@@ -88,12 +85,8 @@ export const Home = () => {
           </div>
 
           <div className="col-12 col-lg-6 order-1 order-lg-2">
-            <Reveal delay={0.15}>
-              <img
-                className="hero-portrait"
-                src="/img/perfil.jpg"
-                alt="Juan Pablo Sanjorge, psicólogo"
-              />
+            <Reveal delay={0.15} className="hero-portrait-frame">
+              <img src="/img/perfil.jpg" alt="Juan Pablo Sanjorge, psicólogo" />
             </Reveal>
           </div>
         </div>

@@ -53,12 +53,8 @@ export const Info = () => {
           </div>
 
           <div className="col-12 col-lg-7 order-1 order-lg-2">
-            <Reveal delay={0.15}>
-              <img
-                className="hero-portrait"
-                src="/img/perfil.jpg"
-                alt="Juan Pablo Sanjorge"
-              />
+            <Reveal delay={0.15} className="hero-portrait-frame">
+              <img src="/img/perfil.jpg" alt="Juan Pablo Sanjorge" />
             </Reveal>
           </div>
         </div>
