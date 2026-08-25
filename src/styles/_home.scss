@@ -47,6 +47,63 @@
   }
 }
 
+.hero-banner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  min-height: 75vh;
+  background-image: url("/img/portada.jpg");
+  background-size: cover;
+  background-position: center right;
+  overflow: hidden;
+}
+
+.hero-banner::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 255, 255, 0.97) 0%,
+    rgba(255, 255, 255, 0.92) 30%,
+    rgba(255, 255, 255, 0.55) 50%,
+    rgba(255, 255, 255, 0) 68%
+  );
+}
+
+.hero-banner-content {
+  position: relative;
+  z-index: 1;
+}
+
+.hero-banner-copy {
+  max-width: 460px;
+  padding: 2.5rem 0;
+}
+
+@media (max-width: 991.98px) {
+  .hero-banner {
+    min-height: 85vh;
+    background-position: top center;
+    align-items: flex-start;
+  }
+
+  .hero-banner::before {
+    background: linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.95) 40%,
+      rgba(255, 255, 255, 0.65) 65%,
+      rgba(255, 255, 255, 0.2) 100%
+    );
+  }
+
+  .hero-banner-copy {
+    max-width: 100%;
+    padding: 1.5rem 0;
+  }
+}
+
 .video-vertical-frame {
   width: 100%;
   max-width: 320px;

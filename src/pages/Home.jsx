@@ -50,10 +50,10 @@ export const Home = () => {
         <meta property="og:url" content="https://psicologosanjorge.com.ar/" />
       </Helmet>
 
-      <section className="container-fluid section-glow hero-top-offset pb-5">
-        <div className="row align-items-center g-5">
-          <div className="col-12 col-lg-6 order-2 order-lg-1">
-            <Reveal className="hero-copy">
+      <section className="hero-banner hero-top-offset">
+        <div className="container-fluid">
+          <div className="hero-banner-content">
+            <Reveal className="hero-banner-copy">
               <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
               <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
 
@@ -81,12 +81,6 @@ export const Home = () => {
                   <BsWhatsapp /> WhatsApp
                 </a>
               </div>
-            </Reveal>
-          </div>
-
-          <div className="col-12 col-lg-6 order-1 order-lg-2">
-            <Reveal delay={0.15} className="hero-portrait-frame">
-              <img src="/img/perfil.jpg" alt="Juan Pablo Sanjorge, psicólogo" />
             </Reveal>
           </div>
         </div>
