@@ -6,6 +6,8 @@ import {
 } from "react-icons/bs";
 
 const Footer = () => {
+  const year = new Date().getFullYear();
+
   return (
     <footer id="footer" className="fondoVerdeO blanco pt-4 pb-3">
       <div className="container">
@@ -22,6 +24,8 @@ const Footer = () => {
                 className="text-decoration-none blanco hoverAmarillo"
                 href="https://wa.link/7staf4"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="WhatsApp"
               >
                 <BsWhatsapp />
               </a>
@@ -29,6 +33,8 @@ const Footer = () => {
                 className="text-decoration-none blanco hoverAmarillo"
                 href="https://www.instagram.com/juanpablosanjorge"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="Instagram"
               >
                 <BsInstagram />
               </a>
@@ -36,6 +42,8 @@ const Footer = () => {
                 className="text-decoration-none blanco hoverAmarillo"
                 href="mailto:jpsanjorge@gmail.com"
                 target="_blank"
+                rel="noreferrer"
+                aria-label="Enviar correo electrónico"
               >
                 <BsFillEnvelopeFill />
               </a>
@@ -44,18 +52,20 @@ const Footer = () => {
               <a
                 className="text-decoration-none size40 weight600 blanco hoverAmarillo"
                 href="#"
+                aria-label="Volver arriba"
               >
                 <BsArrowUpShort />
               </a>
             </div>
             <div className="size14">
-              2023 Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina. -
-              Web Design:{" "}
+              {year} Juan Pablo Sanjorge - Psicólogo, Buenos Aires, Argentina.
+              - Web Design:{" "}
               <span>
                 <a
                   className="blanco hoverAmarillo"
                   href="https://ssanjorge.netlify.app"
                   target="_blank"
+                  rel="noreferrer"
                 >
                   Sebastián Sanjorge
                 </a>

@@ -205,10 +205,27 @@ export const Contact = () => {
   return (
     <main className="topFiller">
       <Helmet>
+        <title>Contacto | Lic. Juan Pablo Sanjorge</title>
         <meta name="title" content="Contactar a Juan Pablo Sanjorge" />
         <meta
           name="description"
           content="Juan Pablo Sanjorge, licenciado en psicología (UBA). Teléfono: +54 9 11 2265-3526 mail: jpsanjorge@gmail.com"
+        />
+        <link
+          rel="canonical"
+          href="https://psicologosanjorge.com.ar/contact"
+        />
+        <meta
+          property="og:title"
+          content="Contacto | Lic. Juan Pablo Sanjorge"
+        />
+        <meta
+          property="og:description"
+          content="Escribime para coordinar tu primera entrevista sin cargo."
+        />
+        <meta
+          property="og:url"
+          content="https://psicologosanjorge.com.ar/contact"
         />
       </Helmet>
 

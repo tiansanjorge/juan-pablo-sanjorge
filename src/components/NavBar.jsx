@@ -25,8 +25,12 @@ export const NavBar = () => {
             </Link>
             <div className="d-md-none">
               <button
+                type="button"
                 className="border-0 blanco fondoVerdeO hoverAmarillo"
                 onClick={toggleMenu}
+                aria-label={menuOpen ? "Cerrar menú" : "Abrir menú"}
+                aria-expanded={menuOpen}
+                aria-controls="mobile-menu"
               >
                 <FontAwesomeIcon
                   icon={isBarsIcon ? faBars : faXmark}
@@ -36,6 +40,7 @@ export const NavBar = () => {
               <AnimatePresence>
                 {menuOpen && (
                   <motion.div
+                    id="mobile-menu"
                     className="col-12 fondoVerdeO sombra pt-2 pb-3 position-absolute top-100 end-0"
                     initial={{ opacity: 0, y: -8 }}
                     animate={{ opacity: 1, y: 0 }}

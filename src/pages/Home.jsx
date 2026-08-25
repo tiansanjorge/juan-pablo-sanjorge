@@ -9,12 +9,19 @@ export const Home = () => {
   return (
     <main className="topFiller">
       <Helmet>
+        <title>Lic. Juan Pablo Sanjorge | Psicólogo</title>
         <meta name="title" content="Psicólogo Juan Pablo Sanjorge" />
         <meta
           name="description"
           content="El licenciado en psicología Juan Pablo Sanjorge egresado de la Universidad de Buenos Aires ofrece sesiones de terapia a distancia. Especializado en Adultos y Tercera Edad."
         />
         <link rel="canonical" href="https://psicologosanjorge.com.ar/" />
+        <meta property="og:title" content="Lic. Juan Pablo Sanjorge | Psicólogo" />
+        <meta
+          property="og:description"
+          content="Sesiones de terapia a distancia. Especializado en Adultos y Tercera Edad. Universidad de Buenos Aires - M. 66123."
+        />
+        <meta property="og:url" content="https://psicologosanjorge.com.ar/" />
       </Helmet>
 
       <section className="container-fluid py-5">
@@ -69,7 +76,7 @@ export const Home = () => {
       <section className="py-4 py-lg-5">
         <div className="container-fluid d-flex justify-content-center">
           <Reveal className="video-vertical-frame">
-            <video controls>
+            <video controls preload="metadata">
               <source src="/img/video.mp4" type="video/mp4" />
               Tu navegador no admite la reproducción de videos.
             </video>

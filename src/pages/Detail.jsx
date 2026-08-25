@@ -2,27 +2,21 @@ import { useParams, Link } from "react-router-dom";
 import ArticlesArray from "../components/Article";
 import { Reveal } from "../components/Reveal";
 import { Helmet } from "react-helmet-async";
+import { slugify } from "../utils/slug";
 
 export const Detail = () => {
   const { articleId } = useParams();
 
   const article = ArticlesArray.find(
-    (article) =>
-      article.titulo
-        .toLowerCase()
-        .replace(/\s+/g, "-")
-        .replace(/[^a-zA-Z0-9-]/g, "") === articleId
+    (article) => slugify(article.titulo) === articleId
   );
 
   if (!article) {
     return (
       <main className="topFiller">
         <Helmet>
-          <meta name="title" content="Artículos de Juan Pablo Sanjorge" />
-          <meta
-            name="description"
-            content="Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículos: ¿Para qué un psicoanálisis?; La terapia a distancia; El diagnóstico en psicología"
-          />
+          <title>Artículo no encontrado | Lic. Juan Pablo Sanjorge</title>
+          <meta name="robots" content="noindex" />
         </Helmet>
         <section className="container-fluid py-5 text-center">
           <p className="section-title mb-4">Artículo no encontrado</p>
@@ -37,10 +31,27 @@ export const Detail = () => {
   return (
     <main className="topFiller">
       <Helmet>
-        <meta name="title" content="Artículos de Juan Pablo Sanjorge" />
+        <title>{article.titulo} | Lic. Juan Pablo Sanjorge</title>
+        <meta name="title" content={article.titulo} />
         <meta
           name="description"
           content={`Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículo: ${article.titulo}`}
+        />
+        <link
+          rel="canonical"
+          href={`https://psicologosanjorge.com.ar/${articleId}`}
+        />
+        <meta
+          property="og:title"
+          content={`${article.titulo} | Lic. Juan Pablo Sanjorge`}
+        />
+        <meta
+          property="og:description"
+          content={`Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículo: ${article.titulo}`}
+        />
+        <meta
+          property="og:url"
+          content={`https://psicologosanjorge.com.ar/${articleId}`}
         />
       </Helmet>
 

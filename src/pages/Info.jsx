@@ -6,10 +6,24 @@ export const Info = () => {
   return (
     <main className="topFiller">
       <Helmet>
+        <title>Información Profesional | Lic. Juan Pablo Sanjorge</title>
         <meta name="title" content="Información Profesional" />
         <meta
           name="description"
           content="Juan Pablo Sanjorge, licenciado en Psicología egresado Universidad de Buenos Aires (M. 66123). Más de 10 años de experiencia en atención clínica, especializado en Adultos y Tercera Edad."
+        />
+        <link rel="canonical" href="https://psicologosanjorge.com.ar/info" />
+        <meta
+          property="og:title"
+          content="Información Profesional | Lic. Juan Pablo Sanjorge"
+        />
+        <meta
+          property="og:description"
+          content="Formación, matrícula y trayectoria del Lic. Juan Pablo Sanjorge, psicólogo (UBA)."
+        />
+        <meta
+          property="og:url"
+          content="https://psicologosanjorge.com.ar/info"
         />
       </Helmet>
 

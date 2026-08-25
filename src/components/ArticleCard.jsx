@@ -1,10 +1,8 @@
 import { Link } from "react-router-dom";
+import { slugify } from "../utils/slug";
 
 export const ArticleCard = ({ articulo }) => {
-  const articleId = articulo.titulo
-    .toLowerCase()
-    .replace(/\s+/g, "-")
-    .replace(/[^a-zA-Z0-9-]/g, "");
+  const articleId = slugify(articulo.titulo);
 
   return (
     <Link

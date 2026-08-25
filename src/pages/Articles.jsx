@@ -7,10 +7,27 @@ export const Articles = () => {
   return (
     <main className="topFiller">
       <Helmet>
+        <title>Artículos | Lic. Juan Pablo Sanjorge</title>
         <meta name="title" content="Artículos de Juan Pablo Sanjorge" />
         <meta
           name="description"
           content="Juan Pablo Sanjorge, licenciado en psicología (UBA). Artículos: ¿Para qué un psicoanálisis?; La terapia a distancia; El diagnóstico en psicología"
+        />
+        <link
+          rel="canonical"
+          href="https://psicologosanjorge.com.ar/articles"
+        />
+        <meta
+          property="og:title"
+          content="Artículos | Lic. Juan Pablo Sanjorge"
+        />
+        <meta
+          property="og:description"
+          content="Reflexiones y escritos sobre psicoanálisis, terapia a distancia y diagnóstico en psicología."
+        />
+        <meta
+          property="og:url"
+          content="https://psicologosanjorge.com.ar/articles"
         />
       </Helmet>
 
