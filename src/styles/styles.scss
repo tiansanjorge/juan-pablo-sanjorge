@@ -1,11 +1,12 @@
+@use "tokens";
+@use "components";
+@use "home";
+@use "contact";
+@use "navbar";
+@use "marquee";
+@use "info";
+
 @import url("https://api.fontshare.com/v2/css?f[]=general-sans@400,500,600&display=swap");
-@import "tokens";
-@import "components";
-@import "home";
-@import "contact";
-@import "navbar";
-@import "marquee";
-@import "info";
 
 *,
 *:before,

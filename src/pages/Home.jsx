@@ -222,16 +222,6 @@ export const Home = () => {
           </Reveal>
         </div>
       </section>
-
-      <a
-        className="whatsapp-fab"
-        href="https://wa.link/7staf4"
-        target="_blank"
-        rel="noreferrer"
-        aria-label="Enviar WhatsApp"
-      >
-        <BsWhatsapp />
-      </a>
     </main>
   );
 };

@@ -2,6 +2,7 @@ import { NavBar } from "./NavBar";
 import Footer from "./Footer";
 import { Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
+import { BsWhatsapp } from "react-icons/bs";
 
 export const UserLayout = () => {
   const location = useLocation();
@@ -21,6 +22,15 @@ export const UserLayout = () => {
         </motion.div>
       </AnimatePresence>
       <Footer />
+      <a
+        className="whatsapp-fab"
+        href="https://wa.link/7staf4"
+        target="_blank"
+        rel="noreferrer"
+        aria-label="Enviar WhatsApp"
+      >
+        <BsWhatsapp />
+      </a>
     </div>
   );
 };
