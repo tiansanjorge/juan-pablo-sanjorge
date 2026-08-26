@@ -1,5 +1,145 @@
 // Estilos específicos de la página Info
 
+.enfoque-section-info {
+  padding-top: calc(3rem + 2rem);
+  padding-bottom: 1.5rem;
+}
+
+.info-hero-section {
+  position: relative;
+  overflow: hidden;
+  padding-top: 170px;
+  padding-bottom: 7rem;
+
+  > .content-width {
+    position: relative;
+    z-index: 1;
+  }
+}
+
+.info-hero-texture {
+  position: absolute;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+// Sombreado superior para que el navbar flotante contraste mejor
+.info-hero-topshade {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 260px;
+  background: linear-gradient(
+    180deg,
+    rgba(3, 44, 122, 0.16) 0%,
+    rgba(3, 44, 122, 0) 100%
+  );
+}
+
+.info-hero-blob {
+  position: absolute;
+  filter: blur(70px);
+}
+
+// Rincón superior derecho, detrás de la grilla y el texto
+.info-hero-blob-a {
+  top: -18%;
+  right: -10%;
+  width: 480px;
+  height: 480px;
+  background: var(--color-primary);
+  opacity: 0.14;
+  border-radius: 50%;
+}
+
+// Enmarca la foto, rincón inferior izquierdo
+.info-hero-blob-b {
+  bottom: -15%;
+  left: -12%;
+  width: 420px;
+  height: 400px;
+  background: var(--color-primary-dark);
+  opacity: 0.1;
+  border-radius: 55% 45% 60% 40% / 50% 55% 45% 50%;
+}
+
+// Acento pequeño, centro-inferior
+.info-hero-blob-c {
+  bottom: -8%;
+  left: 45%;
+  width: 260px;
+  height: 220px;
+  background: var(--color-primary);
+  opacity: 0.08;
+  border-radius: 60% 40% 55% 45% / 45% 55% 45% 55%;
+}
+
+// Grilla de puntos en todo el fondo del hero, con desvanecido en los bordes
+.info-hero-dots {
+  position: absolute;
+  inset: 0;
+  background-image: radial-gradient(
+    var(--color-primary-dark) 1.5px,
+    transparent 1.5px
+  );
+  background-size: 24px 24px;
+  opacity: 0.18;
+  mask-image: radial-gradient(
+    ellipse 85% 85% at 50% 50%,
+    black 55%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 85% 85% at 50% 50%,
+    black 55%,
+    transparent 100%
+  );
+}
+
+.info-hero-copy {
+  position: relative;
+  z-index: 1;
+  width: calc(100% + 4rem);
+  margin-left: -2rem;
+  background: #fff;
+  border-radius: var(--radius-lg);
+  padding: 2.5rem;
+  overflow: hidden;
+}
+
+.info-hero-copy-content {
+  position: relative;
+  z-index: 1;
+
+  .badge-pill {
+    font-size: var(--text-sm);
+    padding: 0.5rem 1.25rem;
+  }
+
+  .section-title {
+    font-size: var(--text-4xl);
+  }
+
+  .info-list li {
+    font-size: 1.2rem;
+  }
+}
+
+.uba-watermark {
+  position: absolute;
+  top: 45%;
+  right: 8%;
+  transform: translateY(-50%);
+  width: 48%;
+  max-width: 280px;
+  opacity: 0.06;
+  z-index: 0;
+  pointer-events: none;
+}
+
 .enfoque-statement {
   font-family: var(--font-sans);
   font-weight: 500;
@@ -32,11 +172,17 @@
 }
 
 .accordion-item {
+  position: relative;
   border-bottom: 1px solid var(--color-border);
+  transition: background-color 0.2s ease;
 }
 
 .accordion-item:last-child {
   border-bottom: none;
+}
+
+.accordion-item:not(.accordion-item-open):hover {
+  background-color: var(--color-bg-subtle);
 }
 
 .accordion-trigger {
@@ -54,17 +200,23 @@
   font-size: var(--text-lg);
   color: var(--color-primary-dark);
   cursor: pointer;
+  transition: color 0.25s ease;
 }
 
 .accordion-icon {
   flex-shrink: 0;
-  color: var(--color-primary);
+  color: var(--color-primary-dark);
   font-size: var(--text-2xl);
-  transition: transform 0.25s ease;
+  transition: transform 0.25s ease, color 0.25s ease;
 }
 
 .accordion-icon-open {
   transform: rotate(180deg);
+}
+
+.accordion-item-open .accordion-trigger,
+.accordion-item-open .accordion-icon {
+  color: var(--color-primary);
 }
 
 .accordion-panel {

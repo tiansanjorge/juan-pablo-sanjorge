@@ -2,6 +2,13 @@
 // Conviven con las clases viejas (.azul, .fondoVerdeO, etc.) hasta que se termine
 // de migrar cada página en los bloques siguientes; al final se limpian las viejas.
 
+.enfoque-body strong,
+.hero-lead strong,
+.article-body strong {
+  font-weight: 500;
+  color: var(--color-navy);
+}
+
 .btn-pill {
   display: inline-flex;
   align-items: center;
@@ -67,6 +74,15 @@
   border: 1px solid var(--color-border);
 }
 
+.badge-pill-subtle-dark {
+  background: var(--color-bg-subtle-2);
+}
+
+.badge-pill-contrast {
+  background: var(--color-white);
+  color: var(--color-primary-dark);
+}
+
 .card-surface {
   background: var(--color-white);
   border-radius: var(--radius-lg);
@@ -74,8 +90,99 @@
   padding: 2rem;
 }
 
+.card-surface-primary {
+  background: var(--color-primary-dark);
+  padding: 2.25rem 3.5rem 3.5rem;
+
+  .section-title {
+    color: var(--color-white);
+    font-weight: 500;
+    font-size: var(--text-3xl);
+  }
+
+  .hero-lead {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: var(--text-xl);
+
+    strong {
+      color: var(--color-white);
+    }
+  }
+
+  .link-primary {
+    color: var(--color-white);
+    text-decoration: none;
+
+    &:hover {
+      color: var(--color-white);
+      opacity: 0.85;
+    }
+  }
+}
+
 .section-subtle {
   background: var(--color-bg-subtle);
+}
+
+.section-navy {
+  background: var(--color-navy);
+}
+
+.articles-hero-fill {
+  background: var(--color-primary);
+}
+
+.section-primary {
+  background: var(--color-primary);
+
+  .badge-pill {
+    background: rgba(255, 255, 255, 0.15);
+    color: var(--color-white);
+  }
+
+  .article-card .badge-pill {
+    background: var(--color-bg-subtle);
+    color: var(--color-primary-dark);
+  }
+
+  .section-title {
+    color: var(--color-white);
+  }
+}
+
+.section-wave-top {
+  position: relative;
+}
+
+.section-wave {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  transform: translateY(calc(-100% + 2px));
+  overflow: hidden;
+  line-height: 0;
+
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  path {
+    fill: var(--color-primary);
+  }
+
+  &--subtle path {
+    fill: var(--color-bg-subtle);
+  }
+}
+
+@media (max-width: 767.98px) {
+  .section-wave {
+    height: 40px;
+  }
 }
 
 .section-gradient {
@@ -194,7 +301,7 @@
 }
 
 .article-body {
-  font-size: var(--text-base);
+  font-size: var(--text-lg);
   line-height: 1.8;
   color: var(--color-text);
 }
@@ -203,12 +310,6 @@
   text-align: right;
   font-style: italic;
   color: var(--color-text-muted);
-}
-
-.uba-seal {
-  width: 88px;
-  height: auto;
-  margin-top: 0.5rem;
 }
 
 .whatsapp-fab {

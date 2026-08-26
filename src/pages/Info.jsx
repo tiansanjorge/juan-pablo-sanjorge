@@ -28,45 +28,58 @@ export const Info = () => {
         />
       </Helmet>
 
-      <section className="container-fluid section-glow hero-top-offset pb-5">
-        <div className="row align-items-center g-5">
-          <div className="col-12 col-lg-5 order-2 order-lg-1">
-            <Reveal>
-              <span className="badge-pill mb-3 d-inline-block">
-                Información Profesional
-              </span>
-              <h1 className="section-title mb-4">Formación y trayectoria</h1>
+      <section className="hero-top-offset info-hero-section">
+        <div className="info-hero-texture" aria-hidden="true">
+          <div className="info-hero-dots"></div>
+          <div className="info-hero-blob info-hero-blob-a"></div>
+          <div className="info-hero-blob info-hero-blob-b"></div>
+          <div className="info-hero-blob info-hero-blob-c"></div>
+          <div className="info-hero-topshade"></div>
+        </div>
+        <div className="content-width">
+          <div className="row align-items-center g-5 justify-content-lg-evenly">
+            <div className="col-12 col-lg-4 order-1">
+              <Reveal
+                delay={0.15}
+                className="hero-portrait-frame hero-portrait-frame-round"
+              >
+                <img src="/img/perfil.jpg" alt="Juan Pablo Sanjorge" />
+              </Reveal>
+            </div>
 
-              <ul className="info-list mb-4">
-                <li>Licenciado en Psicología</li>
-                <li>Universidad de Buenos Aires — M. 66123</li>
-                <li>Más de 10 años de experiencia en atención clínica</li>
-                <li>Especializado en Adultos y Tercera Edad</li>
-                <li>Socio adherente de APOLa</li>
-              </ul>
+            <div className="col-12 col-lg-6 order-2 position-relative">
+              <Reveal className="info-hero-copy">
+                <img
+                  className="uba-watermark"
+                  src="/img/logo-uba.png"
+                  alt=""
+                  aria-hidden="true"
+                />
+                <div className="info-hero-copy-content">
+                  <span className="badge-pill mb-3 d-inline-block">
+                    Información Profesional
+                  </span>
+                  <h1 className="section-title mb-4">
+                    Formación y trayectoria
+                  </h1>
 
-              <img
-                className="uba-seal"
-                src="/img/logo-uba.png"
-                alt="Universidad de Buenos Aires"
-              />
-            </Reveal>
-          </div>
-
-          <div className="col-12 col-lg-7 order-1 order-lg-2">
-            <Reveal delay={0.15} className="hero-portrait-frame">
-              <img src="/img/perfil.jpg" alt="Juan Pablo Sanjorge" />
-            </Reveal>
+                  <ul className="info-list mb-4">
+                    <li>Licenciado en Psicología</li>
+                    <li>Universidad de Buenos Aires — M. 66123</li>
+                    <li>Más de 10 años de experiencia en atención clínica</li>
+                    <li>Especializado en Adultos y Tercera Edad</li>
+                    <li>Socio adherente de APOLa</li>
+                  </ul>
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
 
-      <section id="enfoque" className="py-5">
+      <section id="enfoque" className="enfoque-section-info py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
-            <span className="badge-pill mb-3 d-inline-block">
-              Mi enfoque
-            </span>
             <EnfoqueContent />
           </Reveal>
         </div>
@@ -74,13 +87,14 @@ export const Info = () => {
 
       <section className="section-gradient py-5">
         <div className="container-fluid">
-          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface text-center">
+          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface card-surface-primary text-center">
             <h2 className="section-title mb-3">
               Tu tranquilidad es mi prioridad
             </h2>
+            <div className="divisorAmarillo col-5 col-md-4 col-xl-2 mx-auto mb-5"></div>
             <p className="hero-lead mb-3">
               Por eso, quiero que tengas la seguridad de que estás en manos de
-              un profesional habilitado para acompañarte.
+              un <strong>profesional habilitado</strong> para acompañarte.
             </p>
             <p className="hero-lead mb-3">
               Podés confirmar mi matrícula activa en el{" "}
@@ -104,7 +118,7 @@ export const Info = () => {
         </div>
       </section>
 
-      <section className="section-gradient-subtle py-5">
+      <section className="section-navy py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img

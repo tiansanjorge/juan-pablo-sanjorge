@@ -73,7 +73,8 @@ export const Home = () => {
                 </div>
 
                 <p className="hero-lead mb-4">
-                  Sesiones a distancia · Primera entrevista sin cargo
+                  Sesiones a distancia ·{" "}
+                  <strong>Primera entrevista sin cargo</strong>
                 </p>
 
                 <div className="d-flex flex-wrap gap-3">
@@ -97,7 +98,7 @@ export const Home = () => {
 
       <Marquee items={malestares} />
 
-      <section className="py-5">
+      <section className="enfoque-section">
         <div className="content-width">
           <div className="row align-items-center g-0">
             <div className="col-12 col-lg-5">
@@ -149,7 +150,12 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-gradient py-5">
+      <section className="section-primary section-wave-top faq-section">
+        <div className="section-wave" aria-hidden="true">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,64L80,72C160,80,320,96,480,90.7C640,85,800,59,960,48C1120,37,1280,43,1360,45.3L1440,48L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
+          </svg>
+        </div>
         <div className="container-fluid">
           <Reveal className="col-11 col-md-9 col-lg-7 mx-auto">
             <span className="badge-pill badge-pill-lg mb-3 d-inline-block">
@@ -163,17 +169,22 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-gradient-reverse py-5">
+      <section className="section-subtle section-wave-top py-5">
+        <div className="section-wave section-wave--subtle" aria-hidden="true">
+          <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+            <path d="M0,48L80,45.3C160,43,320,37,480,48C640,59,800,85,960,90.7C1120,96,1280,80,1360,72L1440,64L1440,120L1360,120C1280,120,1120,120,960,120C800,120,640,120,480,120C320,120,160,120,80,120L0,120Z" />
+          </svg>
+        </div>
         <div className="container-fluid">
           <div className="col-11 col-md-10 col-xl-9 mx-auto">
             <Reveal>
-              <span className="badge-pill badge-pill-lg badge-pill-bordered mb-3 d-inline-block">
+              <span className="badge-pill badge-pill-subtle-dark mb-3 d-inline-block">
                 Artículos
               </span>
               <h2 className="section-title mb-4">Reflexiones y escritos</h2>
             </Reveal>
 
-            <div className="row g-4">
+            <div className="row g-4 article-cards-flat">
               {ArticlesArray.map((articulo, index) => (
                 <div className="col-12 col-md-6 col-lg-3" key={index}>
                   <Reveal delay={index * 0.08} className="h-100">
@@ -184,7 +195,11 @@ export const Home = () => {
             </div>
 
             <div className="text-center mt-5">
-              <Link to="/articles" className="btn-pill btn-pill-outline">
+              <Link
+                to="/articles"
+                className="btn-pill btn-pill-outline"
+                onClick={() => window.scrollTo({ top: 0 })}
+              >
                 Ver todos los artículos
               </Link>
             </div>
@@ -192,7 +207,7 @@ export const Home = () => {
         </div>
       </section>
 
-      <section className="section-gradient-subtle py-5">
+      <section className="section-navy py-5">
         <div className="container-fluid">
           <Reveal className="col-11 col-md-8 col-lg-6 mx-auto quote-block">
             <img

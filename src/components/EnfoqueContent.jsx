@@ -10,17 +10,18 @@ export const EnfoqueContent = () => (
     </p>
     <div className="enfoque-body">
       <p className="mb-3">
-        Mi práctica clínica se sostiene en una formación permanente y en un
-        trabajo cuidadoso y particular sobre cada tratamiento. Además de lo
-        que sucede durante las sesiones, dedico tiempo a revisar, estudiar y
-        elaborar el material de cada caso, buscando comprender qué está
-        ocurriendo y qué orientación puede resultar más adecuada para ese
-        tratamiento.
+        Mi práctica clínica se sostiene en una formación permanente y en un{" "}
+        <strong>trabajo cuidadoso y particular sobre cada tratamiento</strong>
+        . Además de lo que sucede durante las sesiones, dedico tiempo a
+        revisar, estudiar y elaborar el material de cada caso, buscando
+        comprender qué está ocurriendo y qué orientación puede resultar más
+        adecuada para ese tratamiento.
       </p>
       <p className="m-0">
-        No trabajo con respuestas prefabricadas. Cada tratamiento requiere
-        una escucha atenta, una reflexión sostenida y una forma de abordaje
-        acorde con aquello que lleva a cada persona a consultar.
+        <strong>No trabajo con respuestas prefabricadas.</strong> Cada
+        tratamiento requiere una escucha atenta, una reflexión sostenida y
+        una forma de abordaje acorde con aquello que lleva a cada persona a
+        consultar.
       </p>
     </div>
   </>

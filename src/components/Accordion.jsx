@@ -9,7 +9,10 @@ export const Accordion = ({ items }) => {
       {items.map((item, index) => {
         const isOpen = openIndex === index;
         return (
-          <div className="accordion-item" key={index}>
+          <div
+            className={`accordion-item${isOpen ? " accordion-item-open" : ""}`}
+            key={index}
+          >
             <button
               type="button"
               className="accordion-trigger"

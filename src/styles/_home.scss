@@ -47,6 +47,12 @@
   }
 }
 
+.hero-portrait-frame-round {
+  max-width: 380px;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius-pill);
+}
+
 .hero-banner {
   position: relative;
   display: flex;
@@ -62,13 +68,46 @@
   content: "";
   position: absolute;
   inset: 0;
-  background: linear-gradient(
+  background:
+    radial-gradient(
+      circle at top left,
+      rgba(46, 107, 213, 0.35) 0%,
+      rgba(46, 107, 213, 0) 45%
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.97) 0%,
+      rgba(255, 255, 255, 0.92) 30%,
+      rgba(255, 255, 255, 0.55) 50%,
+      rgba(255, 255, 255, 0) 68%
+    );
+}
+
+.hero-banner::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: repeating-linear-gradient(
     90deg,
-    rgba(255, 255, 255, 0.97) 0%,
-    rgba(255, 255, 255, 0.92) 30%,
-    rgba(255, 255, 255, 0.55) 50%,
-    rgba(255, 255, 255, 0) 68%
+    var(--color-primary-dark) 0,
+    var(--color-primary-dark) 1.5px,
+    transparent 1.5px,
+    transparent 28px
   );
+  opacity: 0.16;
+  mask-image: radial-gradient(
+    ellipse 30% 45% at top left,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
+  -webkit-mask-image: radial-gradient(
+    ellipse 30% 45% at top left,
+    black 0%,
+    black 40%,
+    transparent 100%
+  );
+  pointer-events: none;
 }
 
 .hero-banner-content {
@@ -118,13 +157,19 @@
   }
 
   .hero-banner::before {
-    background: linear-gradient(
-      180deg,
-      rgba(255, 255, 255, 0.97) 0%,
-      rgba(255, 255, 255, 0.95) 40%,
-      rgba(255, 255, 255, 0.65) 65%,
-      rgba(255, 255, 255, 0.2) 100%
-    );
+    background:
+      radial-gradient(
+        circle at top left,
+        rgba(46, 107, 213, 0.35) 0%,
+        rgba(46, 107, 213, 0) 45%
+      ),
+      linear-gradient(
+        180deg,
+        rgba(255, 255, 255, 0.97) 0%,
+        rgba(255, 255, 255, 0.95) 40%,
+        rgba(255, 255, 255, 0.65) 65%,
+        rgba(255, 255, 255, 0.2) 100%
+      );
   }
 
   .hero-banner-copy {
@@ -182,6 +227,24 @@
   }
 }
 
+.enfoque-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 992px) {
+    padding-bottom: 8rem;
+  }
+}
+
+.faq-section {
+  padding-top: 3rem;
+  padding-bottom: 5rem;
+
+  @media (min-width: 992px) {
+    padding-bottom: 8rem;
+  }
+}
+
 .bio-statement {
   font-family: var(--font-sans);
   font-weight: 500;
@@ -203,21 +266,63 @@
   color: var(--color-primary-dark);
 }
 
+.article-cards-flat .card-surface {
+  box-shadow: none;
+}
+
+.article-cards-flat .article-card:hover {
+  background: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+  color: var(--color-white);
+  box-shadow: none;
+
+  .article-card-title {
+    color: var(--color-white);
+  }
+}
+
 .article-card {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
+  width: 100%;
   padding: 1.75rem;
+  font: inherit;
   color: var(--color-primary-dark);
+  border: 1px solid transparent;
+  text-align: left;
+  cursor: pointer;
+  appearance: none;
   transition:
     transform 0.2s ease,
-    box-shadow 0.2s ease;
+    box-shadow 0.2s ease,
+    border-color 0.3s ease,
+    background 0.3s ease,
+    color 0.3s ease;
 
   &:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-md);
     color: var(--color-primary-dark);
+    border-color: var(--color-primary);
+  }
+
+  &.active {
+    background: var(--color-primary-dark);
+    border-color: var(--color-primary-dark);
+    color: var(--color-white);
+    transform: translateY(-4px);
+    box-shadow: var(--shadow-md);
+
+    .article-card-title {
+      color: var(--color-white);
+      transition: color 0.3s ease;
+    }
+
+    &:hover {
+      border-color: var(--color-primary-dark);
+    }
   }
 }
 
@@ -233,12 +338,12 @@
   background: var(--color-white);
   border-radius: var(--radius-lg);
   box-shadow: var(--shadow-sm);
-  padding: 3rem 2rem 2.5rem;
+  padding: 2rem 2rem 1.5rem;
 }
 
 .quote-author-photo {
-  width: 64px;
-  height: 64px;
+  width: 128px;
+  height: 128px;
   object-fit: cover;
   border-radius: var(--radius-pill);
   margin-bottom: 1.5rem;

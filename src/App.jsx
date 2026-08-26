@@ -7,7 +7,7 @@ import { UserLayout } from "./components/UserLayout";
 import { Home } from "./pages/Home";
 import { Info } from "./pages/Info";
 import { Articles } from "./pages/Articles";
-import { Detail } from "./pages/Detail";
+import { ArticleRedirect } from "./pages/ArticleRedirect";
 import { Contact } from "./pages/Contact";
 import { ToastContainer, Slide } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
@@ -22,7 +22,7 @@ function App() {
             <Route index element={<Home />} />
             <Route path="/info" element={<Info />} />
             <Route path="/articles" element={<Articles />} />
-            <Route path="/:articleId" element={<Detail />} />
+            <Route path="/:articleId" element={<ArticleRedirect />} />
             <Route path="/contact" element={<Contact />} />
           </Route>
         </Routes>
