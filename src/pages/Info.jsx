@@ -81,9 +81,9 @@ export const Info = () => {
         </div>
       </section>
 
-      <section className="section-gradient tranquilidad-section py-5">
+      <section className="section-gradient tranquilidad-section pt-5 pb-10">
         <div className="container-fluid">
-          <Reveal className="col-11 col-md-9 col-lg-7 mx-auto card-surface card-surface-primary text-center">
+          <Reveal className="col-11 tranquilidad-card mx-auto card-surface card-surface-primary text-center">
             <h2 className="section-title mb-3">
               Tu tranquilidad es mi prioridad
             </h2>

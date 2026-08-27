@@ -4,12 +4,22 @@
   position: relative;
   z-index: 1;
   padding-top: calc(3rem + 2rem);
-  padding-bottom: 0.5rem;
+  padding-bottom: 2.5rem;
 }
 
 .tranquilidad-section {
   padding-top: 0;
   padding-bottom: 5rem;
+}
+
+.tranquilidad-card {
+  @media (min-width: 768px) {
+    width: 70%;
+  }
+
+  @media (min-width: 992px) {
+    width: 54%;
+  }
 }
 
 .info-hero-section {
