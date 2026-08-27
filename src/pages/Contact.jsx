@@ -239,7 +239,7 @@ export const Contact = () => {
               <Reveal className="card-surface">
                 <div className="d-flex align-items-center justify-content-center flex-wrap-reverse gap-2 row-gap-3 mb-4">
                   <h1 className="section-title mb-0 me-auto">Contacto</h1>
-                  <span className="badge-pill badge-pill-lg weight700">
+                  <span className="badge-pill badge-pill-lg weight600">
                     Primera entrevista sin cargo
                   </span>
                 </div>
