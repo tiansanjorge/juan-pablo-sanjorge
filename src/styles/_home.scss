@@ -58,7 +58,7 @@
   display: flex;
   align-items: center;
   min-height: 92vh;
-  min-height: 92dvh;
+  min-height: 92svh;
   background-image: url("/img/portada.jpg");
   background-size: cover;
   background-position: center center;
@@ -187,7 +187,7 @@
 @media (max-width: 991.98px) {
   .hero-banner {
     min-height: 90vh;
-    min-height: 90dvh;
+    min-height: 90svh;
     background-position: center center;
     align-items: flex-start;
   }
@@ -218,7 +218,7 @@
   .hero-banner {
     background-image: url("/img/portada-vertical.jpg");
     min-height: 115vh;
-    min-height: 115dvh;
+    min-height: 115svh;
     align-items: flex-end;
   }
 
