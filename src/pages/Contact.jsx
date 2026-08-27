@@ -292,8 +292,8 @@ export const Contact = () => {
                     className="form-control-pill"
                     name="user_phone"
                     onChange={(e) => {
-                      validatePhone(e.target.value);
                       storeInputPhone(e.target.value);
+                      setPhoneError("");
                     }}
                     onBlur={(e) => {
                       validatePhone(e.target.value);
