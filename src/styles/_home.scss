@@ -58,7 +58,8 @@
   display: flex;
   align-items: center;
   min-height: 92vh;
-  background-image: url("/img/portada.jpg");
+  min-height: 92dvh;
+  background-image: url("/img/portada3.jpg");
   background-size: cover;
   background-position: center center;
   overflow: hidden;
@@ -77,9 +78,9 @@
     linear-gradient(
       90deg,
       rgba(255, 255, 255, 0.97) 0%,
-      rgba(255, 255, 255, 0.92) 30%,
-      rgba(255, 255, 255, 0.55) 50%,
-      rgba(255, 255, 255, 0) 68%
+      rgba(255, 255, 255, 0.92) 25%,
+      rgba(255, 255, 255, 0.4) 42%,
+      rgba(255, 255, 255, 0) 55%
     );
 }
 
@@ -121,6 +122,14 @@
   }
 }
 
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .hero-banner-content {
+    max-width: 60vw;
+    padding-left: 5vw;
+    margin-top: 6vh;
+  }
+}
+
 .hero-banner-copy {
   max-width: 580px;
   margin: 0 auto;
@@ -150,8 +159,35 @@
 }
 
 @media (max-width: 991.98px) {
+  .hero-banner-copy {
+    .hero-title {
+      font-size: var(--text-3xl);
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-xl);
+    }
+
+    .hero-lead {
+      font-size: var(--text-base);
+    }
+
+    .badge-pill {
+      font-size: var(--text-xs);
+      padding: 0.4rem 1rem;
+    }
+
+    .btn-pill {
+      font-size: var(--text-base);
+      padding: 0.85rem 1.85rem;
+    }
+  }
+}
+
+@media (max-width: 991.98px) {
   .hero-banner {
     min-height: 90vh;
+    min-height: 90dvh;
     background-position: center center;
     align-items: flex-start;
   }
@@ -164,17 +200,107 @@
         rgba(46, 107, 213, 0) 45%
       ),
       linear-gradient(
-        180deg,
+        135deg,
         rgba(255, 255, 255, 0.97) 0%,
-        rgba(255, 255, 255, 0.95) 40%,
-        rgba(255, 255, 255, 0.65) 65%,
-        rgba(255, 255, 255, 0.2) 100%
+        rgba(255, 255, 255, 0.9) 30%,
+        rgba(255, 255, 255, 0.4) 45%,
+        rgba(255, 255, 255, 0) 60%
       );
   }
 
   .hero-banner-copy {
     max-width: 100%;
     padding: 1.5rem 0;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .hero-banner {
+    background-image: url("/img/portada-vertical.jpg");
+    min-height: 115vh;
+    min-height: 115dvh;
+    align-items: flex-end;
+  }
+
+  .hero-banner::before {
+    background: none;
+  }
+
+  .hero-banner::after {
+    display: none;
+  }
+
+  .hero-banner-content {
+    position: relative;
+    width: 90%;
+    margin: 0 auto 3vh;
+    padding: 0.5rem 0.75rem;
+    border-radius: var(--radius-lg);
+    background-color: rgba(255, 255, 255, 0.6);
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+    box-shadow: var(--shadow-md);
+  }
+
+  .hero-banner-copy {
+    text-align: center;
+
+    .hero-lead {
+      color: var(--color-white);
+    }
+
+    .d-flex {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-banner {
+    min-height: 100vh;
+    min-height: 100dvh;
+  }
+
+  .hero-banner-content {
+    padding: 0.35rem 0.5rem;
+  }
+
+  .hero-banner-copy {
+    padding: 0.75rem 0;
+
+    .hero-title {
+      font-size: 1.5rem;
+      margin-bottom: 0.5rem !important;
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-lg);
+      margin-bottom: 0.85rem !important;
+    }
+
+    .d-flex.mb-4 {
+      margin-bottom: 0.85rem !important;
+    }
+
+    .hero-lead {
+      font-size: var(--text-xs);
+      margin-bottom: 0.85rem !important;
+    }
+
+    .badge-pill {
+      font-size: var(--text-xs);
+      padding: 0.3rem 0.85rem;
+    }
+
+    .btn-pill {
+      font-size: var(--text-sm);
+      padding: 0.7rem 1.5rem;
+    }
+
+    .btn-pill-outline {
+      padding: 0.75rem;
+      font-size: 1.3rem;
+    }
   }
 }
 
@@ -188,10 +314,21 @@
   box-shadow: var(--shadow-md);
   background: var(--color-black);
 
+  @media (min-width: 768px) and (max-width: 991.98px) {
+    max-width: 480px;
+    aspect-ratio: 41 / 30;
+  }
+
   video {
     width: 100%;
     height: 100%;
     object-fit: cover;
+
+    &:fullscreen,
+    &:-webkit-full-screen {
+      object-fit: contain;
+      aspect-ratio: 41 / 30;
+    }
   }
 }
 
@@ -233,6 +370,19 @@
 
   @media (min-width: 992px) {
     padding-bottom: 8rem;
+  }
+
+  @media (max-width: 991.98px) {
+    .col-lg-7 {
+      margin-top: 3rem;
+    }
+  }
+
+  @media (min-width: 992px) and (max-width: 1300px) {
+    .content-width {
+      width: 85%;
+      max-width: 1300px;
+    }
   }
 }
 

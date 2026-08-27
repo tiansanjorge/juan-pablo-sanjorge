@@ -29,6 +29,14 @@ export const Articles = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
+  const handleSelectArticle = (articulo) => {
+    setSelectedArticle(articulo);
+    detailRef.current?.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+    });
+  };
+
   return (
     <main className="topFiller articles-hero-fill">
       <Helmet>
@@ -76,7 +84,7 @@ export const Articles = () => {
                     <ArticleCard
                       articulo={articulo}
                       isActive={articulo === selectedArticle}
-                      onSelect={() => setSelectedArticle(articulo)}
+                      onSelect={() => handleSelectArticle(articulo)}
                     />
                   </Reveal>
                 </div>

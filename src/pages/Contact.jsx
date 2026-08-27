@@ -16,21 +16,15 @@ export const Contact = () => {
   const phoneRegEx = /^\+?[1-9][0-9]{7,14}$/;
   const emailRegEx = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-  const [name, setName] = useState("");
-  const [phone, setPhone] = useState("");
-  const [email, setEmail] = useState("");
-
   const [inputPhone, setInputPhone] = useState("");
   const [inputName, setInputName] = useState("");
   const [inputEmail, setInputEmail] = useState("");
   const [inputInquiry, setInputInquiry] = useState("");
   const [inputMessage, setInputMessage] = useState("");
 
+  const [nameError, setNameError] = useState("");
   const [phoneError, setPhoneError] = useState("");
   const [emailError, setEmailError] = useState("");
-
-  const [submitError, setSubmitError] = useState("");
-  const [submitDisabled, setSubmitDisabled] = useState(true);
 
   // Cargo del localStorage los valores de los inputs
   useEffect(() => {
@@ -47,7 +41,6 @@ export const Contact = () => {
 
     if (storedName) {
       setInputName(JSON.parse(storedName));
-      setName(JSON.parse(storedName));
     }
 
     if (storedEmail) {
@@ -87,36 +80,9 @@ export const Contact = () => {
     localStorage.setItem("message", JSON.stringify(valor));
   };
 
-  // Chequeo si el input de phone, name o email estan vacíos y si phoneError y Email error son diferentes a vacío en ese caso desactivo el boton submit del form por medio de la logíca de la siguiente funcion
-  useEffect(() => {
-    if (
-      phone === "" ||
-      name === "" ||
-      email === "" ||
-      phoneError !== "" ||
-      emailError !== ""
-    ) {
-      setSubmitError("Completá los campos obligatorios •");
-    } else {
-      setSubmitError("");
-    }
-  }, [phone, email, name, phoneError, emailError]);
-
-  useEffect(() => {
-    if (submitError !== "") {
-      setSubmitDisabled(true);
-    } else {
-      setSubmitDisabled(false);
-    }
-  }, [submitError]);
-
   // Funcion para validar el valor phone con el RegEx de telefono declarado previamente ("phoneRegEx")
   const validatePhone = (value) => {
-    if (value === "") {
-      setPhone(value);
-      setPhoneError("");
-    } else if (String(value).toLowerCase().match(phoneRegEx)) {
-      setPhone(value);
+    if (value === "" || String(value).toLowerCase().match(phoneRegEx)) {
       setPhoneError("");
     } else {
       setPhoneError("Teléfono inválido");
@@ -125,20 +91,59 @@ export const Contact = () => {
 
   // Funcion para validar el valor email con el RegEx de email declarado previamente ("EmailRegEx")
   const validateEmail = (value) => {
-    if (value === "") {
-      setEmail(value);
-      setEmailError("");
-    } else if (String(value).toLowerCase().match(emailRegEx)) {
-      setEmail(value);
+    if (value === "" || String(value).toLowerCase().match(emailRegEx)) {
       setEmailError("");
     } else {
       setEmailError("Correo electrónico inválido");
     }
   };
 
-  // Funcion del submit del form para enviar el mail, visualizar la confirmacion y resetear valores del form
+  // Valida los campos obligatorios al enviar el form. Devuelve el id del primer campo con error, o null si no hay errores
+  const validateRequiredFields = () => {
+    let firstErrorId = null;
+
+    if (inputName.trim() === "") {
+      setNameError("El nombre es obligatorio");
+      firstErrorId = firstErrorId ?? "name";
+    } else {
+      setNameError("");
+    }
+
+    if (inputEmail.trim() === "") {
+      setEmailError("El correo electrónico es obligatorio");
+      firstErrorId = firstErrorId ?? "email";
+    } else if (!String(inputEmail).toLowerCase().match(emailRegEx)) {
+      setEmailError("Correo electrónico inválido");
+      firstErrorId = firstErrorId ?? "email";
+    } else {
+      setEmailError("");
+    }
+
+    if (inputPhone.trim() === "") {
+      setPhoneError("El teléfono es obligatorio");
+      firstErrorId = firstErrorId ?? "phone";
+    } else if (!String(inputPhone).toLowerCase().match(phoneRegEx)) {
+      setPhoneError("Teléfono inválido");
+      firstErrorId = firstErrorId ?? "phone";
+    } else {
+      setPhoneError("");
+    }
+
+    return firstErrorId;
+  };
+
+  // Funcion del submit del form: valida campos obligatorios, scrollea al primer error, o envia el mail
   const sendEmail = (e) => {
     e.preventDefault();
+
+    const firstErrorId = validateRequiredFields();
+
+    if (firstErrorId) {
+      const field = document.getElementById(firstErrorId);
+      field?.scrollIntoView({ behavior: "smooth", block: "center" });
+      field?.focus({ preventScroll: true });
+      return;
+    }
 
     emailjs
       .sendForm("service_o5glebh", "template_jvvd64c", form.current, {
@@ -184,14 +189,12 @@ export const Contact = () => {
     );
 
   const resetFormValues = () => {
-    setName("");
-    setPhone("");
-    setEmail("");
     setInputName("");
     setInputPhone("");
     setInputEmail("");
     setInputInquiry("");
     setInputMessage("");
+    setNameError("");
     setPhoneError("");
     setEmailError("");
     localStorage.removeItem("name");
@@ -203,7 +206,7 @@ export const Contact = () => {
   };
 
   return (
-    <main className="topFiller">
+    <main>
       <Helmet>
         <title>Contacto | Lic. Juan Pablo Sanjorge</title>
         <meta name="title" content="Contactar a Juan Pablo Sanjorge" />
@@ -229,15 +232,17 @@ export const Contact = () => {
         />
       </Helmet>
 
-      <section className="contact-hero py-5">
+      <section className="contact-hero">
         <div className="container-fluid">
           <div className="row g-4 g-lg-5 justify-content-center">
             <div className="col-12 col-lg-6 col-xl-5">
               <Reveal className="card-surface">
-                <span className="badge-pill mb-3 d-inline-block">
-                  Primera entrevista sin cargo
-                </span>
-                <h1 className="section-title mb-4">Contacto</h1>
+                <div className="d-flex align-items-center justify-content-center flex-wrap-reverse gap-2 row-gap-3 mb-4">
+                  <h1 className="section-title mb-0 me-auto">Contacto</h1>
+                  <span className="badge-pill badge-pill-lg weight700">
+                    Primera entrevista sin cargo
+                  </span>
+                </div>
 
                 <form
                   className="contact-form"
@@ -249,20 +254,18 @@ export const Contact = () => {
                   </label>
                   <input
                     id="name"
-                    className="form-control-pill mb-3"
+                    className="form-control-pill"
                     name="user_name"
                     onChange={(e) => {
-                      setName(e.target.value);
                       storeInputName(e.target.value);
+                      if (e.target.value.trim() !== "") setNameError("");
                     }}
-                    onBlur={(e) => {
-                      setName(e.target.value);
-                      storeInputName(e.target.value);
-                    }}
+                    onBlur={(e) => storeInputName(e.target.value)}
                     defaultValue={inputName}
                   />
+                  <div className="form-error">{nameError}</div>
 
-                  <label className="form-label" htmlFor="email">
+                  <label className="form-label mt-2" htmlFor="email">
                     Correo electrónico <span className="required-dot">•</span>
                   </label>
                   <input
@@ -270,8 +273,8 @@ export const Contact = () => {
                     className="form-control-pill"
                     name="user_email"
                     onChange={(e) => {
-                      validateEmail(e.target.value);
                       storeInputEmail(e.target.value);
+                      setEmailError("");
                     }}
                     onBlur={(e) => {
                       validateEmail(e.target.value);
@@ -324,12 +327,9 @@ export const Contact = () => {
                     defaultValue={inputMessage}
                   />
 
-                  <div className="form-hint mt-3">{submitError}</div>
-
                   <button
-                    className="btn-pill btn-pill-primary mt-4"
+                    className="btn-pill btn-pill-primary mt-4 align-self-start"
                     type="submit"
-                    disabled={submitDisabled}
                   >
                     Enviar consulta
                   </button>
@@ -338,46 +338,12 @@ export const Contact = () => {
             </div>
 
             <div className="col-12 col-lg-5">
-              <Reveal delay={0.15} className="card-surface h-100">
+              <Reveal delay={0.15} className="card-surface">
                 <h2 className="section-title mb-4">Modalidad</h2>
                 <ul className="info-list mb-4">
                   <li>Sesiones a distancia (exclusivamente online)</li>
                 </ul>
-                <a className="link-primary d-inline-block mb-4" href="#footer">
-                  Consultorio en Olivos (Bs. As.)
-                </a>
 
-                <div className="d-flex flex-column gap-3">
-                  <a
-                    className="link-primary"
-                    href="https://wa.link/7staf4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BsWhatsapp className="me-2" /> +54 9 11 2265-3526
-                  </a>
-                  <a
-                    className="link-primary"
-                    href="https://www.instagram.com/juanpablosanjorge"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BsInstagram className="me-2" /> juanpablosanjorge
-                  </a>
-                  <a
-                    className="link-primary"
-                    href="mailto:jpsanjorge@gmail.com"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BsFillEnvelopeFill className="me-2" />{" "}
-                    jpsanjorge@gmail.com
-                  </a>
-                </div>
-
-                <hr className="contact-divider" />
-
-                <h3 className="contact-subtitle mb-3">Antes de tu consulta</h3>
                 <dl className="operational-info">
                   <div>
                     <dt>Pago</dt>
@@ -399,6 +365,35 @@ export const Contact = () => {
                     </dd>
                   </div>
                 </dl>
+
+                <hr className="contact-divider" />
+
+                <div className="d-flex flex-column gap-3 align-items-start">
+                  <a
+                    className="btn-pill btn-pill-outline"
+                    href="https://wa.link/7staf4"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsWhatsapp /> +54 9 11 2265-3526
+                  </a>
+                  <a
+                    className="btn-pill btn-pill-outline"
+                    href="https://www.instagram.com/juanpablosanjorge"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsInstagram /> juanpablosanjorge
+                  </a>
+                  <a
+                    className="btn-pill btn-pill-outline"
+                    href="mailto:jpsanjorge@gmail.com"
+                    target="_blank"
+                    rel="noreferrer"
+                  >
+                    <BsFillEnvelopeFill /> jpsanjorge@gmail.com
+                  </a>
+                </div>
               </Reveal>
             </div>
           </div>

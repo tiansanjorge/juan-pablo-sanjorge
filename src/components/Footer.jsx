@@ -19,7 +19,7 @@ const Footer = () => {
               F. Félix de Amador 1805 Dpto. 6, Tel: 11 2265-3526 <br />
               Olivos, Buenos Aires, Argentina
             </div>
-            <div className="col-3 d-flex justify-content-evenly blanco py-3 size20 ">
+            <div className="d-flex gap-4 blanco py-3 size20">
               <a
                 className="text-decoration-none blanco hoverAmarillo"
                 href="https://wa.link/7staf4"

@@ -1,25 +1,39 @@
 // Estilos específicos de la página Info
 
 .enfoque-section-info {
+  position: relative;
+  z-index: 1;
   padding-top: calc(3rem + 2rem);
-  padding-bottom: 1.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.tranquilidad-section {
+  padding-top: 0;
+  padding-bottom: 5rem;
 }
 
 .info-hero-section {
   position: relative;
-  overflow: hidden;
   padding-top: 170px;
   padding-bottom: 7rem;
 
+  @media (max-width: 991.98px) {
+    padding-top: 130px;
+  }
+
   > .content-width {
     position: relative;
-    z-index: 1;
   }
 }
 
+// Se extiende por debajo del hero para que blobs y puntos se desvanezcan
+// de forma natural en vez de cortarse en seco en el borde de la sección
 .info-hero-texture {
   position: absolute;
-  inset: 0;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: -110px;
   z-index: 0;
   overflow: hidden;
   pointer-events: none;
@@ -37,6 +51,17 @@
     rgba(3, 44, 122, 0.16) 0%,
     rgba(3, 44, 122, 0) 100%
   );
+}
+
+// Desvanece el fondo del hero hacia blanco, arrancando donde antes
+// empezaba la siguiente sección, para fundirse con ella sin corte
+.info-hero-bottomfade {
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 280px;
+  background: linear-gradient(to bottom, transparent 0%, var(--color-white) 100%);
 }
 
 .info-hero-blob {
@@ -99,15 +124,77 @@
   );
 }
 
-.info-hero-copy {
+.info-hero-panel {
   position: relative;
   z-index: 1;
-  width: calc(100% + 4rem);
-  margin-left: -2rem;
-  background: #fff;
+  display: flex;
+  flex-direction: column;
   border-radius: var(--radius-lg);
-  padding: 2.5rem;
   overflow: hidden;
+  border: 2px solid var(--color-navy);
+  box-shadow: 0 12px 28px rgba(3, 44, 122, 0.12);
+  min-height: 380px;
+
+  @media (min-width: 992px) {
+    flex-direction: row;
+  }
+}
+
+.info-hero-photo {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.25rem;
+  background: var(--color-navy);
+  overflow: hidden;
+
+  @media (min-width: 992px) {
+    flex: 0 0 38%;
+    max-width: 38%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(
+      circle at 50% 40%,
+      rgba(46, 107, 213, 0.5) 0%,
+      rgba(3, 44, 122, 0) 55%
+    );
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    box-shadow: inset 0 0 90px rgba(0, 0, 0, 0.45);
+    pointer-events: none;
+  }
+
+  img {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    max-width: 340px;
+    aspect-ratio: 1 / 1;
+    object-fit: cover;
+    border-radius: 50%;
+  }
+}
+
+.info-hero-copy {
+  position: relative;
+  flex: 1;
+  padding: 1.5rem;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  background: linear-gradient(135deg, var(--color-white) 0%, #eef2fb 100%);
+
+  @media (min-width: 768px) {
+    padding: 2.5rem;
+  }
 }
 
 .info-hero-copy-content {
@@ -120,11 +207,19 @@
   }
 
   .section-title {
-    font-size: var(--text-4xl);
+    font-size: var(--text-3xl);
+
+    @media (min-width: 768px) {
+      font-size: var(--text-4xl);
+    }
   }
 
   .info-list li {
-    font-size: 1.2rem;
+    font-size: 1rem;
+
+    @media (min-width: 768px) {
+      font-size: 1.2rem;
+    }
   }
 }
 
@@ -190,17 +285,22 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  gap: 1.5rem;
+  gap: 1rem;
   background: none;
   border: none;
   text-align: left;
-  padding: 1.75rem 2.5rem;
+  padding: 1.25rem 1.25rem;
   font-family: var(--font-sans);
   font-weight: 500;
   font-size: var(--text-lg);
   color: var(--color-primary-dark);
   cursor: pointer;
   transition: color 0.25s ease;
+
+  @media (min-width: 768px) {
+    gap: 1.5rem;
+    padding: 1.75rem 2.5rem;
+  }
 }
 
 .accordion-icon {
@@ -230,9 +330,13 @@
 }
 
 .accordion-panel-inner p {
-  padding: 0 2.5rem 1.75rem;
+  padding: 0 1.25rem 1.25rem;
   margin: 0;
   color: var(--color-text-muted);
   line-height: 1.7;
   white-space: pre-line;
+
+  @media (min-width: 768px) {
+    padding: 0 2.5rem 1.75rem;
+  }
 }

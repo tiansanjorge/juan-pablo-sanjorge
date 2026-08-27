@@ -43,6 +43,11 @@
   }
 }
 
+.btn-pill-disabled {
+  background: var(--color-navy);
+  color: var(--color-white);
+}
+
 .btn-pill-outline {
   background: transparent;
   border-color: var(--color-primary);
@@ -91,8 +96,12 @@
 }
 
 .card-surface-primary {
-  background: var(--color-primary-dark);
-  padding: 2.25rem 3.5rem 3.5rem;
+  background: var(--color-primary);
+  padding: 1.75rem 1.5rem 2rem;
+
+  @media (min-width: 768px) {
+    padding: 2.25rem 3.5rem 3.5rem;
+  }
 
   .section-title {
     color: var(--color-white);
@@ -109,14 +118,18 @@
     }
   }
 
-  .link-primary {
-    color: var(--color-white);
+  .link-accent {
+    color: var(--color-navy);
     text-decoration: none;
+    transition: color 0.2s ease;
 
     &:hover {
       color: var(--color-white);
-      opacity: 0.85;
     }
+  }
+
+  .divisorAmarillo {
+    border-top-color: var(--color-navy);
   }
 }
 
@@ -214,9 +227,17 @@
 }
 
 .content-width {
-  width: 70vw;
+  width: 92%;
   max-width: 1200px;
   margin: 0 auto;
+
+  @media (min-width: 768px) {
+    width: 85%;
+  }
+
+  @media (min-width: 992px) {
+    width: 70vw;
+  }
 }
 
 .section-glow {
@@ -263,7 +284,7 @@
   z-index: 1;
 }
 
-.link-primary {
+.link-accent {
   color: var(--color-primary);
   font-weight: 500;
   text-decoration: none;
@@ -283,17 +304,16 @@
 }
 
 .info-list li {
-  position: relative;
-  padding-left: 1.4rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
   color: var(--color-text);
   font-size: var(--text-base);
 }
 
 .info-list li::before {
   content: "";
-  position: absolute;
-  left: 0;
-  top: 0.5em;
+  flex-shrink: 0;
   width: 7px;
   height: 7px;
   border-radius: var(--radius-pill);
@@ -336,6 +356,16 @@
   &:hover {
     background: var(--color-white);
     color: var(--color-primary);
+  }
+
+  &.whatsapp-fab--contrast {
+    background: var(--color-navy);
+    border-color: var(--color-navy);
+
+    &:hover {
+      background: var(--color-white);
+      color: var(--color-navy);
+    }
   }
 }
 

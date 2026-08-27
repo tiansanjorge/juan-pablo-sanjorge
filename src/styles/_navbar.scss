@@ -13,21 +13,44 @@
 
 .navbar-inner {
   position: relative;
-  width: 75vw;
+  width: 94vw;
   max-width: 1200px;
-  background: #fff;
+  background: var(--color-white);
   border-radius: var(--radius-md);
-  padding: 0.75rem 1rem 0.75rem 1.75rem;
+  padding: 0.65rem 0.85rem 0.65rem 1.25rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  transition: border-radius 0.2s ease-out;
+
+  &.navbar-inner-menu-open {
+    border-radius: var(--radius-md) var(--radius-md) 0 0;
+  }
+
+  @media (min-width: 992px) {
+    width: 75vw;
+    padding: 0.75rem 1rem 0.75rem 1.75rem;
+  }
+
+  @media (min-width: 988px) and (max-width: 1200px) {
+    width: 85vw;
+    padding: 0.65rem 0.85rem 0.65rem 1.25rem;
+  }
 }
 
 .navbar-brand {
   color: var(--color-primary-dark);
   font-weight: 600;
   white-space: nowrap;
+
+  p {
+    font-size: 17px;
+
+    @media (min-width: 992px) {
+      font-size: 20px;
+    }
+  }
 }
 
 .navbar-links {
@@ -35,7 +58,7 @@
 }
 
 .navbar-link {
-  color: var(--color-black);
+  color: var(--color-navy);
   font-weight: 500;
   text-decoration: none;
   white-space: nowrap;
@@ -43,6 +66,15 @@
 
   &:hover {
     color: var(--color-primary);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 991.98px) {
+  .navbar-inner {
+    .navbar-link,
+    .btn-pill {
+      font-size: 14px;
+    }
   }
 }
 
@@ -62,10 +94,17 @@
 
 .navbar-mobile-menu {
   background: var(--color-white);
-  border-radius: var(--radius-lg);
-  box-shadow: var(--shadow-md);
+  border-radius: 0 0 var(--radius-lg) var(--radius-lg);
   position: absolute;
-  top: calc(100% + 10px);
+  top: 100%;
   right: 0;
   left: 0;
+
+  .navbar-link {
+    font-size: 14px;
+  }
+
+  .btn-pill {
+    padding: 0.6rem 1.4rem;
+  }
 }

@@ -64,11 +64,15 @@ export const Home = () => {
                 <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
 
                 <div className="d-flex flex-wrap gap-2 mb-4">
-                  <span className="badge-pill">
+                  <span className="badge-pill d-md-none">UBA</span>
+                  <span className="badge-pill d-none d-md-inline">
                     Universidad de Buenos Aires
                   </span>
                   <span className="badge-pill">M. 66123</span>
-                  <span className="badge-pill">+10 años de experiencia</span>
+                  <span className="badge-pill d-md-none">+10 años de exp.</span>
+                  <span className="badge-pill d-none d-md-inline">
+                    +10 años de experiencia
+                  </span>
                   <span className="badge-pill">Adultos y Tercera Edad</span>
                 </div>
 
@@ -87,7 +91,8 @@ export const Home = () => {
                     target="_blank"
                     rel="noreferrer"
                   >
-                    <BsWhatsapp /> WhatsApp
+                    <BsWhatsapp />
+                    <span className="d-none d-sm-inline"> WhatsApp</span>
                   </a>
                 </div>
               </Reveal>
@@ -132,12 +137,12 @@ export const Home = () => {
               <Reveal delay={0.15}>
                 <div className="d-lg-none">
                   <p className="bio-statement mb-4">
-                    Escuchar es solo el comienzo.{" "}
+                    Escuchar es solo el comienzo.
                     <mark>Deconstruir lo que parece dado</mark> y construir
                     nuevas formas de interpretar lo que nos sucede es el
                     horizonte.
                   </p>
-                  <Link to="/info#enfoque" className="link-primary">
+                  <Link to="/info#enfoque" className="link-accent">
                     Conocé más sobre mi enfoque →
                   </Link>
                 </div>

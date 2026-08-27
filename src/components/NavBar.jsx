@@ -1,10 +1,12 @@
 import React, { useState } from "react";
 import { faBars, faXmark } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const NavBar = () => {
+  const location = useLocation();
+  const isContactPage = location.pathname === "/contact";
   const [menuOpen, setMenuOpen] = useState(false);
   const [isBarsIcon, setIsBarsIcon] = useState(true);
 
@@ -20,7 +22,7 @@ export const NavBar = () => {
 
   return (
     <header className="navbar-float">
-      <nav className="navbar-inner">
+      <nav className={`navbar-inner ${menuOpen ? "navbar-inner-menu-open" : ""}`}>
         <Link className="text-decoration-none navbar-brand" to="/">
           <p className="size20 weight600 lh-sm mb-0">Lic. Juan Pablo Sanjorge</p>
         </Link>
@@ -35,7 +37,9 @@ export const NavBar = () => {
         </div>
 
         <Link
-          className="btn-pill btn-pill-primary d-none d-md-inline-flex"
+          className={`btn-pill d-none d-md-inline-flex ${
+            isContactPage ? "btn-pill-disabled" : "btn-pill-primary"
+          }`}
           to="/contact"
         >
           Reservar consulta
@@ -79,7 +83,9 @@ export const NavBar = () => {
                     Artículos
                   </NavLink>
                   <Link
-                    className="btn-pill btn-pill-primary align-self-start"
+                    className={`btn-pill align-self-start ${
+                      isContactPage ? "btn-pill-disabled" : "btn-pill-primary"
+                    }`}
                     to="/contact"
                     onClick={toggleMenu}
                   >
