@@ -140,9 +140,9 @@ export const Home = () => {
                     Escuchar es solo el comienzo.
                     <mark>
                       Deconstruir lo que parece dado y construir nuevas
-                      formas de interpretar
+                      formas de interpretar lo que nos sucede
                     </mark>{" "}
-                    lo que nos sucede es el horizonte.
+                    es el horizonte.
                   </p>
                   <Link to="/info#enfoque" className="link-accent">
                     Conocé más sobre mi enfoque →
