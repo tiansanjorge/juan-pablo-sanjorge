@@ -138,9 +138,11 @@ export const Home = () => {
                 <div className="d-lg-none">
                   <p className="bio-statement mb-4">
                     Escuchar es solo el comienzo.
-                    <mark>Deconstruir lo que parece dado</mark> y construir
-                    nuevas formas de interpretar lo que nos sucede es el
-                    horizonte.
+                    <mark>
+                      Deconstruir lo que parece dado y construir nuevas
+                      formas de interpretar
+                    </mark>{" "}
+                    lo que nos sucede es el horizonte.
                   </p>
                   <Link to="/info#enfoque" className="link-accent">
                     Conocé más sobre mi enfoque →
