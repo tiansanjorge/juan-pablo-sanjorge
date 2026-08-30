@@ -60,40 +60,44 @@ export const Home = () => {
           <div className="hero-banner-content row">
             <div className="col-12 col-lg-6 offset-lg-1">
               <Reveal className="hero-banner-copy">
-                <h1 className="hero-title mb-2">Lic. Juan Pablo Sanjorge</h1>
-                <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
+                <div className="hero-headline mb-4">
+                  <h1 className="hero-title mb-2">Terapia a distancia</h1>
+                  <p className="hero-lead mb-4">
+                    <strong>Primera entrevista sin cargo</strong>
+                  </p>
 
-                <div className="d-flex flex-wrap gap-2 mb-4">
-                  <span className="badge-pill d-md-none">UBA</span>
-                  <span className="badge-pill d-none d-md-inline">
-                    Universidad de Buenos Aires
-                  </span>
-                  <span className="badge-pill">M. 66123</span>
-                  <span className="badge-pill d-md-none">+10 años de exp.</span>
-                  <span className="badge-pill d-none d-md-inline">
-                    +10 años de experiencia
-                  </span>
-                  <span className="badge-pill">Adultos y Tercera Edad</span>
+                  <div className="d-flex flex-wrap gap-3">
+                    <Link to="/contact" className="btn-pill btn-pill-primary">
+                      Reservar primera consulta
+                    </Link>
+                    <a
+                      className="btn-pill btn-pill-outline"
+                      href="https://wa.link/7staf4"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      <BsWhatsapp />
+                      <span className="d-none d-sm-inline"> WhatsApp</span>
+                    </a>
+                  </div>
                 </div>
 
-                <p className="hero-lead mb-4">
-                  Sesiones a distancia ·{" "}
-                  <strong>Primera entrevista sin cargo</strong>
-                </p>
+                <div className="hero-identity">
+                  <h2 className="hero-name mb-2">Lic. Juan Pablo Sanjorge</h2>
+                  <p className="hero-subtitle mb-4">Psicólogo Clínico</p>
 
-                <div className="d-flex flex-wrap gap-3">
-                  <Link to="/contact" className="btn-pill btn-pill-primary">
-                    Reservar primera consulta
-                  </Link>
-                  <a
-                    className="btn-pill btn-pill-outline"
-                    href="https://wa.link/7staf4"
-                    target="_blank"
-                    rel="noreferrer"
-                  >
-                    <BsWhatsapp />
-                    <span className="d-none d-sm-inline"> WhatsApp</span>
-                  </a>
+                  <div className="d-flex flex-wrap gap-2">
+                    <span className="badge-pill d-md-none">UBA</span>
+                    <span className="badge-pill d-none d-md-inline">
+                      Universidad de Buenos Aires
+                    </span>
+                    <span className="badge-pill">M. 66123</span>
+                    <span className="badge-pill d-md-none">+10 años de exp.</span>
+                    <span className="badge-pill d-none d-md-inline">
+                      +10 años de experiencia
+                    </span>
+                    <span className="badge-pill">Adultos y Tercera Edad</span>
+                  </div>
                 </div>
               </Reveal>
             </div>

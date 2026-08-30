@@ -24,7 +24,7 @@ export const NavBar = () => {
     <header className="navbar-float">
       <nav className={`navbar-inner ${menuOpen ? "navbar-inner-menu-open" : ""}`}>
         <Link className="text-decoration-none navbar-brand" to="/">
-          <p className="size20 weight600 lh-sm mb-0">Lic. Juan Pablo Sanjorge</p>
+          <img src="/img/logo.png" alt="Lic. Juan Pablo Sanjorge" className="navbar-brand-logo" />
         </Link>
 
         <div className="d-none d-md-flex align-items-center navbar-links">

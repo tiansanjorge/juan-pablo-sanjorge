@@ -40,16 +40,18 @@
 }
 
 .navbar-brand {
-  color: var(--color-primary-dark);
-  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
   white-space: nowrap;
+}
 
-  p {
-    font-size: 17px;
+.navbar-brand-logo {
+  height: 34px;
+  width: auto;
+  display: block;
 
-    @media (min-width: 992px) {
-      font-size: 20px;
-    }
+  @media (min-width: 992px) {
+    height: 40px;
   }
 }
 

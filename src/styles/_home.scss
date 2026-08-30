@@ -1,9 +1,19 @@
 // Estilos específicos de la página Home
 
 .hero-title {
-  font-family: var(--font-sans);
+  font-family: var(--font-display);
   font-weight: 600;
   font-size: var(--text-3xl);
+  color: var(--color-primary-dark);
+  line-height: 1.05;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+}
+
+.hero-name {
+  font-family: var(--font-sans);
+  font-weight: 600;
+  font-size: var(--text-xl);
   color: var(--color-primary-dark);
   line-height: 1.15;
 }
@@ -11,13 +21,42 @@
 .hero-subtitle {
   font-family: var(--font-sans);
   font-weight: 500;
-  font-size: var(--text-xl);
+  font-size: var(--text-lg);
   color: var(--color-primary);
 }
 
 .hero-lead {
   font-size: var(--text-lg);
   color: var(--color-text-muted);
+}
+
+.hero-identity {
+  position: relative;
+  padding-top: 1.5rem;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: calc(100% - 80px);
+    height: 1px;
+    background: rgba(3, 44, 122, 0.12);
+  }
+}
+
+@media (min-width: 992px) {
+  .hero-identity {
+    margin-top: 2.5rem;
+    padding-top: 2.5rem;
+    margin-left: -30px;
+    margin-right: -30px;
+  }
+
+  .hero-headline {
+    margin-left: -30px;
+    margin-right: -30px;
+  }
 }
 
 .hero-copy {
@@ -118,7 +157,7 @@
 
 @media (min-width: 992px) {
   .hero-banner-content {
-    margin-top: -10vh;
+    margin-top: -5vh;
   }
 }
 
@@ -136,11 +175,15 @@
   padding: 2.5rem 0;
 
   .hero-title {
-    font-size: var(--text-4xl);
+    font-size: var(--text-5xl);
+  }
+
+  .hero-name {
+    font-size: var(--text-2xl);
   }
 
   .hero-subtitle {
-    font-size: var(--text-2xl);
+    font-size: var(--text-xl);
   }
 
   .hero-lead {
@@ -161,11 +204,15 @@
 @media (max-width: 991.98px) {
   .hero-banner-copy {
     .hero-title {
-      font-size: var(--text-3xl);
+      font-size: var(--text-4xl);
+    }
+
+    .hero-name {
+      font-size: var(--text-xl);
     }
 
     .hero-subtitle {
-      font-size: var(--text-xl);
+      font-size: var(--text-base);
     }
 
     .hero-lead {
@@ -253,6 +300,11 @@
       justify-content: center;
     }
   }
+
+  .hero-identity::before {
+    left: 50%;
+    transform: translateX(-50%);
+  }
 }
 
 @media (max-width: 575.98px) {
@@ -269,17 +321,22 @@
     padding: 0.75rem 0;
 
     .hero-title {
-      font-size: 1.5rem;
+      font-size: 1.75rem;
       margin-bottom: 0.5rem !important;
     }
 
-    .hero-subtitle {
+    .hero-name {
       font-size: var(--text-lg);
+      margin-bottom: 0.35rem !important;
+    }
+
+    .hero-subtitle {
+      font-size: var(--text-base);
       margin-bottom: 0.85rem !important;
     }
 
-    .d-flex.mb-4 {
-      margin-bottom: 0.85rem !important;
+    .hero-identity {
+      padding-top: 0.85rem;
     }
 
     .hero-lead {
