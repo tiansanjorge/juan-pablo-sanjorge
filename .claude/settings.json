@@ -1,0 +1,8 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(git push *)",
+      "Bash(git -C \"d:/tians/Documents/Desarrollador Full Stack/Proyectos/Juan Pablo Sanjorge/juan-pablo-sanjorge\" branch -a)"
+    ]
+  }
+}
