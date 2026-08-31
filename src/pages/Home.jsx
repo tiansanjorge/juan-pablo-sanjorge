@@ -115,7 +115,7 @@ export const Home = () => {
                 <div className="video-vertical-frame">
                   <video
                     ref={videoRef}
-                    controls
+                    controls={isVideoPlaying}
                     preload="metadata"
                     onPlay={() => setIsVideoPlaying(true)}
                     onPause={() => setIsVideoPlaying(false)}

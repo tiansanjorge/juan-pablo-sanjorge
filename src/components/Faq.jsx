@@ -5,7 +5,7 @@ const FaqArray = [
       "La primera entrevista tiene como objetivo que el paciente pueda conocer al profesional y comenzar a hablar acerca de aquello que lo lleva a consultar. Es también una oportunidad para conocer el modo de trabajo y plantear cualquier pregunta o inquietud que pueda tener antes de iniciar un tratamiento.\n\nA su vez, esta primera entrevista funciona como una instancia de admisión para el profesional. A partir de lo que el paciente plantea y de la evaluación de su situación particular, se podrá considerar si resulta conveniente iniciar un tratamiento en este espacio o, eventualmente, realizar una derivación a otro profesional o dispositivo de atención.",
   },
   {
-    pregunta: "¿Atendés por obra social?",
+    pregunta: "¿Se atiende por obra social?",
     respuesta:
       "El servicio se brinda de manera particular. No obstante, algunas obras sociales y empresas de medicina prepaga ofrecen sistemas de reintegro para tratamientos realizados con profesionales externos a su cartilla.\n\nLas condiciones de reintegro —incluyendo el porcentaje, la cantidad de sesiones y la documentación requerida— dependen de cada cobertura, por lo que se recomienda consultar directamente con la obra social o prepaga correspondiente.",
   },
